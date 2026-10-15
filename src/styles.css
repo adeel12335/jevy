@@ -657,6 +657,36 @@ html.js .hero-controls[data-playing='false'] .hero-dot.is-active .hero-dot-bar {
 .compare-links a:hover { text-decoration: underline; }
 .compare-links i { width: 1rem; height: 1px; background: var(--slab-200); }
 
+/* ---------- site footage ---------- */
+.clip-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.75rem, 3.5vw, 3rem) clamp(1.25rem, 2.5vw, 2rem); }
+.clip { margin: 0; }
+.clip-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 2px; background: var(--ink-800); }
+.clip-video { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* The shade and the play button sit over the poster only; once the clip is
+   running they go, and the browser's own controls were underneath all along. */
+.clip-shade {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to top, rgba(10, 13, 17, 0.55), rgba(10, 13, 17, 0.08) 60%);
+  transition: opacity 0.3s var(--ease);
+}
+.clip-frame.is-playing .clip-shade { opacity: 0; }
+.clip-play {
+  position: absolute; top: 50%; left: 50%; translate: -50% -50%;
+  display: grid; justify-items: center; gap: 0.7rem; padding: 0; border: 0; background: none; color: #fff; cursor: pointer;
+}
+.clip-play svg {
+  width: 68px; height: 68px; padding: 21px 19px 21px 23px;
+  border: 2px solid #fff; border-radius: 999px; background: rgba(10, 13, 17, 0.5); backdrop-filter: blur(4px);
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease), scale 0.2s var(--ease);
+}
+.clip-play:hover svg, .clip-play:focus-visible svg { background: var(--blue-700); border-color: var(--blue-700); scale: 1.06; }
+.clip-play:focus-visible { outline: none; }
+.clip-play > span { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; text-shadow: 0 1px 8px rgba(10, 13, 17, 0.8); }
+.clip figcaption { margin-top: 1rem; }
+.clip-meta { display: block; margin-bottom: 0.45rem; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-300); }
+.clip strong { display: block; font-family: var(--display); font-size: clamp(1.3rem, 1.9vw, 1.7rem); font-weight: 700; line-height: 1; text-transform: uppercase; }
+.clip p { margin: 0.5rem 0 0; max-width: 48ch; font-size: 0.95rem; color: var(--chalk-faint); }
+
 /* ---------- the archive ---------- */
 .gallery-section { overflow: hidden; }
 .gallery-intro { display: grid; gap: 1.6rem; justify-items: start; }
@@ -937,6 +967,7 @@ html.lenis, html.lenis body { height: auto; }
   .gallery-tally { grid-template-columns: repeat(2, 1fr); gap: 0 1rem; }
   .tally-item:nth-child(2n) { border-right: 0; }
   .compare-grid { grid-template-columns: 1fr; }
+  .clip-grid { grid-template-columns: 1fr; }
   .work-card { min-height: 15rem; }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-office { grid-column: 1 / -1; }

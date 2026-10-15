@@ -24,6 +24,7 @@ npm run dev        # http://127.0.0.1:5173
 | `npm run preview` | Vite's preview server — **note the caveat below** |
 | `npm run typecheck` | `tsc -b`, no emit |
 | `npm run assets` | Regenerates every image in `public/media` from `images/` |
+| `npm run videos` | Re-encodes the clips in `videos/` into `public/media/video` with posters (needs ffmpeg) |
 
 `npm run assets` is **not** part of `npm run build` — it takes a couple of minutes and its
 output is committed. Run it only when the photographs change.

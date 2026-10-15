@@ -4,6 +4,7 @@ import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
 import { CallToAction } from '../components/CallToAction'
 import { BeforeAfter } from '../components/BeforeAfter'
+import { SiteVideos } from '../components/Videos'
 import { Photo, Reveal, TextLink } from '../components/ui'
 
 export default function Projects() {
@@ -57,6 +58,8 @@ export default function Projects() {
     </section>
 
     <BeforeAfter />
+
+    <SiteVideos />
 
     <CallToAction
       eyebrow="Seen something like your job?"

@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "assets": "node scripts/prepare-assets.mjs",
+    "videos": "node scripts/prepare-videos.mjs",
     "typecheck": "tsc -b",
     "build:client": "vite build"
   },

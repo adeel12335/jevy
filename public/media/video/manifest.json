@@ -1,0 +1,36 @@
+{
+  "clips": [
+    {
+      "name": "plaza-pour",
+      "source": "WhatsApp Video 2026-10-15 at 5.43.30 PM (2).mp4",
+      "seconds": 31,
+      "width": 848,
+      "height": 478,
+      "bytes": 5080413
+    },
+    {
+      "name": "plaza-seal",
+      "source": "WhatsApp Video 2026-10-15 at 5.43.31 PM.mp4",
+      "seconds": 9,
+      "width": 848,
+      "height": 478,
+      "bytes": 832474
+    },
+    {
+      "name": "stone-steps-set",
+      "source": "WhatsApp Video 2026-10-15 at 5.43.30 PM.mp4",
+      "seconds": 21,
+      "width": 848,
+      "height": 478,
+      "bytes": 3868393
+    },
+    {
+      "name": "stone-steps-lift",
+      "source": "WhatsApp Video 2026-10-15 at 5.43.30 PM (1).mp4",
+      "seconds": 16,
+      "width": 848,
+      "height": 478,
+      "bytes": 3006658
+    }
+  ]
+}

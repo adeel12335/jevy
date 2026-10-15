@@ -201,3 +201,15 @@ export const transformations: Transformation[] = [
   { id: 'plaza-slab', title: 'Plaza slab', before: 'plaza-formwork', after: 'plaza-cured', note: 'Formwork and mesh set out, concrete placed and floated, then sealed and left to cure.' },
   { id: 'tiled-wall', title: 'Tiled wall', before: 'tile-membrane', after: 'tile-ceiling', note: 'Waterproofing membrane first, then wall tile set to line with the band and trims.' },
 ]
+
+/* Footage from the same sites, encoded by scripts/prepare-videos.mjs. The
+   running time is written here so the page can show it before anything has
+   downloaded. */
+export type Clip = { id: string; title: string; category: Category; seconds: number; description: string }
+
+export const clips: Clip[] = [
+  { id: 'plaza-pour', title: 'Placing the plaza slab', category: 'Concrete', seconds: 31, description: 'Concrete placed over the mesh and screeded off the forms, bay by bay, across the plaza.' },
+  { id: 'plaza-seal', title: 'Sealing the slab', category: 'Concrete', seconds: 9, description: 'Curing compound rolled across the finished slab so it holds its moisture while it cures.' },
+  { id: 'stone-steps-set', title: 'Setting a stone tread', category: 'Stone', seconds: 21, description: 'A stone tread brought in by forklift on a sling and lowered onto the flight.' },
+  { id: 'stone-steps-lift', title: 'Lifting the next tread', category: 'Stone', seconds: 16, description: 'The next tread rigged and lifted while the crew lines it up on the step below.' },
+]
