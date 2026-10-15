@@ -8,6 +8,7 @@ import { FeaturedWork } from '../components/Projects'
 import { Archive } from '../components/Gallery'
 import { Qualifications } from '../components/Qualifications'
 import { Contact } from '../components/Contact'
+import { FindUs } from '../components/FindUs'
 
 export default function Home() {
   return <>
@@ -22,5 +23,6 @@ export default function Home() {
     <Archive />
     <Qualifications />
     <Contact />
+    <FindUs />
   </>
 }

@@ -103,6 +103,7 @@ const csp = [
   "img-src 'self' data:",
   "font-src 'self'",
   "connect-src 'self'",
+  'frame-src https://www.google.com',
   "form-action 'self'",
   "frame-ancestors 'self'",
   'upgrade-insecure-requests',

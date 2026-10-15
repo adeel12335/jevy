@@ -500,6 +500,46 @@ html.js .hero-controls[data-playing='false'] .hero-dot.is-active .hero-dot-bar {
 .form-sent .button { margin-top: 0.75rem; }
 .form-note { margin: 0; font-family: var(--mono); font-size: 0.68rem; line-height: 1.65; letter-spacing: 0.04em; color: var(--chalk-dim); }
 
+/* ---------- find us: the office on the map ---------- */
+.findus-map { position: relative; aspect-ratio: 16 / 7; min-height: 24rem; overflow: hidden; border-radius: 2px; background: var(--ink-800); }
+.findus-frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: saturate(0.85); }
+/* The card sits over the map like its own info window. */
+.findus-card {
+  /* Top right, clear of the map's own address box in the top left. */
+  position: absolute; top: clamp(1rem, 2vw, 1.75rem); right: clamp(1rem, 2vw, 1.75rem); z-index: 2;
+  display: grid; gap: 0.35rem; width: min(22rem, calc(100% - 2rem));
+  padding: 1.35rem 1.5rem 1.4rem; border: 1px solid var(--rule); border-radius: 2px;
+  background: rgba(17, 21, 26, 0.94); backdrop-filter: blur(10px); color: var(--chalk);
+  box-shadow: 0 18px 40px rgba(6, 8, 11, 0.45);
+}
+.findus-pin { display: inline-grid; place-items: center; width: 36px; height: 36px; margin-bottom: 0.5rem; border-radius: 999px; background: var(--blue-700); color: #fff; }
+.findus-card strong { font-family: var(--display); font-size: 1.5rem; font-weight: 800; line-height: 0.95; text-transform: uppercase; }
+.findus-type { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-300); }
+.findus-card address { margin: 0.5rem 0 0.9rem; font-style: normal; font-size: 0.95rem; color: var(--chalk-dim); }
+.findus-estimate { border-top: 1px solid var(--rule); }
+.findus-estimate summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.85rem 0;
+  list-style: none; cursor: pointer;
+  font-family: var(--mono); font-size: 0.74rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-500);
+}
+.findus-estimate summary::-webkit-details-marker { display: none; }
+.findus-estimate summary svg { transition: rotate 0.2s var(--ease); }
+.findus-estimate[open] summary svg { rotate: 180deg; }
+.findus-estimate summary:hover { color: var(--blue-300); }
+.findus-reveal { display: grid; gap: 0.6rem; padding-bottom: 0.9rem; }
+.findus-reveal a:not(.button) {
+  display: inline-flex; align-items: center; gap: 0.6rem; font-size: 1rem; color: var(--chalk); text-decoration: none;
+  transition: color 0.18s var(--ease);
+}
+.findus-reveal a:not(.button):hover { color: var(--blue-300); }
+.findus-reveal svg { color: var(--blue-500); }
+.findus-reveal .button { justify-content: center; margin-top: 0.35rem; }
+.findus-directions {
+  display: inline-flex; align-items: center; gap: 0.35rem; padding-top: 0.85rem; border-top: 1px solid var(--rule);
+  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--chalk-dim); text-decoration: none;
+}
+.findus-directions:hover { color: var(--chalk); }
+
 /* ---------- footer ---------- */
 .site-footer {
   position: relative; overflow: hidden;
@@ -968,6 +1008,9 @@ html.lenis, html.lenis body { height: auto; }
   .tally-item:nth-child(2n) { border-right: 0; }
   .compare-grid { grid-template-columns: 1fr; }
   .clip-grid { grid-template-columns: 1fr; }
+  .findus-map { aspect-ratio: auto; min-height: 0; display: grid; }
+  .findus-frame { position: static; aspect-ratio: 4 / 3; min-height: 18rem; }
+  .findus-card { position: static; width: auto; border-top: 0; border-radius: 0 0 2px 2px; box-shadow: none; }
   .work-card { min-height: 15rem; }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-office { grid-column: 1 / -1; }

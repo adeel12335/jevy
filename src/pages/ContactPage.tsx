@@ -2,6 +2,7 @@ import { company } from '../site'
 import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
 import { Contact } from '../components/Contact'
+import { FindUs } from '../components/FindUs'
 
 export default function ContactPage() {
   const meta = metaFor('/contact')
@@ -15,5 +16,6 @@ export default function ContactPage() {
       compact
     />
     <Contact heading={false} />
+    <FindUs />
   </>
 }

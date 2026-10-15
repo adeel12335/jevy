@@ -108,7 +108,7 @@ come from `dist/_headers`, which the build generates.
 
 ### The content security policy
 
-The policy is strict: everything the page loads is same-origin, fonts included. The
+The policy is strict: everything the page loads is same-origin, fonts included, with one exception: the office map on the home and contact pages is a Google Maps frame, so `frame-src` allows `https://www.google.com`. The
 document head carries one inline script (it marks the document script-capable before
 first paint, so scroll reveals never hide content from a reader without JavaScript), and
 a strict policy refuses inline scripts unless their hash is allow-listed.
