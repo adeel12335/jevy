@@ -36,11 +36,11 @@ const photos = {
 }
 
 /* Every photograph is written at the three sizes the layout actually asks
-   for. Only the two that run full-bleed get a fourth: these are detailed
+   for. Only the four that run full-bleed in the home slider get a fourth: these are detailed
    phone photographs of gravel and concrete, so each extra size is expensive
    and nothing but the hero is ever displayed above 1200px. */
 const WIDTHS = [400, 800, 1200]
-const FULL_BLEED = new Set(['crew', 'sidewalk'])
+const FULL_BLEED = new Set(['crew', 'sidewalk', 'masonry', 'stairs'])
 const QUALITY = { 400: 76, 800: 80, 1200: 78, 1600: 72 }
 
 const manifest = []

@@ -62,9 +62,9 @@ export const inCategory = (category: Category) => projects.filter(project => pro
 
 export const countByCategory = (category: Category) => projects.filter(project => project.category === category).length
 
-/* The photographs that run full-bleed; these are the only two written at
-   1600px by scripts/prepare-assets.mjs. */
-export const fullBleed = new Set(['crew', 'sidewalk'])
+/* The photographs that run full-bleed in the home slider; these are the only
+   four written at 1600px by scripts/prepare-assets.mjs. */
+export const fullBleed = new Set(['crew', 'sidewalk', 'masonry', 'stairs'])
 
 export const services: { slug: string; title: string; lines: string[]; category: Category; description: string; detail: string; image: string; items: string[] }[] = [
   { slug: 'concrete-sidewalks', title: 'Concrete & Sidewalks', lines: ['Concrete &', 'Sidewalks'], category: 'Concrete', description: 'Preparation, forming and finishing for concrete surfaces.', detail: 'From the preparation beneath the surface to the finished concrete, explore the details in our site photography.', image: 'sidewalk', items: ['Surface preparation', 'Formwork & reinforcement', 'Sidewalks & walkways', 'Driveways & aprons'] },
@@ -118,3 +118,49 @@ export const navigation = [
 ]
 
 export { socials } from './site'
+
+/* The home page opens on a slider: the company first, then one frame for
+   each trade. Every photograph here is one of the four written at 1600px. */
+export type HeroSlide = {
+  id: string
+  image: string
+  eyebrow: string
+  title: [string, string]
+  lede: string
+  primary: { label: string; to: string }
+  secondary: { label: string; to: string }
+}
+
+const serviceBySlug = (slug: string) => {
+  const found = services.find(service => service.slug === slug)
+  if (!found) throw new Error(`No service "${slug}" for the home slider`)
+  return found
+}
+
+const tradeSlide = (slug: string, title: [string, string], lede: string): HeroSlide => {
+  const service = serviceBySlug(slug)
+  return {
+    id: service.slug,
+    image: service.image,
+    eyebrow: service.title,
+    title,
+    lede,
+    primary: { label: service.title, to: `/services/${service.slug}` },
+    secondary: { label: `${countByCategory(service.category)} photographs`, to: `/projects?trade=${categorySlug(service.category)}` },
+  }
+}
+
+export const heroSlides: HeroSlide[] = [
+  {
+    id: 'company',
+    image: 'crew',
+    eyebrow: 'MWBE · DBE · SBE certified',
+    title: ['Building with purpose.', 'Delivering with care.'],
+    lede: 'Concrete, masonry and stair construction from our team in Jamaica, New York.',
+    primary: { label: 'Explore Our Work', to: '/projects' },
+    secondary: { label: 'Contact Our Team', to: '/contact' },
+  },
+  tradeSlide('concrete-sidewalks', ['Poured to line.', 'Finished by hand.'], 'Sidewalks, driveways and aprons, taken from the subbase up to the final float.'),
+  tradeSlide('masonry-blockwork', ['Laid true.', 'Built to last.'], 'Block walls and masonry on live sites, around services and down tight corridors.'),
+  tradeSlide('stair-construction', ['Every tread', 'set out right.'], 'Stairways and steps, with the blockwork that carries them.'),
+]
