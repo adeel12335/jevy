@@ -1,0 +1,540 @@
+{
+  "logo": "Adapted from the supplied logo; transparent PNG source in mockups/v2.",
+  "widths": [
+    400,
+    800,
+    1200
+  ],
+  "photos": [
+    {
+      "name": "sidewalk",
+      "number": 35,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (9).jpeg",
+      "widths": [
+        400,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "walkway",
+      "number": 10,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (5).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "driveway",
+      "number": 30,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (4).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "entrance",
+      "number": 34,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (8).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "pour",
+      "number": 15,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "ramp-fence",
+      "number": 1,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.46 PM (1).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "sidewalk-taped",
+      "number": 3,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (1).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "slab-wide",
+      "number": 5,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (11).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "driveway-garage",
+      "number": 6,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (12).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "stone-wall-walk",
+      "number": 7,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (2).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "formwork-edge",
+      "number": 8,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (3).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 901,
+      "height": 1600
+    },
+    {
+      "name": "curved-walk",
+      "number": 9,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (4).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "side-passage",
+      "number": 11,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (6).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 901,
+      "height": 1600
+    },
+    {
+      "name": "alley-walk",
+      "number": 12,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (7).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "retaining-walk",
+      "number": 13,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (8).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "manhole-apron",
+      "number": 14,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (9).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "stone-apron",
+      "number": 16,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (1).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "street-barriers",
+      "number": 17,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (10).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "hoarding-walk",
+      "number": 18,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (11).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "gateway-apron",
+      "number": 20,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (13).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "pour-edge",
+      "number": 27,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (2).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "gate-driveway",
+      "number": 29,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (3).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "ramp-formwork",
+      "number": 31,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (5).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "tree-pit-walk",
+      "number": 32,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (6).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "joint-detail",
+      "number": 33,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (7).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "column-base",
+      "number": 36,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 901,
+      "height": 1600
+    },
+    {
+      "name": "masonry",
+      "number": 25,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (18).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "block-wall",
+      "number": 26,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (19).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "block-interior",
+      "number": 22,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (15).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "block-mixer",
+      "number": 23,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (16).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "block-services",
+      "number": 24,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (17).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "block-corner",
+      "number": 28,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (20).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "block-corridor",
+      "number": 44,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "stairs",
+      "number": 42,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (6).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "stair-detail",
+      "number": 40,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (4).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "stair-progress",
+      "number": 39,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (3).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "stairwell-narrow",
+      "number": 21,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (14).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "stair-opening",
+      "number": 37,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (1).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "stair-treads",
+      "number": 38,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (2).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "stair-blockwork",
+      "number": 41,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (5).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "prep",
+      "number": 2,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.46 PM.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "crew",
+      "number": 4,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.47 PM (10).jpeg",
+      "widths": [
+        400,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "mesh",
+      "number": 19,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (12).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "excavation",
+      "number": 43,
+      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (7).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    }
+  ]
+}

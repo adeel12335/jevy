@@ -1,0 +1,254 @@
+import { certifications, inCategory, projects, services } from './data'
+import { SITE_URL, company, socials } from './site'
+
+/* Every page on the site, with the head it needs. The client reads this on
+   navigation and the prerenderer reads it at build time, so a page can never
+   end up with markup and metadata that disagree. */
+export type PageMeta = {
+  path: string
+  title: string
+  description: string
+  /* Photograph id used for the social card. */
+  image: string
+  /* Trail shown in the page header and emitted as BreadcrumbList. */
+  trail?: { name: string; path: string }[]
+  /* True when the page opens on that photograph full-bleed, which makes it
+     the largest contentful paint and worth preloading. */
+  photo?: boolean
+  noindex?: boolean
+}
+
+const brand = company.name
+const abs = (path: string) => `${SITE_URL}${path === '/' ? '/' : path}`
+
+const HOME: PageMeta = {
+  path: '/',
+  title: `${brand} | Concrete, Masonry & Stair Construction in Jamaica, NY`,
+  description: 'Jevvy Construction Inc builds concrete, masonry and stair work from Jamaica, New York. MWBE, DBE and SBE prequalified with DASNY, NYC SBS, NYS ESD, NYC SCA, OGS NY, PANYNJ, MTA and NJDOT.',
+  image: 'crew',
+  photo: true,
+}
+
+const STATIC: PageMeta[] = [
+  HOME,
+  {
+    path: '/about',
+    title: `About ${brand} | Construction Corporation in Jamaica, NY`,
+    description: `${brand} is a construction corporation in Jamaica, New York, working in concrete, masonry and stair construction and prequalified with eight public agencies across New York and New Jersey.`,
+    image: 'sidewalk',
+    photo: true,
+    trail: [{ name: 'About', path: '/about' }],
+  },
+  {
+    path: '/services',
+    title: `Construction Services | Concrete, Masonry & Stairs | ${brand}`,
+    description: 'Concrete and sidewalk work, masonry and blockwork, and stair construction across New York and New Jersey — every service documented in photographs from our own sites.',
+    image: 'masonry',
+    photo: true,
+    trail: [{ name: 'Services', path: '/services' }],
+  },
+  {
+    path: '/process',
+    title: `How a Concrete Job Goes In | ${brand}`,
+    description: 'Excavate and prep, form and reinforce, pour and finish, cure and reopen. The four stages of a concrete job, photographed on our own sites rather than illustrated with stock images.',
+    image: 'pour',
+    photo: true,
+    trail: [{ name: 'Process', path: '/process' }],
+  },
+  {
+    path: '/projects',
+    title: `Project Gallery | ${projects.length} Photographs from Our Sites | ${brand}`,
+    description: `Every photograph here is our own work: ${inCategory('Concrete').length} concrete, ${inCategory('Masonry').length} masonry, ${inCategory('Stairs').length} stair and ${inCategory('Groundwork').length} groundwork jobs across New York and New Jersey.`,
+    image: 'crew',
+    trail: [{ name: 'Projects', path: '/projects' }],
+  },
+  {
+    path: '/qualifications',
+    title: `MWBE, DBE & SBE Prequalifications | ${brand}`,
+    description: 'Prequalified MWBE with DASNY, NYC SBS, NYS ESD, NYC SCA, OGS NY and PANYNJ. Prequalified DBE with MTA and NJDOT. SBE and DBE with the Port Authority of New York and New Jersey.',
+    image: 'crew',
+    trail: [{ name: 'Qualifications', path: '/qualifications' }],
+  },
+  {
+    path: '/contact',
+    title: `Contact ${brand} | Jamaica, NY`,
+    description: `${company.street}, ${company.locality}, ${company.region} ${company.postalCode}. Call ${company.telephone} or email ${company.email} to discuss concrete, masonry or stair work.`,
+    image: 'sidewalk',
+    trail: [{ name: 'Contact', path: '/contact' }],
+  },
+]
+
+const SERVICE_PAGES: PageMeta[] = services.map(service => ({
+  path: `/services/${service.slug}`,
+  title: `${service.title} in New York | ${brand}`,
+  description: `${service.items.join(', ')}. ${inCategory(service.category).length} photographs from ${service.category.toLowerCase()} jobs by ${brand} across New York and New Jersey.`,
+  image: service.image,
+  photo: true,
+  trail: [{ name: 'Services', path: '/services' }, { name: service.title, path: `/services/${service.slug}` }],
+}))
+
+const PROJECT_PAGES: PageMeta[] = projects.map(project => ({
+  path: `/projects/${project.id}`,
+  title: `${project.title} — ${project.category} | ${brand}`,
+  description: `${project.alt}. ${project.category} work photographed on site by ${brand}, Jamaica, New York.`,
+  image: project.id,
+  photo: true,
+  trail: [{ name: 'Projects', path: '/projects' }, { name: project.title, path: `/projects/${project.id}` }],
+}))
+
+export const pages: PageMeta[] = [...STATIC, ...SERVICE_PAGES, ...PROJECT_PAGES]
+
+export const notFoundMeta: PageMeta = {
+  path: '/404',
+  title: `Page not found | ${brand}`,
+  description: 'That page is not on this site. Everything we build — concrete, masonry and stair work — is one click away.',
+  image: 'crew',
+  noindex: true,
+}
+
+export const metaFor = (path: string): PageMeta => {
+  const clean = path.length > 1 ? path.replace(/\/+$/, '') : path
+  return pages.find(page => page.path === clean) ?? notFoundMeta
+}
+
+/* ---------- structured data ---------- */
+
+const organization = {
+  '@type': 'GeneralContractor',
+  '@id': `${SITE_URL}/#organization`,
+  name: brand,
+  description: company.description,
+  url: abs('/'),
+  logo: `${SITE_URL}/icon-512.png`,
+  image: `${SITE_URL}/og-image.jpg`,
+  email: company.email,
+  telephone: '+1-415-747-4786',
+  faxNumber: '+1-917-325-5173',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: company.street,
+    addressLocality: company.locality,
+    addressRegion: company.region,
+    postalCode: company.postalCode,
+    addressCountry: company.country,
+  },
+  areaServed: company.areaServed.map(name => ({ '@type': 'State', name })),
+  knowsAbout: ['Concrete construction', 'Sidewalk construction', 'Masonry and blockwork', 'Stair construction', 'Site preparation'],
+  hasCredential: certifications.map(group => ({
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: `${group.label} (${group.type})`,
+    recognizedBy: group.agencies.map(agency => ({ '@type': 'Organization', name: agency.name })),
+  })),
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Construction services',
+    itemListElement: services.map(service => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: service.title, description: service.items.join(', '), url: abs(`/services/${service.slug}`) },
+    })),
+  },
+  sameAs: socials.map(social => social.href),
+}
+
+export function structuredData(meta: PageMeta): unknown[] {
+  const graph: unknown[] = [organization]
+
+  graph.push({
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    url: abs('/'),
+    name: brand,
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    inLanguage: 'en-US',
+  })
+
+  if (meta.trail?.length) {
+    graph.push({
+      '@type': 'BreadcrumbList',
+      itemListElement: [{ name: 'Home', path: '/' }, ...meta.trail].map((crumb, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: crumb.name,
+        item: abs(crumb.path),
+      })),
+    })
+  }
+
+  const service = services.find(entry => meta.path === `/services/${entry.slug}`)
+  if (service) {
+    graph.push({
+      '@type': 'Service',
+      '@id': `${abs(meta.path)}#service`,
+      name: service.title,
+      description: service.description,
+      serviceType: service.title,
+      provider: { '@id': `${SITE_URL}/#organization` },
+      areaServed: company.areaServed.map(name => ({ '@type': 'State', name })),
+      url: abs(meta.path),
+      image: `${SITE_URL}/media/${service.image}-1200.webp`,
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: `${service.title} scope`,
+        itemListElement: service.items.map(item => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: item } })),
+      },
+    })
+  }
+
+  const project = projects.find(entry => meta.path === `/projects/${entry.id}`)
+  if (project) {
+    graph.push({
+      '@type': 'ImageObject',
+      '@id': `${abs(meta.path)}#photo`,
+      name: project.title,
+      caption: project.alt,
+      description: project.alt,
+      contentUrl: `${SITE_URL}/media/${project.id}-1200.webp`,
+      thumbnailUrl: `${SITE_URL}/media/${project.id}-400.webp`,
+      creator: { '@id': `${SITE_URL}/#organization` },
+      creditText: brand,
+      representativeOfPage: true,
+      isPartOf: { '@id': `${abs('/projects')}#gallery` },
+    })
+  }
+
+  if (meta.path === '/projects') {
+    graph.push({
+      '@type': 'ImageGallery',
+      '@id': `${abs('/projects')}#gallery`,
+      name: `${brand} project gallery`,
+      description: meta.description,
+      url: abs('/projects'),
+      numberOfItems: projects.length,
+    })
+  }
+
+  if (meta.path === '/contact') {
+    graph.push({ '@type': 'ContactPage', '@id': `${abs('/contact')}#page`, url: abs('/contact'), about: { '@id': `${SITE_URL}/#organization` } })
+  }
+
+  if (meta.path === '/about') {
+    graph.push({ '@type': 'AboutPage', '@id': `${abs('/about')}#page`, url: abs('/about'), about: { '@id': `${SITE_URL}/#organization` } })
+  }
+
+  return graph
+}
+
+/* Widths written for every photograph; the hero pair also gets 1600. */
+const srcSet = (image: string) => {
+  const widths = image === 'crew' || image === 'sidewalk' ? [400, 800, 1200, 1600] : [400, 800, 1200]
+  return widths.map(width => `/media/${image}-${width}.webp ${width}w`).join(', ')
+}
+
+export function headFor(meta: PageMeta) {
+  return {
+    title: meta.title,
+    description: meta.description,
+    canonical: abs(meta.path),
+    image: `${SITE_URL}/media/${meta.image}-1200.webp`,
+    robots: meta.noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large',
+    preload: meta.photo
+      ? { href: `/media/${meta.image}-1200.webp`, srcSet: srcSet(meta.image), sizes: '100vw' }
+      : null,
+    jsonLd: JSON.stringify({ '@context': 'https://schema.org', '@graph': structuredData(meta) }),
+  }
+}

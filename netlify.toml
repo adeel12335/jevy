@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Headers and caching live in public/_headers so they stay with the site
+# whichever static host it lands on.
