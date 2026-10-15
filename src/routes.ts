@@ -133,7 +133,7 @@ const organization = {
     addressCountry: company.country,
   },
   areaServed: company.areaServed.map(name => ({ '@type': 'State', name })),
-  knowsAbout: ['Concrete construction', 'Sidewalk construction', 'Masonry and blockwork', 'Subway construction', 'Site preparation'],
+  knowsAbout: ['Subway construction', 'Concrete construction', 'Sidewalk construction', 'Masonry and stonework', 'Tiling and finish work', 'General plumbing', 'Contract administration', 'Owner and contractor representation', 'Cost estimating', 'Quality control inspections', 'Subcontracting support', 'Site preparation'],
   hasCredential: certifications.map(group => ({
     '@type': 'EducationalOccupationalCredential',
     credentialCategory: `${group.label} (${group.type})`,

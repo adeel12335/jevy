@@ -5,6 +5,7 @@ import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
 import { CallToAction } from '../components/CallToAction'
 import { Sectors } from '../components/Sectors'
+import { Capabilities } from '../components/Capabilities'
 import { CountUp, Lines, Photo, Reveal, TextLink } from '../components/ui'
 
 export default function About() {
@@ -52,6 +53,8 @@ export default function About() {
         </Reveal>
       </div>
     </section>
+
+    <Capabilities />
 
     <Sectors />
 

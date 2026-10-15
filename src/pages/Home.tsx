@@ -1,5 +1,6 @@
 import { AboutIntro, Hero } from '../components/Introduction'
 import { Expertise } from '../components/Expertise'
+import { Capabilities } from '../components/Capabilities'
 import { Sectors } from '../components/Sectors'
 import { Process } from '../components/Process'
 import { BeforeAfter } from '../components/BeforeAfter'
@@ -15,6 +16,7 @@ export default function Home() {
     <Hero />
     <AboutIntro />
     <Expertise />
+    <Capabilities />
     <Sectors />
     <Process />
     <FeaturedWork />

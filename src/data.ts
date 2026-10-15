@@ -213,3 +213,10 @@ export const clips: Clip[] = [
   { id: 'stone-steps-set', title: 'Setting a stone tread', category: 'Stone', seconds: 21, description: 'A stone tread brought in by forklift on a sling and lowered onto the flight.' },
   { id: 'stone-steps-lift', title: 'Lifting the next tread', category: 'Stone', seconds: 16, description: 'The next tread rigged and lifted while the crew lines it up on the step below.' },
 ]
+
+/* What the company does, as supplied by the company: the work on site and
+   the services around a project. */
+export const capabilities: { title: string; items: string[] }[] = [
+  { title: 'On site', items: ['Subway construction', 'Concrete work', 'Masonry and stonework', 'Tiling and finish work', 'General plumbing'] },
+  { title: 'For the project', items: ['Contract administration', 'Owner / contractor representation', 'Cost estimating', 'Quality control inspections', 'Subcontracting support'] },
+]

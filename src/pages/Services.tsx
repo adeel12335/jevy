@@ -3,6 +3,7 @@ import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
 import { CallToAction } from '../components/CallToAction'
 import { Expertise } from '../components/Expertise'
+import { Capabilities } from '../components/Capabilities'
 import { Process } from '../components/Process'
 
 export default function Services() {
@@ -18,6 +19,7 @@ export default function Services() {
       imageAlt="Concrete block wall under construction"
     />
     <Expertise heading={false} />
+    <Capabilities />
     <Process />
     <CallToAction
       eyebrow="Scope it with us"
