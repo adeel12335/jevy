@@ -26,13 +26,22 @@ const photos = {
   'gate-driveway': 29, 'ramp-formwork': 31, 'tree-pit-walk': 32, 'joint-detail': 33,
   'column-base': 36,
   // Masonry and blockwork
-  masonry: 25, 'block-wall': 26, 'block-interior': 22, 'block-mixer': 23,
-  'block-services': 24, 'block-corner': 28, 'block-corridor': 44,
+  masonry: 25, 'block-wall': 26,
   // Stair construction
   stairs: 42, 'stair-detail': 40, 'stair-progress': 39, 'stairwell-narrow': 21,
   'stair-opening': 37, 'stair-treads': 38, 'stair-blockwork': 41,
   // Groundwork
   prep: 2, crew: 4, mesh: 19, excavation: 43,
+  // Plaza concrete and formwork, supplied 15 October
+  'plaza-pour': 45, 'plaza-screed': 46, 'plaza-float': 47, 'plaza-cured': 48, 'plaza-formwork': 49, 'slab-formwork': 50,
+  // Tile work
+  'tile-band': 51, 'tile-ceiling': 52, 'tile-floor': 53, 'tile-membrane': 54,
+  // Stone steps
+  'stone-steps': 55, 'stone-steps-crew': 56, 'stone-steps-detail': 57,
+  // Stair reconstruction, including a subway station flight
+  'station-stairs': 58, 'station-stairs-before': 59, 'stair-rail': 60, 'stair-nosings': 61, 'stair-rebuilt': 62, 'stair-breakout': 63,
+  // Groundwork
+  'gateway-clearance': 64,
 }
 
 /* Every photograph is written at the three sizes the layout actually asks

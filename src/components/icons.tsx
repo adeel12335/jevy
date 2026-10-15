@@ -1,4 +1,4 @@
-import { BrickWall, Layers2 } from 'lucide-react'
+import { BrickWall, CircleParking, Footprints, Hospital, Landmark, Layers2, School, TrainFront } from 'lucide-react'
 import type { ComponentType, ReactNode } from 'react'
 
 export type IconProps = { size?: number; strokeWidth?: number }
@@ -12,6 +12,16 @@ export function StairsIcon({ size = 24, strokeWidth = 1.6 }: IconProps) {
 }
 
 export const tradeIcons: ComponentType<IconProps>[] = [Layers2, BrickWall, StairsIcon]
+
+/* One mark per kind of site in src/data.ts `sectors`. */
+export const sectorIcons: Record<'museum' | 'school' | 'hospital' | 'sidewalk' | 'parking' | 'station', ComponentType<IconProps>> = {
+  museum: Landmark,
+  school: School,
+  hospital: Hospital,
+  sidewalk: Footprints,
+  parking: CircleParking,
+  station: TrainFront,
+}
 
 /* Lucide carries no brand marks, so the four networks the company is on are
    drawn here in the same stroke as the rest of the icon set. */

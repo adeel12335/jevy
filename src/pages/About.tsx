@@ -1,9 +1,10 @@
 import { Link } from 'react-router'
-import { agencyCount, categories, countByCategory, projects, services } from '../data'
+import { agencyCount, countByCategory, projects, services } from '../data'
 import { company } from '../site'
 import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
 import { CallToAction } from '../components/CallToAction'
+import { Sectors } from '../components/Sectors'
 import { CountUp, Lines, Photo, Reveal, TextLink } from '../components/ui'
 
 export default function About() {
@@ -52,6 +53,8 @@ export default function About() {
       </div>
     </section>
 
+    <Sectors />
+
     <section className="section section--panel" aria-labelledby="about-trades">
       <div className="container">
         <Reveal className="section-head">
@@ -79,7 +82,7 @@ export default function About() {
                 <span className="service-row-title">Groundwork</span>
                 <span className="service-row-text">Excavation, drainage, subbase and reinforcement — the work that goes in before a pour.</span>
               </span>
-              <span className="service-row-count">{countByCategory(categories[3])}<small>photos</small></span>
+              <span className="service-row-count">{countByCategory('Groundwork')}<small>photos</small></span>
             </Link>
           </Reveal>
         </div>

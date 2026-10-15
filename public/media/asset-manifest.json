@@ -345,66 +345,6 @@
       "height": 1200
     },
     {
-      "name": "block-interior",
-      "number": 22,
-      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (15).jpeg",
-      "widths": [
-        400,
-        800,
-        1200
-      ],
-      "width": 1600,
-      "height": 1200
-    },
-    {
-      "name": "block-mixer",
-      "number": 23,
-      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (16).jpeg",
-      "widths": [
-        400,
-        800,
-        1200
-      ],
-      "width": 1200,
-      "height": 1600
-    },
-    {
-      "name": "block-services",
-      "number": 24,
-      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (17).jpeg",
-      "widths": [
-        400,
-        800,
-        1200
-      ],
-      "width": 1200,
-      "height": 1600
-    },
-    {
-      "name": "block-corner",
-      "number": 28,
-      "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (20).jpeg",
-      "widths": [
-        400,
-        800,
-        1200
-      ],
-      "width": 1600,
-      "height": 1200
-    },
-    {
-      "name": "block-corridor",
-      "number": 44,
-      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM.jpeg",
-      "widths": [
-        400,
-        800,
-        1200
-      ],
-      "width": 1200,
-      "height": 1600
-    },
-    {
       "name": "stairs",
       "number": 42,
       "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (6).jpeg",
@@ -530,6 +470,246 @@
       "name": "excavation",
       "number": 43,
       "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (7).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "plaza-pour",
+      "number": 45,
+      "source": "WhatsApp Image 2026-10-15 at 5.43.30 PM (2).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "name": "plaza-screed",
+      "number": 46,
+      "source": "WhatsApp Image 2026-10-15 at 5.43.30 PM (3).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "name": "plaza-float",
+      "number": 47,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.14 PM (6).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "name": "plaza-cured",
+      "number": 48,
+      "source": "WhatsApp Image 2026-10-15 at 5.43.30 PM.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "name": "plaza-formwork",
+      "number": 49,
+      "source": "WhatsApp Image 2026-10-15 at 5.43.30 PM (1).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "name": "slab-formwork",
+      "number": 50,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.14 PM (7).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "tile-band",
+      "number": 51,
+      "source": "WhatsApp Image 2026-10-15 at 5.54.50 PM (2).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "tile-ceiling",
+      "number": 52,
+      "source": "WhatsApp Image 2026-10-15 at 5.54.53 PM (2).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "tile-floor",
+      "number": 53,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.13 PM (2).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "name": "tile-membrane",
+      "number": 54,
+      "source": "WhatsApp Image 2026-10-15 at 5.54.51 PM.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "stone-steps",
+      "number": 55,
+      "source": "WhatsApp Image 2026-10-15 at 5.43.30 PM (5).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "name": "stone-steps-crew",
+      "number": 56,
+      "source": "WhatsApp Image 2026-10-15 at 5.43.31 PM.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "name": "stone-steps-detail",
+      "number": 57,
+      "source": "WhatsApp Image 2026-10-15 at 5.43.30 PM (6).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "name": "station-stairs",
+      "number": 58,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.12 PM (2).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "name": "station-stairs-before",
+      "number": 59,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.13 PM (4).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "name": "stair-rail",
+      "number": 60,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.14 PM (2).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "stair-nosings",
+      "number": 61,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.14 PM (4).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "stair-rebuilt",
+      "number": 62,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.14 PM.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "stair-breakout",
+      "number": 63,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.13 PM (10).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "name": "gateway-clearance",
+      "number": 64,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.13 PM (7).jpeg",
       "widths": [
         400,
         800,

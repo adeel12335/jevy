@@ -3,6 +3,7 @@ import { categories, categoryFromSlug, categorySlug, countByCategory, projects, 
 import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
 import { CallToAction } from '../components/CallToAction'
+import { BeforeAfter } from '../components/BeforeAfter'
 import { Photo, Reveal, TextLink } from '../components/ui'
 
 export default function Projects() {
@@ -16,7 +17,7 @@ export default function Projects() {
     <PageHeader
       eyebrow="The archive"
       title={['Every photograph', 'is our own work.']}
-      lede={<p>{projects.length} frames from our concrete, masonry, stair and groundwork sites across New York and New Jersey. No stock images and no renders — just the work as it went in.</p>}
+      lede={<p>{projects.length} frames from our concrete, formwork, masonry, stone, tile, stair and groundwork sites across New York and New Jersey. No stock images and no renders — just the work as it went in.</p>}
       trail={meta.trail!}
       compact
     />
@@ -54,6 +55,8 @@ export default function Projects() {
         </div>
       </div>
     </section>
+
+    <BeforeAfter />
 
     <CallToAction
       eyebrow="Seen something like your job?"

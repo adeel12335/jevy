@@ -28,7 +28,7 @@ export function Archive() {
           <h2 id="gallery-title"><Lines text={['Every photograph', 'is our own work.']} accent={1} /></h2>
         </div>
         <div className="gallery-intro">
-          <p className="lede">{projects.length} photographs from our concrete, masonry, stair and groundwork sites. No stock images, no renders.</p>
+          <p className="lede">{projects.length} photographs from our concrete, formwork, masonry, stone, tile, stair and groundwork sites. No stock images, no renders.</p>
           <Link className="button button-outline gallery-open" to="/projects">
             <Images size={18} aria-hidden="true" />View all {projects.length} photographs
           </Link>

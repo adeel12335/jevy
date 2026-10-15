@@ -1,4 +1,4 @@
-import { certifications, inCategory, projects, services } from './data'
+import { categories, certifications, inCategory, projects, services } from './data'
 import { SITE_URL, company, socials } from './site'
 
 /* Every page on the site, with the head it needs. The client reads this on
@@ -58,7 +58,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/projects',
     title: `Project Gallery | ${projects.length} Photographs from Our Sites | ${brand}`,
-    description: `Every photograph here is our own work: ${inCategory('Concrete').length} concrete, ${inCategory('Masonry').length} masonry, ${inCategory('Stairs').length} stair and ${inCategory('Groundwork').length} groundwork jobs across New York and New Jersey.`,
+    description: `Every photograph here is our own work: ${categories.map(category => `${inCategory(category).length} ${category.toLowerCase()}`).join(', ')} photographs from jobs across New York and New Jersey.`,
     image: 'crew',
     trail: [{ name: 'Projects', path: '/projects' }],
   },

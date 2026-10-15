@@ -599,6 +599,64 @@ html.js .hero-controls[data-playing='false'] .hero-dot.is-active .hero-dot-bar {
 .mobile-menu-contact span { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--chalk-dim); }
 .mobile-menu-contact a { color: var(--chalk); text-decoration: none; }
 
+/* ---------- sectors ---------- */
+.sector-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; margin: 0; padding: 0; list-style: none; }
+.sector {
+  display: grid; gap: 1rem; justify-items: start; align-content: start;
+  padding: clamp(1.3rem, 2vw, 1.8rem); background: var(--ink-800);
+  transition: background 0.2s var(--ease);
+}
+.sector:hover { background: var(--navy-900); }
+.sector svg { color: var(--blue-500); }
+.sector span { font-family: var(--display); font-size: clamp(1.2rem, 1.6vw, 1.5rem); font-weight: 700; line-height: 1; text-transform: uppercase; }
+
+/* ---------- before and after ----------
+   Two frames of the same work in one box. The before photograph sits on top
+   and is clipped at --pos; an invisible range input across the whole box
+   moves it, so a drag, a tap, the arrow keys and a screen reader all work. */
+.compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.75rem, 3.5vw, 3rem) clamp(1.5rem, 3vw, 2.5rem); }
+.compare {
+  position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 2px;
+  background: var(--ink-800); user-select: none; -webkit-user-select: none;
+}
+.compare:has(.compare-range:focus-visible) { outline: 2px solid var(--blue-700); outline-offset: 3px; }
+.compare-after, .compare-before { position: absolute; inset: 0; }
+.compare img { width: 100%; height: 100%; object-fit: cover; }
+.compare-before { clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+.compare-handle {
+  position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 2px;
+  translate: -50% 0; background: #fff; pointer-events: none;
+  box-shadow: 0 0 0 1px rgba(10, 13, 17, 0.25);
+}
+.compare-handle span {
+  position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; translate: -50% -50%;
+  border: 2px solid #fff; border-radius: 999px; background: rgba(10, 13, 17, 0.55); backdrop-filter: blur(4px);
+}
+.compare-handle span::before, .compare-handle span::after {
+  content: ''; position: absolute; top: 50%; width: 8px; height: 8px;
+  border-left: 2px solid #fff; border-bottom: 2px solid #fff;
+}
+.compare-handle span::before { left: 13px; translate: 0 -50%; rotate: 45deg; }
+.compare-handle span::after { right: 13px; translate: 0 -50%; rotate: -135deg; }
+.compare-range {
+  position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; margin: 0; padding: 0;
+  opacity: 0; cursor: ew-resize; touch-action: pan-y; -webkit-appearance: none; appearance: none;
+}
+.compare-badge {
+  position: absolute; top: 0.9rem; z-index: 1; padding: 0.38rem 0.6rem; border-radius: 2px;
+  background: rgba(10, 13, 17, 0.72); font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--chalk); pointer-events: none;
+}
+.compare-badge--before { left: 0.9rem; }
+.compare-badge--after { right: 0.9rem; }
+.compare-caption { margin-top: 1.1rem; }
+.compare-caption h3 { margin-bottom: 0.45rem; }
+.compare-caption p { max-width: 50ch; margin-bottom: 0.7rem; font-size: 0.95rem; color: var(--slab-700); }
+.compare-links { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.compare-links a { color: var(--blue-700); text-decoration: none; }
+.compare-links a:hover { text-decoration: underline; }
+.compare-links i { width: 1rem; height: 1px; background: var(--slab-200); }
+
 /* ---------- the archive ---------- */
 .gallery-section { overflow: hidden; }
 .gallery-intro { display: grid; gap: 1.6rem; justify-items: start; }
@@ -626,7 +684,7 @@ html.js .hero-controls[data-playing='false'] .hero-dot.is-active .hero-dot-bar {
 .marquee-tile:hover::after { opacity: 1; }
 .marquee-tile:hover .marquee-label { opacity: 1; translate: 0 0; }
 
-.gallery-tally { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); }
+.gallery-tally { display: grid; grid-template-columns: repeat(7, 1fr); border-top: 1px solid var(--rule); }
 .tally-item {
   display: flex; align-items: baseline; gap: 0.75rem; padding: 1.5rem 0.5rem 0 0;
   border: 0; border-right: 1px solid var(--rule); background: none;
@@ -857,6 +915,9 @@ html.lenis, html.lenis body { height: auto; }
   .work-card--lead { grid-column: span 2; grid-row: span 1; min-height: 24rem; }
   .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .footer-brand { grid-column: 1 / -1; }
+  .sector-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-tally { grid-template-columns: repeat(4, 1fr); }
+  .tally-item:nth-child(4n) { border-right: 0; }
 }
 
 @media (max-width: 860px) {
@@ -874,7 +935,8 @@ html.lenis, html.lenis body { height: auto; }
   .work-grid { grid-template-columns: repeat(2, 1fr); }
   .work-card--lead { grid-column: span 2; }
   .gallery-tally { grid-template-columns: repeat(2, 1fr); gap: 0 1rem; }
-  .tally-item:nth-child(2) { border-right: 0; }
+  .tally-item:nth-child(2n) { border-right: 0; }
+  .compare-grid { grid-template-columns: 1fr; }
   .work-card { min-height: 15rem; }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-office { grid-column: 1 / -1; }
@@ -902,6 +964,7 @@ html.lenis, html.lenis body { height: auto; }
   .cert-row { grid-template-columns: 1fr; gap: 0.2rem; }
   .hero-actions .button { flex: 1 1 100%; justify-content: center; }
   .hero-dot { width: 1.6rem; }
+  .sector-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-arrows .icon-button { width: 42px; height: 42px; }
   .footer-strip, .footer-certs { flex-direction: column; align-items: flex-start; }
   .about-stamp { right: 0; }
