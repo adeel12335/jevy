@@ -1,6 +1,6 @@
 # Jevvy Construction Inc — website
 
-Marketing site for Jevvy Construction Inc: concrete, masonry and stair construction,
+Marketing site for Jevvy Construction Inc: concrete, masonry and subway construction,
 Jamaica, New York. **69 pages, all prerendered to static HTML.** No server required.
 
 Vite · React 19 · TypeScript · React Router · Lenis · Radix Dialog · sharp (build-time image pipeline)

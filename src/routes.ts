@@ -23,8 +23,8 @@ const abs = (path: string) => `${SITE_URL}${path === '/' ? '/' : path}`
 
 const HOME: PageMeta = {
   path: '/',
-  title: `${brand} | Concrete, Masonry & Stair Construction in Jamaica, NY`,
-  description: 'Jevvy Construction Inc builds concrete, masonry and stair work from Jamaica, New York. MWBE, DBE and SBE prequalified with DASNY, NYC SBS, NYS ESD, NYC SCA, OGS NY, PANYNJ, MTA and NJDOT.',
+  title: `${brand} | Concrete, Masonry & Subway Construction in Jamaica, NY`,
+  description: 'Jevvy Construction Inc builds concrete, masonry and subway work from Jamaica, New York. MWBE, DBE and SBE prequalified with DASNY, NYC SBS, NYS ESD, NYC SCA, OGS NY, PANYNJ, MTA and NJDOT.',
   image: 'crew',
   photo: true,
 }
@@ -34,15 +34,15 @@ const STATIC: PageMeta[] = [
   {
     path: '/about',
     title: `About ${brand} | Construction Corporation in Jamaica, NY`,
-    description: `${brand} is a construction corporation in Jamaica, New York, working in concrete, masonry and stair construction and prequalified with eight public agencies across New York and New Jersey.`,
+    description: `${brand} is a construction corporation in Jamaica, New York, working in concrete, masonry and subway construction and prequalified with eight public agencies across New York and New Jersey.`,
     image: 'sidewalk',
     photo: true,
     trail: [{ name: 'About', path: '/about' }],
   },
   {
     path: '/services',
-    title: `Construction Services | Concrete, Masonry & Stairs | ${brand}`,
-    description: 'Concrete and sidewalk work, masonry and blockwork, and stair construction across New York and New Jersey — every service documented in photographs from our own sites.',
+    title: `Construction Services | Concrete, Masonry & Subway | ${brand}`,
+    description: 'Concrete and sidewalk work, masonry and blockwork, and subway construction across New York and New Jersey — every service documented in photographs from our own sites.',
     image: 'masonry',
     photo: true,
     trail: [{ name: 'Services', path: '/services' }],
@@ -72,7 +72,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/contact',
     title: `Contact ${brand} | Jamaica, NY`,
-    description: `${company.street}, ${company.locality}, ${company.region} ${company.postalCode}. Call ${company.telephone} or email ${company.email} to discuss concrete, masonry or stair work.`,
+    description: `${company.street}, ${company.locality}, ${company.region} ${company.postalCode}. Call ${company.telephone} or email ${company.email} to discuss concrete, masonry or subway work.`,
     image: 'sidewalk',
     trail: [{ name: 'Contact', path: '/contact' }],
   },
@@ -101,7 +101,7 @@ export const pages: PageMeta[] = [...STATIC, ...SERVICE_PAGES, ...PROJECT_PAGES]
 export const notFoundMeta: PageMeta = {
   path: '/404',
   title: `Page not found | ${brand}`,
-  description: 'That page is not on this site. Everything we build — concrete, masonry and stair work — is one click away.',
+  description: 'That page is not on this site. Everything we build — concrete, masonry and subway work — is one click away.',
   image: 'crew',
   noindex: true,
 }
@@ -133,7 +133,7 @@ const organization = {
     addressCountry: company.country,
   },
   areaServed: company.areaServed.map(name => ({ '@type': 'State', name })),
-  knowsAbout: ['Concrete construction', 'Sidewalk construction', 'Masonry and blockwork', 'Stair construction', 'Site preparation'],
+  knowsAbout: ['Concrete construction', 'Sidewalk construction', 'Masonry and blockwork', 'Subway construction', 'Site preparation'],
   hasCredential: certifications.map(group => ({
     '@type': 'EducationalOccupationalCredential',
     credentialCategory: `${group.label} (${group.type})`,

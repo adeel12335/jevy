@@ -11,7 +11,7 @@ export function StairsIcon({ size = 24, strokeWidth = 1.6 }: IconProps) {
   </svg>
 }
 
-export const tradeIcons: ComponentType<IconProps>[] = [Layers2, BrickWall, StairsIcon]
+export const tradeIcons: ComponentType<IconProps>[] = [Layers2, BrickWall, TrainFront]
 
 /* One mark per kind of site in src/data.ts `sectors`. */
 export const sectorIcons: Record<'museum' | 'school' | 'hospital' | 'sidewalk' | 'parking' | 'station', ComponentType<IconProps>> = {

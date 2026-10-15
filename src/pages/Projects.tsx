@@ -18,7 +18,7 @@ export default function Projects() {
     <PageHeader
       eyebrow="The archive"
       title={['Every photograph', 'is our own work.']}
-      lede={<p>{projects.length} frames from our concrete, formwork, masonry, stone, tile, stair and groundwork sites across New York and New Jersey. No stock images and no renders — just the work as it went in.</p>}
+      lede={<p>{projects.length} frames from our concrete, formwork, masonry, stone, tile, subway and groundwork sites across New York and New Jersey. No stock images and no renders — just the work as it went in.</p>}
       trail={meta.trail!}
       compact
     />

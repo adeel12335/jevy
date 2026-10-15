@@ -16,7 +16,7 @@ export function FeaturedWork() {
           <p className="eyebrow">Our work</p>
           <h2 id="projects-title"><Lines text={['A closer look', 'at the build.']} /></h2>
         </div>
-        <p className="lede">Concrete, masonry and stair work from sites across New York. Open a project to see it full size.</p>
+        <p className="lede">Concrete, masonry and subway work from sites across New York. Open a project to see it full size.</p>
       </Reveal>
       <Reveal className="work-grid">
         {featured.map((project, index) => <Link

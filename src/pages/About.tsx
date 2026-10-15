@@ -14,7 +14,7 @@ export default function About() {
     <PageHeader
       eyebrow="About Jevvy"
       title={['Care in every detail.', 'Commitment on every site.']}
-      lede={<p>{company.name} is a {company.legalType.toLowerCase()} working in concrete, masonry and stair construction out of {company.locality}, New York.</p>}
+      lede={<p>{company.name} is a {company.legalType.toLowerCase()} working in concrete, masonry and subway construction out of {company.locality}, New York.</p>}
       trail={meta.trail!}
       image="sidewalk"
       imageAlt="Finished concrete sidewalk panels alongside a stone retaining wall"
@@ -27,7 +27,7 @@ export default function About() {
           <h2 id="about-story"><Lines text={['The work speaks', 'for itself.']} /></h2>
         </Reveal>
         <Reveal className="about-page-copy" delay={0.08}>
-          <p>Jevvy Construction Inc builds in concrete, masonry and stairs. The work runs from the excavation and drainage beneath a surface through formwork and reinforcement to the finished, jointed pour — and from a single block wall to the stair flights and the blockwork that carries them.</p>
+          <p>Jevvy Construction Inc builds in concrete, masonry and subway stations. The work runs from the excavation and drainage beneath a surface through formwork and reinforcement to the finished, jointed pour — and from a single block wall to the station stair flights and the blockwork that carries them.</p>
           <p>Every photograph on this site came off one of our own jobs. There are no renders here and no stock photography: {projects.length} frames of real surfaces, real formwork and real site conditions, so you can judge the standard before you call us.</p>
           <p>We are prequalified as a Minority and Women-owned, Disadvantaged and Small Business Enterprise with {agencyCount} public agencies across New York and New Jersey, which lets general contractors and agencies count our scope toward their participation goals.</p>
           <TextLink to="/qualifications">See the prequalifications</TextLink>

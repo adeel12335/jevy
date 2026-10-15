@@ -12,7 +12,7 @@ export function Sectors() {
           <p className="eyebrow">Where we work</p>
           <h2 id="sectors-title"><Lines text={['Public buildings.', 'Public ground.']} accent={1} /></h2>
         </div>
-        <p className="lede">Museums, schools, hospitals, sidewalks, parking and subway stations: the sites our concrete, stone, tile and stair work goes into.</p>
+        <p className="lede">Museums, schools, hospitals, sidewalks, parking and subway stations: the sites our concrete, masonry, stone, tile and station work goes into.</p>
       </Reveal>
       <ul className="sector-grid">
         {sectors.map((sector, index) => {

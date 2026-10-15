@@ -11,7 +11,7 @@ export const company = {
   name: 'Jevvy Construction Inc',
   legalType: 'Construction Corporation',
   tagline: 'Building with purpose. Delivering with care.',
-  description: 'Concrete, masonry and stair construction from Jamaica, New York. MWBE, DBE and SBE prequalified with public agencies across New York and New Jersey.',
+  description: 'Concrete, masonry and subway construction from Jamaica, New York. MWBE, DBE and SBE prequalified with public agencies across New York and New Jersey.',
   street: '175-61 Hillside Avenue, Suite 202',
   locality: 'Jamaica',
   region: 'NY',
