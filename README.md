@@ -1,7 +1,7 @@
 # Jevvy Construction Inc — website
 
-Marketing site for Jevvy Construction Inc: concrete, masonry and subway construction,
-Jamaica, New York. **69 pages, all prerendered to static HTML.** No server required.
+Marketing site for Jevvy Construction Inc: residential and commercial construction services,
+Jamaica, New York. **74 pages, all prerendered to static HTML.** No server required.
 
 Vite · React 19 · TypeScript · React Router · Lenis · Radix Dialog · sharp (build-time image pipeline)
 
@@ -20,7 +20,7 @@ npm run dev        # http://127.0.0.1:5173
 | Script | What it does |
 | --- | --- |
 | `npm run dev` | Dev server with hot reload |
-| `npm run build` | Typecheck, build the client, build the SSR bundle, prerender all 69 pages |
+| `npm run build` | Typecheck, build the client, build the SSR bundle, prerender all 74 pages |
 | `npm run preview` | Vite's preview server — **note the caveat below** |
 | `npm run typecheck` | `tsc -b`, no emit |
 | `npm run assets` | Regenerates every image in `public/media` from `images/` |
@@ -78,7 +78,7 @@ than replacing it, and `src/head.ts` keeps the head in step on client-side navig
 | `/about` | About |
 | `/services`, `/services/:slug` | Services index and one page per trade (3) |
 | `/process` | How a job goes in |
-| `/projects`, `/projects/:id` | Gallery and one page per photograph (59) |
+| `/projects`, `/projects/:id` | Gallery and one page per photograph (64) |
 | `/qualifications` | MWBE / DBE / SBE register |
 | `/contact` | Contact |
 | `404.html` | Served by the host for anything else |
@@ -161,7 +161,7 @@ the JSON-LD graph. This is the only place SEO copy lives.
 
 ## Photography
 
-59 of the 64 supplied photographs are used (five of the seven block-wall frames were set aside at the company's request). They live in `images/` as the original JPEGs and are
+64 of the 69 supplied photographs are used (five of the seven block-wall frames were set aside at the company's request). They live in `images/` as the original JPEGs and are
 catalogued by number in `mockups/asset-index.txt`.
 
 `scripts/prepare-assets.mjs` turns them into `public/media/`:
@@ -221,7 +221,7 @@ consent notice.
 - Skip link is the first tab stop; focus rings are visible throughout.
 - Every page has one `<h1>`, a breadcrumb trail and a `BreadcrumbList` in its JSON-LD.
 - The archive strip on the home page is a visual duplicate of `/projects` and is hidden
-  from screen readers; the gallery page holds the same 59 photographs with captions,
+  from screen readers; the gallery page holds the same 64 photographs with captions,
   filters and links.
 - `prefers-reduced-motion` disables smooth scrolling, both parallax effects, the reveals
   and the count-up — everything renders at its final state.

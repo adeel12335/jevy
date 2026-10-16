@@ -23,9 +23,9 @@ const abs = (path: string) => `${SITE_URL}${path === '/' ? '/' : path}`
 
 const HOME: PageMeta = {
   path: '/',
-  title: `${brand} | Concrete, Masonry & Subway Construction in Jamaica, NY`,
-  description: 'Jevvy Construction Inc builds concrete, masonry and subway work from Jamaica, New York. MWBE, DBE and SBE prequalified with DASNY, NYC SBS, NYS ESD, NYC SCA, OGS NY, PANYNJ, MTA and NJDOT.',
-  image: 'crew',
+  title: `${brand} | Residential & Commercial Construction Services | New York & New Jersey`,
+  description: 'Jevvy Construction Inc provides renovation and new construction services for residential and commercial projects throughout New York and New Jersey. Prequalified MWBE with DASNY, NYC SCA, NYC SBS, NYS ESD and MTA, SBE with PANYNJ, DBE with NJDOT, and registered with New York State OGS.',
+  image: 'commercial-deck',
   photo: true,
 }
 
@@ -34,7 +34,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/about',
     title: `About ${brand} | Construction Corporation in Jamaica, NY`,
-    description: `${brand} is a construction corporation in Jamaica, New York, working in concrete, masonry and subway construction and prequalified with eight public agencies across New York and New Jersey.`,
+    description: `${brand} is a construction corporation in Jamaica, New York, providing residential and commercial construction services, prequalified with seven public agencies across New York and New Jersey.`,
     image: 'sidewalk',
     photo: true,
     trail: [{ name: 'About', path: '/about' }],
@@ -65,7 +65,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/qualifications',
     title: `MWBE, DBE & SBE Prequalifications | ${brand}`,
-    description: 'Prequalified MWBE with DASNY, NYC SBS, NYS ESD, NYC SCA, OGS NY and PANYNJ. Prequalified DBE with MTA and NJDOT. SBE and DBE with the Port Authority of New York and New Jersey.',
+    description: 'Prequalified MWBE with DASNY, NYC SCA, NYC SBS, NYS ESD and MTA. SBE with the Port Authority of New York and New Jersey. DBE with the New Jersey Department of Transportation. Registered vendor with the New York State Office of General Services.',
     image: 'crew',
     trail: [{ name: 'Qualifications', path: '/qualifications' }],
   },
@@ -101,7 +101,7 @@ export const pages: PageMeta[] = [...STATIC, ...SERVICE_PAGES, ...PROJECT_PAGES]
 export const notFoundMeta: PageMeta = {
   path: '/404',
   title: `Page not found | ${brand}`,
-  description: 'That page is not on this site. Everything we build — concrete, masonry and subway work — is one click away.',
+  description: 'That page is not on this site. Everything we build — residential and commercial construction — is one click away.',
   image: 'crew',
   noindex: true,
 }
@@ -133,7 +133,7 @@ const organization = {
     addressCountry: company.country,
   },
   areaServed: company.areaServed.map(name => ({ '@type': 'State', name })),
-  knowsAbout: ['Subway construction', 'Concrete construction', 'Sidewalk construction', 'Masonry and stonework', 'Tiling and finish work', 'General plumbing', 'Contract administration', 'Owner and contractor representation', 'Cost estimating', 'Quality control inspections', 'Subcontracting support', 'Site preparation'],
+  knowsAbout: ['Residential construction', 'Commercial construction', 'Subway construction', 'Concrete work', 'Masonry, brick and block work', 'Stonework and installation', 'Tile installation', 'K-rail installation', 'Plumbing', 'Interior and exterior painting', 'Contract administration', 'Owner and contractor representation', 'Cost estimating', 'Quality control inspections', 'Subcontracting support'],
   hasCredential: certifications.map(group => ({
     '@type': 'EducationalOccupationalCredential',
     credentialCategory: `${group.label} (${group.type})`,

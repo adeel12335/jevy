@@ -34,7 +34,7 @@ export function FindUs() {
         <div className="findus-card">
           <span className="findus-pin" aria-hidden="true"><MapPin size={18} strokeWidth={1.8} /></span>
           <strong>{company.name}</strong>
-          <span className="findus-type">Concrete, masonry &amp; subway construction</span>
+          <span className="findus-type">Residential &amp; commercial construction</span>
           <address>{company.street}<br />{company.locality}, {company.region} {company.postalCode}</address>
 
           <details className="findus-estimate">

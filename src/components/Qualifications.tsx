@@ -17,8 +17,8 @@ export function Qualifications({ heading = true }: { heading?: boolean }) {
           <p className="eyebrow">Prequalifications</p>
           <h2 id="qualifications-title"><Lines text={['Certified.', 'Registered.', 'On the list.']} /></h2>
         </> : null}
-        <p className="lede">Jevvy Construction Inc is certified as a Minority and Women-owned, Disadvantaged and Small Business Enterprise with {agencyCount} public agencies across New York and New Jersey.</p>
-        <div className="cert-types"><span>MWBE</span><span>DBE</span><span>SBE</span></div>
+        <p className="lede">Jevvy Construction Inc is certified as a Minority and Women-owned, Small and Disadvantaged Business Enterprise with {agencyCount} public agencies across New York and New Jersey, and is a registered vendor with the New York State Office of General Services.</p>
+        <div className="cert-types"><span>MWBE</span><span>SBE</span><span>DBE</span><span>OGS registered</span></div>
         <TextLink to="/contact" className="cert-link">Discuss a project</TextLink>
       </Reveal>
       <Reveal delay={0.1}>

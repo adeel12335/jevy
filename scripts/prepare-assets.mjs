@@ -42,6 +42,8 @@ const photos = {
   'station-stairs': 58, 'station-stairs-before': 59, 'stair-rail': 60, 'stair-nosings': 61, 'stair-rebuilt': 62, 'stair-breakout': 63,
   // Groundwork
   'gateway-clearance': 64,
+  // Commercial building construction, supplied 16 October
+  'commercial-wall-forms': 65, 'commercial-deck': 66, 'commercial-wall-crew': 67, 'commercial-column': 68, 'commercial-columns': 69,
 }
 
 /* Every photograph is written at the three sizes the layout actually asks
@@ -49,7 +51,7 @@ const photos = {
    phone photographs of gravel and concrete, so each extra size is expensive
    and nothing but the hero is ever displayed above 1200px. */
 const WIDTHS = [400, 800, 1200]
-const FULL_BLEED = new Set(['crew', 'sidewalk', 'masonry', 'stairs'])
+const FULL_BLEED = new Set(['crew', 'sidewalk', 'masonry', 'stairs', 'commercial-deck', 'commercial-wall-forms'])
 const QUALITY = { 400: 76, 800: 80, 1200: 78, 1600: 72 }
 
 const manifest = []

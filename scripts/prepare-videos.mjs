@@ -13,6 +13,10 @@ const clips = {
   'plaza-seal': { file: 'WhatsApp Video 2026-10-15 at 5.43.31 PM.mp4', poster: 0.1 },
   'stone-steps-set': { file: 'WhatsApp Video 2026-10-15 at 5.43.30 PM.mp4', poster: 0.5 },
   'stone-steps-lift': { file: 'WhatsApp Video 2026-10-15 at 5.43.30 PM (1).mp4', poster: 0.5 },
+  // Commercial building construction, portrait clips supplied 16 October
+  'commercial-deck-site': { file: 'WhatsApp Video 2026-10-16 at 5.18.02 PM (1).mp4', poster: 0.5 },
+  'commercial-pour-night': { file: 'WhatsApp Video 2026-10-16 at 5.18.02 PM (2).mp4', poster: 0.5 },
+  'commercial-deck-crew': { file: 'WhatsApp Video 2026-10-16 at 5.18.02 PM.mp4', poster: 0.15 },
 }
 
 const output = resolve('public/media/video')

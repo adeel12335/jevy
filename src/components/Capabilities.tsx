@@ -1,4 +1,5 @@
 import { capabilities } from '../data'
+import { company } from '../site'
 import { Lines, Reveal, Setout } from './ui'
 
 const pad = (value: number) => String(value).padStart(2, '0')
@@ -13,9 +14,9 @@ export function Capabilities() {
       <Reveal className="section-head">
         <div>
           <p className="eyebrow">What we do</p>
-          <h2 id="capabilities-title"><Lines text={['Expertise in', 'subway construction.']} /></h2>
+          <h2 id="capabilities-title"><Lines text={['Residential & commercial', 'construction services.']} /></h2>
         </div>
-        <p className="lede">The work on site, and the services that carry a project from the estimate to the close-out.</p>
+        <p className="lede">{company.intro}</p>
       </Reveal>
       <div className="cap-grid">
         {capabilities.map((group, index) => <Reveal key={group.title} className="cap-group" delay={index * 0.08}>
@@ -28,6 +29,7 @@ export function Capabilities() {
           </ol>
         </Reveal>)}
       </div>
+      <Reveal as="div" className="cap-foot" delay={0.16}><span>From new construction to renovations.</span></Reveal>
     </div>
   </section>
 }

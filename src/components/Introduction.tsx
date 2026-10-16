@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
 import { prefersReducedMotion, useScrollTransform } from '../parallax'
 import { agencyCount, countByCategory, heroSlides, projectById, services } from '../data'
+import { company } from '../site'
 import { tradeIcons } from './icons'
 import { CountUp, Lines, Photo, Reveal, Rise, Setout, TextLink } from './ui'
 
@@ -187,8 +188,8 @@ export function AboutIntro() {
       <Reveal className="about-copy" delay={0.1}>
         <p className="eyebrow">About Jevvy</p>
         <h2 id="about-title"><Lines text={['Care in every detail.', 'Commitment on every site.']} /></h2>
-        <p>Jevvy Construction Inc is a New York construction corporation working in concrete, masonry and subway construction. Every photograph on this site is our own work, on our own jobs.</p>
-        <p>We hold MWBE, DBE and SBE certifications across {agencyCount} public agencies in New York and New Jersey.</p>
+        <p>{company.intro}</p>
+        <p>Every photograph on this site is our own work, on our own jobs. We hold MWBE, SBE and DBE certifications across {agencyCount} public agencies in New York and New Jersey, and we are a registered vendor with New York State OGS.</p>
         <TextLink to="/about">Get to know Jevvy</TextLink>
       </Reveal>
     </div>

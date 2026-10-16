@@ -1,4 +1,4 @@
-import { agencyCount, certifications } from '../data'
+import { agencyCount, certified } from '../data'
 import { company } from '../site'
 import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
@@ -8,13 +8,13 @@ import { Lines, Reveal } from '../components/ui'
 
 export default function QualificationsPage() {
   const meta = metaFor('/qualifications')
-  const types = certifications.map(group => group.type).join(', ')
+  const types = certified.map(group => group.type).join(', ')
 
   return <>
     <PageHeader
       eyebrow="Prequalifications"
       title={['Certified.', 'Registered.', 'On the list.']}
-      lede={<p>{company.name} is prequalified {types} with {agencyCount} public agencies across New York and New Jersey — so our scope can count toward a participation goal on your project.</p>}
+      lede={<p>{company.name} is prequalified {types} with {agencyCount} public agencies across New York and New Jersey, and registered with New York State OGS — so our scope can count toward a participation goal on your project.</p>}
       trail={meta.trail!}
       compact
     />

@@ -16,7 +16,7 @@ export function Footer() {
         <div className="footer-brand">
           <Link to="/" className="footer-logo" aria-label={`${company.name} home`}><Logo /></Link>
           <p className="footer-tagline">{tagline[0]}<span className="accent">{tagline[1]}</span></p>
-          <p className="footer-blurb">Concrete, masonry and subway construction from {company.locality}, New York, prequalified with {agencyCount} public agencies across New York and New Jersey.</p>
+          <p className="footer-blurb">Residential and commercial construction services throughout New York and New Jersey, prequalified with {agencyCount} public agencies and registered with New York State OGS.</p>
         </div>
 
         <nav className="footer-links" aria-label="Services">
@@ -53,7 +53,7 @@ export function Footer() {
           <ul className="footer-badges" aria-label="Certifications">
             {certifications.map(group => <li key={group.type} title={group.label}>{group.type}</li>)}
           </ul>
-          <p>Prequalified with {agencyCount} public agencies in New York &amp; New Jersey</p>
+          <p>Prequalified with {agencyCount} public agencies in New York &amp; New Jersey · Registered with OGS NY</p>
         </div>
         <ul className="footer-socials" aria-label={`Follow ${company.name}`}>
           {socials.map(social => {
