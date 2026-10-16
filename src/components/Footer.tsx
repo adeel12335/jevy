@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import { ArrowUp, Mail, MapPin, Phone, Printer } from 'lucide-react'
-import { agencyCount, certifications, services, socials } from '../data'
+import { agencyCount, certifications, prequalified, services, socials } from '../data'
 import { company } from '../site'
 import { socialIcons } from './icons'
 import { Logo, Setout } from './ui'
@@ -41,9 +41,9 @@ export function Footer() {
           <h2>Office</h2>
           <ul className="footer-lines">
             <li><MapPin size={17} aria-hidden="true" /><address>{company.street}<br />{company.locality}, {company.region} {company.postalCode}</address></li>
+            <li><Mail size={17} aria-hidden="true" /><a href={`mailto:${company.email}`}>{company.email}</a></li>
             <li><Phone size={17} aria-hidden="true" /><a href={company.telephoneHref}>{company.telephone}</a></li>
             <li><Printer size={17} aria-hidden="true" /><span>Fax {company.fax}</span></li>
-            <li><Mail size={17} aria-hidden="true" /><a href={`mailto:${company.email}`}>{company.email}</a></li>
           </ul>
         </div>
       </div>
@@ -53,7 +53,7 @@ export function Footer() {
           <ul className="footer-badges" aria-label="Certifications">
             {certifications.map(group => <li key={group.type} title={group.label}>{group.type}</li>)}
           </ul>
-          <p>Prequalified with {agencyCount} public agencies in New York &amp; New Jersey · Registered with OGS NY</p>
+          <p>Prequalified {prequalified.join(' · ')} · Registered with OGS NY</p>
         </div>
         <ul className="footer-socials" aria-label={`Follow ${company.name}`}>
           {socials.map(social => {

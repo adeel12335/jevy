@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { ArrowRight, Phone } from 'lucide-react'
+import { ArrowRight, Mail } from 'lucide-react'
 import { company } from '../site'
 import { Lines, Reveal, Setout } from './ui'
 
@@ -17,10 +17,10 @@ export function CallToAction({ eyebrow = 'Next step', title = ['Tell us about', 
         <h2 id="cta-title"><Lines text={title} /></h2>
       </div>
       <Reveal className="cta-actions" delay={0.1}>
-        <p className="lede">{lede ?? 'Send us the scope and the timeline, or call the office. We will come back to you about the work.'}</p>
+        <p className="lede">{lede ?? 'Send us the scope and the timeline by email and we will come back to you about the work.'}</p>
         <div className="cta-buttons">
           <Link to="/contact" className="button">Start a Project <ArrowRight size={18} aria-hidden="true" /></Link>
-          <a href={company.telephoneHref} className="button button-outline"><Phone size={17} aria-hidden="true" />{company.telephone}</a>
+          <a href={`mailto:${company.email}`} className="button button-outline"><Mail size={17} aria-hidden="true" />Email us</a>
         </div>
       </Reveal>
     </div>

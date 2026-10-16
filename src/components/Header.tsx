@@ -45,8 +45,8 @@ export function Header() {
             <Link to="/contact" className="button" onClick={() => setOpen(false)}>Start a Project <ArrowRight size={18} /></Link>
             <div className="mobile-menu-contact">
               <span>Let us talk about your project</span>
-              <a href={company.telephoneHref}>{company.telephone}</a>
               <a href={`mailto:${company.email}`}>{company.email}</a>
+              <a href={company.telephoneHref}>{company.telephone}</a>
             </div>
           </Dialog.Content>
         </Dialog.Portal>

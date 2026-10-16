@@ -110,7 +110,6 @@ export const certifications: Credential[] = [
   {
     type: 'MWBE', label: 'Minority and Women-owned Business Enterprise', kind: 'certification', agencies: [
       { code: 'DASNY', name: 'Dormitory Authority of the State of New York' },
-      { code: 'NYC SCA', name: 'NYC School Construction Authority' },
       { code: 'NYC SBS', name: 'NYC Department of Small Business Services' },
       { code: 'NYS ESD', name: 'Empire State Development' },
       { code: 'MTA', name: 'Metropolitan Transportation Authority' },
@@ -138,6 +137,11 @@ export const registrations = certifications.filter(group => group.kind === 'regi
 /* Agencies the company holds a certification with; the OGS registration is
    counted separately wherever it is mentioned. */
 export const agencyCount = new Set(certified.flatMap(group => group.agencies.map(agency => agency.code))).size
+
+const listOf = (items: string[]) => items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('')
+/* One phrase per certification, in the company's own form: "MWBE with DASNY,
+   NYC SBS, NYS ESD and MTA". */
+export const prequalified = certified.map(group => `${group.type} with ${listOf(group.agencies.map(agency => agency.code))}`)
 
 export const navigation = [
   { label: 'About', href: '/about' },

@@ -1,4 +1,4 @@
-import { categories, certifications, inCategory, projects, services } from './data'
+import { categories, certifications, inCategory, prequalified, projects, services } from './data'
 import { SITE_URL, company, socials } from './site'
 
 /* Every page on the site, with the head it needs. The client reads this on
@@ -24,7 +24,7 @@ const abs = (path: string) => `${SITE_URL}${path === '/' ? '/' : path}`
 const HOME: PageMeta = {
   path: '/',
   title: `${brand} | Residential & Commercial Construction Services | New York & New Jersey`,
-  description: 'Jevvy Construction Inc provides renovation and new construction services for residential and commercial projects throughout New York and New Jersey. Prequalified MWBE with DASNY, NYC SCA, NYC SBS, NYS ESD and MTA, SBE with PANYNJ, DBE with NJDOT, and registered with New York State OGS.',
+  description: `Jevvy Construction Inc provides renovation and new construction services for residential and commercial projects throughout New York and New Jersey. Prequalified ${prequalified.join(', ')}, and registered with New York State OGS.`,
   image: 'commercial-deck',
   photo: true,
 }
@@ -34,7 +34,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/about',
     title: `About ${brand} | Construction Corporation in Jamaica, NY`,
-    description: `${brand} is a construction corporation in Jamaica, New York, providing residential and commercial construction services, prequalified with seven public agencies across New York and New Jersey.`,
+    description: `${brand} is a construction corporation in Jamaica, New York, providing residential and commercial construction services, prequalified with six public agencies across New York and New Jersey.`,
     image: 'sidewalk',
     photo: true,
     trail: [{ name: 'About', path: '/about' }],
@@ -65,14 +65,14 @@ const STATIC: PageMeta[] = [
   {
     path: '/qualifications',
     title: `MWBE, DBE & SBE Prequalifications | ${brand}`,
-    description: 'Prequalified MWBE with DASNY, NYC SCA, NYC SBS, NYS ESD and MTA. SBE with the Port Authority of New York and New Jersey. DBE with the New Jersey Department of Transportation. Registered vendor with the New York State Office of General Services.',
+    description: `Prequalified ${prequalified.join('; ')}. Registered vendor with the New York State Office of General Services.`,
     image: 'crew',
     trail: [{ name: 'Qualifications', path: '/qualifications' }],
   },
   {
     path: '/contact',
     title: `Contact ${brand} | Jamaica, NY`,
-    description: `${company.street}, ${company.locality}, ${company.region} ${company.postalCode}. Call ${company.telephone} or email ${company.email} to discuss concrete, masonry or subway work.`,
+    description: `${company.street}, ${company.locality}, ${company.region} ${company.postalCode}. Email ${company.email} or call the office on ${company.telephone} to discuss concrete, masonry or subway work.`,
     image: 'sidewalk',
     trail: [{ name: 'Contact', path: '/contact' }],
   },
@@ -122,8 +122,8 @@ const organization = {
   logo: `${SITE_URL}/icon-512.png`,
   image: `${SITE_URL}/og-image.jpg`,
   email: company.email,
-  telephone: '+1-415-747-4786',
-  faxNumber: '+1-917-325-5173',
+  telephone: '+1-786-767-0403',
+  faxNumber: '+1-646-352-503',
   address: {
     '@type': 'PostalAddress',
     streetAddress: company.street,

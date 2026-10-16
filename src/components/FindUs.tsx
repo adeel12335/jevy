@@ -40,8 +40,8 @@ export function FindUs() {
           <details className="findus-estimate">
             <summary>Free estimate <ChevronDown size={16} aria-hidden="true" /></summary>
             <div className="findus-reveal">
-              <a href={company.telephoneHref}><Phone size={16} aria-hidden="true" />{company.telephone}</a>
               <a href={`mailto:${company.email}`}><Mail size={16} aria-hidden="true" />{company.email}</a>
+              <a href={company.telephoneHref}><Phone size={16} aria-hidden="true" />{company.telephone}</a>
               <Link to="/contact" className="button">Start a Project <ArrowRight size={16} aria-hidden="true" /></Link>
             </div>
           </details>

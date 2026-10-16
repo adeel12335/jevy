@@ -96,7 +96,7 @@ export default function About() {
     <CallToAction
       eyebrow="Work with us"
       title={['Bring us in', 'on your next job.']}
-      lede={`Call the office on ${company.telephone} or send the scope through. We will come back to you about the work.`}
+      lede={`Email ${company.email} or send the scope through the form. We will come back to you about the work.`}
     />
   </>
 }

@@ -20,9 +20,9 @@ export const company = {
   region: 'NY',
   postalCode: '11432',
   country: 'US',
-  telephone: '(415) 747-4786',
-  telephoneHref: 'tel:+14157474786',
-  fax: '(917) 325-5173',
+  telephone: '(786) 767-0403',
+  telephoneHref: 'tel:+17867670403',
+  fax: '+1 646 352 503',
   email: 'info@jevvyconstruction.com',
   areaServed: ['New York', 'New Jersey'],
 } as const

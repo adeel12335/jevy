@@ -11,7 +11,7 @@ export default function ContactPage() {
     <PageHeader
       eyebrow="Let us talk"
       title={['Start with a', 'conversation.']}
-      lede={<p>The office is at {company.street}, {company.locality}, {company.region} {company.postalCode}. Call {company.telephone}, or send the scope through the form and we will come back to you about the work.</p>}
+      lede={<p>The office is at {company.street}, {company.locality}, {company.region} {company.postalCode}. Email {company.email} or send the scope through the form, or call the office on {company.telephone}, and we will come back to you about the work.</p>}
       trail={meta.trail!}
       compact
     />
