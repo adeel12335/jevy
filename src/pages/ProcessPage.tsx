@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { process, services } from '../data'
+import { featuredServices, process } from '../data'
 import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
 import { CallToAction } from '../components/CallToAction'
@@ -43,9 +43,9 @@ export default function ProcessPage() {
           </div>
         </Reveal>
         <div className="service-rows">
-          {services.map((service, index) => <Reveal key={service.slug} delay={index * 0.07}>
+          {featuredServices.map((service, index) => <Reveal key={service.slug} delay={index * 0.07}>
             <Link className="service-row" to={`/services/${service.slug}`}>
-              <Photo id={service.image} alt="" sizes="200px" />
+              <Photo id={service.image!} alt="" sizes="200px" />
               <span className="service-row-body">
                 <span className="service-row-title">{service.title}</span>
                 <span className="service-row-text">{service.description}</span>

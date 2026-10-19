@@ -1,4 +1,5 @@
-import { capabilities } from '../data'
+import { Link } from 'react-router'
+import { capabilities, services } from '../data'
 import { company } from '../site'
 import { Lines, Reveal, Setout } from './ui'
 
@@ -24,7 +25,13 @@ export function Capabilities() {
           <ol className="cap-list">
             {group.items.map(item => {
               count += 1
-              return <li key={item}><span className="cap-index" aria-hidden="true">{pad(count)}</span>{item}</li>
+              /* Each trade we offer has its own page; the project services
+                 around it do not, so those stay as plain entries. */
+              const service = services.find(entry => entry.title === item)
+              return <li key={item}>
+                <span className="cap-index" aria-hidden="true">{pad(count)}</span>
+                {service ? <Link to={`/services/${service.slug}`}>{item}</Link> : item}
+              </li>
             })}
           </ol>
         </Reveal>)}

@@ -2,9 +2,9 @@ import { useCallback, useEffect, useRef, useState, type AnimationEvent, type CSS
 import { Link } from 'react-router'
 import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
 import { prefersReducedMotion, useScrollTransform } from '../parallax'
-import { agencyCount, countByCategory, heroSlides, projectById, services } from '../data'
+import { agencyCount, countByCategory, featuredServices, heroSlides, projectById } from '../data'
 import { company } from '../site'
-import { tradeIcons } from './icons'
+import { serviceIcons } from './icons'
 import { CountUp, Lines, Photo, Reveal, Rise, Setout, TextLink } from './ui'
 
 /* Milliseconds per slide. Written into the section as --hero-interval so the
@@ -162,13 +162,13 @@ export function Hero() {
 
     <Rise className="hero-rail" delay={0.42}>
       <div className="container rail-grid">
-        {services.map((service, index) => {
-          const Icon = tradeIcons[index]
+        {featuredServices.map(service => {
+          const Icon = serviceIcons[service.slug]
           return <Link key={service.slug} className="rail-item" to={`/services/${service.slug}`}>
-            <Icon size={30} strokeWidth={1.4} />
+            {Icon ? <Icon size={30} strokeWidth={1.4} /> : null}
             <span className="rail-text">
               <span className="rail-title">{service.title}</span>
-              <span className="rail-count">{countByCategory(service.category)} photographs</span>
+              <span className="rail-count">{countByCategory(service.category!)} photographs</span>
             </span>
             <ArrowRight className="rail-go" size={20} aria-hidden="true" />
           </Link>

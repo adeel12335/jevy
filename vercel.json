@@ -49,5 +49,22 @@
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/services/concrete-sidewalks",
+      "destination": "/services/concrete-work",
+      "permanent": true
+    },
+    {
+      "source": "/services/masonry-blockwork",
+      "destination": "/services/masonry-brick-block",
+      "permanent": true
+    },
+    {
+      "source": "/services/subway-construction",
+      "destination": "/services",
+      "permanent": true
+    }
+  ]
 }

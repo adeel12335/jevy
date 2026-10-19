@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import { ArrowRight } from 'lucide-react'
-import { projectById, services } from '../data'
+import { featuredServices, projectById } from '../data'
 import { Lines, Photo, Reveal } from './ui'
 
 export function Expertise({ heading = true }: { heading?: boolean }) {
@@ -11,13 +11,13 @@ export function Expertise({ heading = true }: { heading?: boolean }) {
           <p className="eyebrow">Our expertise</p>
           <h2 id="expertise-title"><Lines text={['Practical expertise.', 'Careful execution.']} /></h2>
         </div>
-        <p className="lede">Three trades, documented across our own project sites in New York. Open any one of them for the detail.</p>
+        <p className="lede">The four trades our own site photography covers. Every service we offer is listed below them.</p>
       </Reveal> : null}
       <div className="trade-strip">
-        {services.map((service, index) => {
-          const photo = projectById(service.image)!
+        {featuredServices.map((service, index) => {
+          const photo = projectById(service.image!)!
           return <Reveal key={service.slug} className="trade-panel" delay={index * 0.08}>
-            <Photo id={service.image} alt={photo.alt} sizes="(max-width: 1080px) 100vw, 34vw" />
+            <Photo id={service.image!} alt={photo.alt} sizes="(max-width: 1080px) 100vw, 26vw" />
             <div className="trade-shade" />
             <div className="trade-body">
               <span className="trade-index">{service.category}</span>

@@ -1,4 +1,4 @@
-import { BrickWall, Building, CircleParking, Footprints, Hospital, House, Landmark, Layers2, School, TrainFront } from 'lucide-react'
+import { Blocks, BrickWall, Building, CircleParking, Construction, Footprints, Frame, Grid3x3, Hospital, House, Landmark, Layers2, PaintRoller, School, SprayCan, Table2, TrainFront, Umbrella, Wrench } from 'lucide-react'
 import type { ComponentType, ReactNode } from 'react'
 
 export type IconProps = { size?: number; strokeWidth?: number }
@@ -11,7 +11,21 @@ export function StairsIcon({ size = 24, strokeWidth = 1.6 }: IconProps) {
   </svg>
 }
 
-export const tradeIcons: ComponentType<IconProps>[] = [Layers2, BrickWall, TrainFront]
+/* One mark per service in src/data.ts `services`, keyed by slug so the list
+   can grow or reorder without the icons sliding out of step. */
+export const serviceIcons: Record<string, ComponentType<IconProps>> = {
+  'concrete-work': Layers2,
+  'masonry-brick-block': BrickWall,
+  stonework: Blocks,
+  'tile-installation': Grid3x3,
+  'k-rail-installation': Construction,
+  plumbing: Wrench,
+  painting: PaintRoller,
+  countertops: Table2,
+  scaffolding: Frame,
+  waterproofing: Umbrella,
+  'cleaning-services': SprayCan,
+}
 
 /* One mark per kind of site in src/data.ts `sectors`. */
 export const sectorIcons: Record<'commercial' | 'residential' | 'museum' | 'school' | 'hospital' | 'sidewalk' | 'parking' | 'station', ComponentType<IconProps>> = {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { agencyCount, countByCategory, projects, services } from '../data'
+import { agencyCount, countByCategory, featuredServices, projects, services } from '../data'
 import { company } from '../site'
 import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
@@ -29,7 +29,7 @@ export default function About() {
         </Reveal>
         <Reveal className="about-page-copy" delay={0.08}>
           <p>{company.intro}</p>
-          <p>The work runs from the excavation and drainage beneath a surface through forms and reinforcement to the finished, jointed pour — and from a single block wall to a commercial building deck, a stone stair or a subway station flight.</p>
+          <p>The work runs from the excavation and drainage beneath a surface through forms and reinforcement to the finished, jointed pour — and from a single block wall to a commercial building deck, a stone stair or a station stairway.</p>
           <p>Every photograph on this site came off one of our own jobs. There are no renders here and no stock photography: {projects.length} frames of real surfaces, real formwork and real site conditions, so you can judge the standard before you call us.</p>
           <p>We are prequalified as a Minority and Women-owned, Small and Disadvantaged Business Enterprise with {agencyCount} public agencies across New York and New Jersey, and registered as a vendor with New York State OGS, which lets general contractors and agencies count our scope toward their participation goals.</p>
           <TextLink to="/qualifications">See the prequalifications</TextLink>
@@ -64,19 +64,19 @@ export default function About() {
         <Reveal className="section-head">
           <div>
             <p className="eyebrow">What we build</p>
-            <h2 id="about-trades"><Lines text={['Three trades,', 'one standard.']} /></h2>
+            <h2 id="about-trades"><Lines text={['Every trade,', 'one standard.']} /></h2>
           </div>
           <p className="lede">Each trade has its own page, with the full set of photographs behind it.</p>
         </Reveal>
         <div className="service-rows">
-          {services.map((service, index) => <Reveal key={service.slug} delay={index * 0.07}>
+          {featuredServices.map((service, index) => <Reveal key={service.slug} delay={index * 0.07}>
             <Link className="service-row" to={`/services/${service.slug}`}>
-              <Photo id={service.image} alt="" sizes="200px" />
+              <Photo id={service.image!} alt="" sizes="200px" />
               <span className="service-row-body">
                 <span className="service-row-title">{service.title}</span>
                 <span className="service-row-text">{service.description}</span>
               </span>
-              <span className="service-row-count">{countByCategory(service.category)}<small>photos</small></span>
+              <span className="service-row-count">{countByCategory(service.category!)}<small>photos</small></span>
             </Link>
           </Reveal>)}
           <Reveal delay={0.21}>

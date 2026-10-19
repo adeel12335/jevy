@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router'
 import App from './App'
-import { headFor, notFoundMeta, pages, metaFor } from './routes'
+import { headFor, notFoundMeta, pages, metaFor, redirects } from './routes'
 import { SITE_URL } from './site'
 
 /* Used only by scripts/prerender.mjs. Everything it needs to write a page —
@@ -14,6 +14,8 @@ export function render(path: string) {
 }
 
 export const siteUrl = SITE_URL
+
+export const redirectList = redirects
 
 export function routeList(): string[] {
   return [...pages.map(page => page.path), '/404']

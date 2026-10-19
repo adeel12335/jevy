@@ -86,6 +86,23 @@ Allow: /
 Sitemap: ${site}/sitemap.xml
 `)
 
+/* Host-level redirects for paths that have moved. Netlify and Cloudflare
+   Pages read _redirects from the publish directory; Vercel reads its own
+   config from the repository, so that copy is checked rather than written. */
+const redirects = server.redirectList
+const redirectLines = redirects.map(r => `${r.from}  ${r.to}  301`)
+await writeFile(resolve(DIST, '_redirects'), `${redirectLines.join('\n')}\n`)
+
+const vercelConfig = JSON.parse(await readFile(resolve('vercel.json'), 'utf8'))
+const vercelRedirects = vercelConfig.redirects ?? []
+const missing = redirects.filter(r => !vercelRedirects.some(
+  v => v.source === r.from && v.destination === r.to && v.permanent === true,
+))
+if (missing.length) {
+  const detail = missing.map(r => `  ${r.from} -> ${r.to}`).join('\n')
+  throw new Error(`vercel.json is missing permanent redirects:\n${detail}`)
+}
+
 /* The document head carries one inline script, which a strict content
    security policy will refuse unless its hash is allow-listed. Deriving the
    hash from the built HTML means the policy can never fall out of step with
@@ -152,3 +169,4 @@ const largest = pages.reduce((a, b) => (a.bytes > b.bytes ? a : b))
 console.log(`Prerendered ${pages.length} pages (largest ${Math.round(largest.bytes / 1024)} kB — ${largest.path})`)
 console.log(`Sitemap lists ${indexable.length} URLs at ${site}`)
 console.log(`CSP allows ${hashes.length} inline script hash(es)`)
+console.log(`${redirects.length} permanent redirects written`)

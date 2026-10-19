@@ -1,4 +1,4 @@
-export type Category = 'Commercial' | 'Concrete' | 'Foam Work' | 'Masonry' | 'Stone' | 'Tile' | 'Subway' | 'Groundwork'
+export type Category = 'Commercial' | 'Concrete' | 'Formwork' | 'Masonry' | 'Stone' | 'Tile' | 'Stairs' | 'Groundwork'
 export type Project = { id: string; title: string; category: Category; caption: string; alt: string }
 
 /* Every photograph supplied by the company, catalogued by trade. Titles and
@@ -8,10 +8,10 @@ export type Project = { id: string; title: string; category: Category; caption: 
 export const projects: Project[] = [
   { id: 'commercial-deck', title: 'Commercial Build: Deck Reinforcement', category: 'Commercial', caption: 'Reinforcement in', alt: 'Reinforcing steel tied out across a commercial building deck, with the city skyline beyond' },
   { id: 'sidewalk', title: 'Sidewalk & Retaining Wall', category: 'Concrete', caption: 'Finished panels', alt: 'Finished concrete sidewalk panels running alongside a stone retaining wall' },
-  { id: 'stairs', title: 'Subway Stairway Flight', category: 'Subway', caption: 'In progress', alt: 'Stair flight under construction with tiled walls and protected handrails' },
+  { id: 'stairs', title: 'Subway Stairway Flight', category: 'Stairs', caption: 'In progress', alt: 'Stair flight under construction with tiled walls and protected handrails' },
   { id: 'masonry', title: 'Block Wall', category: 'Masonry', caption: 'Laid and pointed', alt: 'Concrete block wall under construction on a project site' },
   { id: 'crew', title: 'Reinforcement Tied Out', category: 'Groundwork', caption: 'On site with the team', alt: 'Crew preparing a reinforced concrete sidewalk behind street barriers' },
-  { id: 'station-stairs', title: 'Station Stairway', category: 'Subway', caption: 'Reopened', alt: 'Rebuilt subway station stairway with yellow nosings, handrails and new floor tile' },
+  { id: 'station-stairs', title: 'Station Stairway', category: 'Stairs', caption: 'Reopened', alt: 'Rebuilt subway station stairway with yellow nosings, handrails and new floor tile' },
   { id: 'plaza-float', title: 'Lehman College: Floating the Slab', category: 'Concrete', caption: 'Floated', alt: 'Three crew members floating the fresh slab at the Lehman College building stairs' },
   { id: 'commercial-wall-forms', title: 'Commercial Build: Wall Forms', category: 'Commercial', caption: 'Forms set', alt: 'Wall forms and reinforcement set for a concrete wall on a commercial building site' },
   { id: 'tile-band', title: 'Wall Tile with Band', category: 'Tile', caption: 'Finished', alt: 'White wall tile with a blue and black band above a red quarry tile floor' },
@@ -19,12 +19,12 @@ export const projects: Project[] = [
   { id: 'walkway', title: 'Residential Sidewalk', category: 'Concrete', caption: 'Finished, reopened', alt: 'Completed concrete walkway along a residential street with street trees' },
   { id: 'driveway', title: 'Driveway Apron', category: 'Concrete', caption: 'Finished', alt: 'Wide concrete driveway apron leading to a garage in early morning light' },
   { id: 'commercial-wall-crew', title: 'Commercial Build: Setting a Wall Form', category: 'Commercial', caption: 'In progress', alt: 'Crew member on a ladder setting a wall form on a commercial building site' },
-  { id: 'plaza-formwork', title: 'Lehman College: Set Out for the Pour', category: 'Foam Work', caption: 'Set to line', alt: 'Timber forms and reinforcing mesh set out before the pour at the Lehman College building stairs' },
+  { id: 'plaza-formwork', title: 'Lehman College: Set Out for the Pour', category: 'Formwork', caption: 'Set to line', alt: 'Timber forms and reinforcing mesh set out before the pour at the Lehman College building stairs' },
   { id: 'entrance', title: 'Gated Entrance', category: 'Concrete', caption: 'Finished', alt: 'Concrete entrance drive between stone gateposts under a blue sky' },
   { id: 'block-wall', title: 'Block Wall Detail', category: 'Masonry', caption: 'Laid and pointed', alt: 'Detailed view of a newly laid concrete block wall above a timber plate' },
-  { id: 'stair-detail', title: 'Stairs at the Block Wall', category: 'Subway', caption: 'In progress', alt: 'Stair flight running alongside a new concrete block wall' },
+  { id: 'stair-detail', title: 'Stairs at the Block Wall', category: 'Stairs', caption: 'In progress', alt: 'Stair flight running alongside a new concrete block wall' },
   { id: 'tile-floor', title: 'Quarry Tile Floor', category: 'Tile', caption: 'Grouted', alt: 'Two crew members grouting a red quarry tile floor beside a glass wall' },
-  { id: 'stair-progress', title: 'Stairway Progress', category: 'Subway', caption: 'In progress', alt: 'Steps under construction with blue protective tape on the treads' },
+  { id: 'stair-progress', title: 'Stairway Progress', category: 'Stairs', caption: 'In progress', alt: 'Steps under construction with blue protective tape on the treads' },
   { id: 'pour', title: 'Night Pour', category: 'Concrete', caption: 'Placed and finished', alt: 'Freshly finished concrete panels on a city street after dark' },
   { id: 'commercial-column', title: 'Commercial Build: Column Cage', category: 'Commercial', caption: 'Reinforcement in', alt: 'Column reinforcement cage standing between shoring posts under a formed deck' },
   { id: 'stone-steps-crew', title: 'Lehman College: Setting the Steps', category: 'Stone', caption: 'In progress', alt: 'Crew setting the stone steps at the Lehman College building with a forklift alongside' },
@@ -32,47 +32,47 @@ export const projects: Project[] = [
   { id: 'prep', title: 'Drainage & Subbase', category: 'Groundwork', caption: 'Site preparation', alt: 'Trenching and drainage pipe laid before a concrete pour' },
   { id: 'plaza-pour', title: 'Lehman College: Slab Pour', category: 'Concrete', caption: 'Placed', alt: 'Crew placing concrete across the reinforced slab at the Lehman College building stairs' },
   { id: 'gate-driveway', title: 'Drive Through the Gates', category: 'Concrete', caption: 'Finished', alt: 'Finished concrete drive running between stone gateposts and iron gates' },
-  { id: 'stair-rail', title: 'New Flight with Rail', category: 'Subway', caption: 'Poured', alt: 'New concrete stair flight with a temporary timber handrail' },
-  { id: 'stairwell-narrow', title: 'Narrow Stairwell', category: 'Subway', caption: 'In progress', alt: 'Narrow stair flight rising between a rendered wall and a block wall' },
+  { id: 'stair-rail', title: 'New Flight with Rail', category: 'Stairs', caption: 'Poured', alt: 'New concrete stair flight with a temporary timber handrail' },
+  { id: 'stairwell-narrow', title: 'Narrow Stairwell', category: 'Stairs', caption: 'In progress', alt: 'Narrow stair flight rising between a rendered wall and a block wall' },
   { id: 'tile-ceiling', title: 'Tile to the Ceiling', category: 'Tile', caption: 'Finished', alt: 'White wall tile with a black band meeting a finished ceiling' },
   { id: 'retaining-walk', title: 'Walk Below the Wall', category: 'Concrete', caption: 'Finished', alt: 'Broad concrete walkway below a stone retaining wall with street barriers' },
   { id: 'tree-pit-walk', title: 'Walk with Tree Pits', category: 'Concrete', caption: 'Finished', alt: 'New sidewalk finished around a street tree pit on a residential block' },
-  { id: 'stair-treads', title: 'Treads Set Out', category: 'Subway', caption: 'Set out', alt: 'Stair treads set out and taped ready for finishing' },
+  { id: 'stair-treads', title: 'Treads Set Out', category: 'Stairs', caption: 'Set out', alt: 'Stair treads set out and taped ready for finishing' },
   { id: 'commercial-columns', title: 'Commercial Build: Columns & Shoring', category: 'Commercial', caption: 'In progress', alt: 'Column cages and shoring under a formed deck on a commercial building site' },
-  { id: 'slab-formwork', title: 'Slab Edge, Set to Line', category: 'Foam Work', caption: 'Forms in place', alt: 'Timber forms braced along a slab edge inside a plant room' },
+  { id: 'slab-formwork', title: 'Slab Edge, Set to Line', category: 'Formwork', caption: 'Forms in place', alt: 'Timber forms braced along a slab edge inside a plant room' },
   { id: 'slab-wide', title: 'Wide Slab', category: 'Concrete', caption: 'Fresh finish', alt: 'Wide concrete slab freshly floated across a street frontage' },
   { id: 'joint-detail', title: 'Control Joints', category: 'Concrete', caption: 'Jointed and floated', alt: 'Close view of control joints cut into a floated concrete surface' },
-  { id: 'stair-opening', title: 'Stair Opening', category: 'Subway', caption: 'Opened up', alt: 'Stair opening excavated and framed with the first treads set' },
+  { id: 'stair-opening', title: 'Stair Opening', category: 'Stairs', caption: 'Opened up', alt: 'Stair opening excavated and framed with the first treads set' },
   { id: 'alley-walk', title: 'Alley Walkway', category: 'Concrete', caption: 'Finished', alt: 'Concrete walkway laid along a narrow alley between brick buildings' },
-  { id: 'ramp-formwork', title: 'Ramp, Edges Set', category: 'Foam Work', caption: 'Forms in place', alt: 'Concrete ramp with the plywood forms still in place' },
+  { id: 'ramp-formwork', title: 'Ramp, Edges Set', category: 'Formwork', caption: 'Forms in place', alt: 'Concrete ramp with the plywood forms still in place' },
   { id: 'plaza-screed', title: 'Lehman College: Screeding', category: 'Concrete', caption: 'Screeded', alt: 'Concrete screeded level across the slab at the Lehman College building stairs' },
   { id: 'pour-edge', title: 'Pour at the Edge', category: 'Concrete', caption: 'Placed', alt: 'Fresh concrete placed against a gravel edge beside a stone wall' },
-  { id: 'stair-blockwork', title: 'Stair & Blockwork', category: 'Subway', caption: 'In progress', alt: 'Stair flight beside a block wall with a scaffold jack supporting the run' },
+  { id: 'stair-blockwork', title: 'Stair & Blockwork', category: 'Stairs', caption: 'In progress', alt: 'Stair flight beside a block wall with a scaffold jack supporting the run' },
   { id: 'stone-steps-detail', title: 'Lehman College: Steps in Detail', category: 'Stone', caption: 'In progress', alt: 'Stone treads taped off along the Lehman College building stairs with the crew working above' },
   { id: 'curved-walk', title: 'Curved Walkway', category: 'Concrete', caption: 'Finished', alt: 'Curved concrete walkway passing a scaffold standard' },
   { id: 'sidewalk-taped', title: 'Taped Off to Cure', category: 'Concrete', caption: 'Curing', alt: 'New sidewalk panels taped off with a traffic cone while the concrete cures' },
-  { id: 'stair-nosings', title: 'Nosings Set', category: 'Subway', caption: 'Nosings in', alt: 'Stair treads with new nosings set between tiled walls' },
+  { id: 'stair-nosings', title: 'Nosings Set', category: 'Stairs', caption: 'Nosings in', alt: 'Stair treads with new nosings set between tiled walls' },
   { id: 'stone-wall-walk', title: 'Walk at the Stone Wall', category: 'Concrete', caption: 'Barriers in place', alt: 'Concrete walkway beside a stone wall with orange street barriers' },
   { id: 'manhole-apron', title: 'Apron with Covers', category: 'Concrete', caption: 'Finished', alt: 'Concrete apron finished around two utility covers beside a stone wall' },
   { id: 'tile-membrane', title: 'Membrane Before Tile', category: 'Tile', caption: 'In progress', alt: 'Blue waterproofing membrane on a wall beside new tile, with a mixer and cone on the floor' },
   { id: 'side-passage', title: 'Side Passage', category: 'Concrete', caption: 'Finished', alt: 'Narrow concrete passage between a brick wall and a fence' },
-  { id: 'formwork-edge', title: 'Sidewalk Edge, Set to Line', category: 'Foam Work', caption: 'Forms in place', alt: 'Timber forms holding the edge of a new concrete sidewalk panel' },
-  { id: 'stair-rebuilt', title: 'Flight Rebuilt', category: 'Subway', caption: 'Poured', alt: 'Freshly poured concrete stair flight rising between plain walls' },
+  { id: 'formwork-edge', title: 'Sidewalk Edge, Set to Line', category: 'Formwork', caption: 'Forms in place', alt: 'Timber forms holding the edge of a new concrete sidewalk panel' },
+  { id: 'stair-rebuilt', title: 'Flight Rebuilt', category: 'Stairs', caption: 'Poured', alt: 'Freshly poured concrete stair flight rising between plain walls' },
   { id: 'hoarding-walk', title: 'Walk at the Hoarding', category: 'Concrete', caption: 'Finished', alt: 'Concrete walkway running past a green site hoarding' },
   { id: 'street-barriers', title: 'Street Frontage', category: 'Concrete', caption: 'Barriers in place', alt: 'New concrete street frontage protected by barriers at dusk' },
   { id: 'plaza-cured', title: 'Lehman College: Slab Sealed', category: 'Concrete', caption: 'Cured and sealed', alt: 'The finished slab at the Lehman College building stairs with curing compound rolled on' },
   { id: 'gateway-apron', title: 'Gateway Apron', category: 'Concrete', caption: 'Curing', alt: 'Concrete apron at a gated entrance with barriers set out' },
   { id: 'stone-apron', title: 'Stone Wall Apron', category: 'Concrete', caption: 'Finished', alt: 'Concrete apron meeting a mortared stone wall' },
-  { id: 'station-stairs-before', title: 'Station Stairway, Before', category: 'Subway', caption: 'Before', alt: 'Worn subway station stairway behind iron gates before reconstruction' },
+  { id: 'station-stairs-before', title: 'Station Stairway, Before', category: 'Stairs', caption: 'Before', alt: 'Worn subway station stairway behind iron gates before reconstruction' },
   { id: 'column-base', title: 'Slab at the Column', category: 'Concrete', caption: 'Finished', alt: 'Concrete slab finished tight to a painted steel column base' },
   { id: 'driveway-garage', title: 'Garage Driveway', category: 'Concrete', caption: 'Finished', alt: 'Concrete driveway leading to a brick garage with a car parked alongside' },
-  { id: 'stair-breakout', title: 'Breaking Out', category: 'Subway', caption: 'Demolition', alt: 'Crew breaking out an old stair flight with jackhammers' },
+  { id: 'stair-breakout', title: 'Breaking Out', category: 'Stairs', caption: 'Demolition', alt: 'Crew breaking out an old stair flight with jackhammers' },
   { id: 'ramp-fence', title: 'Ramped Walkway', category: 'Concrete', caption: 'Finished', alt: 'Concrete ramp rising beside a timber fence' },
   { id: 'gateway-clearance', title: 'Clearing the Gateway', category: 'Groundwork', caption: 'Demolition', alt: 'Excavator clearing concrete rubble between stone gate pillars' },
   { id: 'excavation', title: 'Excavation', category: 'Groundwork', caption: 'Site preparation', alt: 'Excavated ground with service pipe and bucket before new work' },
 ]
 
-export const categories: Category[] = ['Commercial', 'Concrete', 'Masonry', 'Stone', 'Tile', 'Foam Work', 'Subway', 'Groundwork']
+export const categories: Category[] = ['Commercial', 'Concrete', 'Masonry', 'Stone', 'Tile', 'Formwork', 'Stairs', 'Groundwork']
 
 export const categorySlug = (category: Category) => category.toLowerCase().replace(/\s+/g, '-')
 export const categoryFromSlug = (slug: string) => categories.find(category => categorySlug(category) === slug)
@@ -86,11 +86,89 @@ export const countByCategory = (category: Category) => projects.filter(project =
    four written at 1600px by scripts/prepare-assets.mjs. */
 export const fullBleed = new Set(['crew', 'sidewalk', 'masonry', 'stairs', 'commercial-deck', 'commercial-wall-forms'])
 
-export const services: { slug: string; title: string; lines: string[]; category: Category; description: string; detail: string; image: string; items: string[] }[] = [
-  { slug: 'concrete-sidewalks', title: 'Concrete & Sidewalks', lines: ['Concrete &', 'Sidewalks'], category: 'Concrete', description: 'Preparation, forming and finishing for concrete surfaces.', detail: 'From the preparation beneath the surface to the finished concrete, explore the details in our site photography.', image: 'sidewalk', items: ['Surface preparation', 'Foam work & reinforcement', 'Sidewalks & walkways', 'Driveways & aprons'] },
-  { slug: 'masonry-blockwork', title: 'Masonry & Blockwork', lines: ['Masonry &', 'Blockwork'], category: 'Masonry', description: 'Block walls and masonry details from our project sites.', detail: 'A closer look at our blockwork and masonry. Tell us about your site and the scope you have in mind.', image: 'masonry', items: ['Concrete block walls', 'Masonry construction', 'Blockwork around services'] },
-  { slug: 'subway-construction', title: 'Subway Construction', lines: ['Subway', 'Construction'], category: 'Subway', description: 'Station stairways, steps and the finishes around them.', detail: 'Explore subway station construction, from stair flights and nosings to the tile and blockwork around them, through photographs from our project sites.', image: 'stairs', items: ['Station stairways & steps', 'Nosings, rails & treads', 'Tile & blockwork around them'] },
+/* The eleven services the company offers, in its own wording.
+
+   `category` and `image` are set only for the four trades the photo archive
+   actually covers. The other seven carry no imagery rather than borrow a
+   picture of somebody else's work. */
+export const services: {
+  slug: string
+  title: string
+  lines: string[]
+  description: string
+  items: string[]
+  category?: Category
+  image?: string
+  detail?: string
+}[] = [
+  {
+    slug: 'concrete-work', title: 'Concrete Work', lines: ['Concrete', 'Work'],
+    category: 'Concrete', image: 'sidewalk',
+    description: 'Preparation, forming and finishing for concrete surfaces, inside and out.',
+    detail: 'From the ground beneath a surface, through formwork and reinforcement, to the finished and jointed pour.',
+    items: ['Site preparation & subbase', 'Formwork & reinforcement', 'Sidewalks, slabs & driveways', 'Steps, ramps & aprons'],
+  },
+  {
+    slug: 'masonry-brick-block', title: 'Masonry, Brick & Block Work', lines: ['Masonry, Brick', '& Block Work'],
+    category: 'Masonry', image: 'masonry',
+    description: 'Block walls, brickwork and the masonry details that go with them.',
+    detail: 'Concrete block, brick, and the blockwork that carries stairs, services and structure.',
+    items: ['Concrete block walls', 'Brickwork', 'Blockwork around services', 'Repairs and making good'],
+  },
+  {
+    slug: 'stonework', title: 'Stonework & Installation', lines: ['Stonework &', 'Installation'],
+    category: 'Stone', image: 'stone-steps',
+    description: 'Cut stone set by hand — treads, copings, facings and surrounds.',
+    detail: 'Setting cut stone to line and level, from stair treads through to copings, facings and surrounds.',
+    items: ['Stone steps & treads', 'Copings & facings', 'Setting & bedding', 'Pointing & finishing'],
+  },
+  {
+    slug: 'tile-installation', title: 'Tile Installation', lines: ['Tile', 'Installation'],
+    category: 'Tile', image: 'tile-band',
+    description: 'Wall and floor tile, with the membranes and substrates beneath them.',
+    detail: 'Tile laid over a prepared substrate, including the waterproof membrane where the room needs one.',
+    items: ['Wall tile', 'Floor & quarry tile', 'Membranes & substrates', 'Banding & detail courses'],
+  },
+  {
+    slug: 'k-rail-installation', title: 'K-Rail Installation', lines: ['K-Rail', 'Installation'],
+    description: 'Concrete barrier placed, moved and struck as the work moves across a site.',
+    items: ['Barrier placement', 'Site & lane protection', 'Repositioning as work moves', 'Removal & reinstatement'],
+  },
+  {
+    slug: 'plumbing', title: 'Plumbing', lines: ['Plumbing'],
+    description: 'Plumbing for renovation and new construction, residential and commercial.',
+    items: ['Rough-in & fit-out', 'Fixture installation', 'Alterations & repairs', 'Coordination with other trades'],
+  },
+  {
+    slug: 'painting', title: 'Interior & Exterior Painting', lines: ['Interior & Exterior', 'Painting'],
+    description: 'Preparation and painting to interior and exterior surfaces.',
+    items: ['Surface preparation', 'Interior finishes', 'Exterior coatings', 'Making good behind other trades'],
+  },
+  {
+    slug: 'countertops', title: 'Countertops', lines: ['Countertops'],
+    description: 'Countertop supply and installation for kitchens, bathrooms and work areas.',
+    items: ['Templating & fitting', 'Installation', 'Cut-outs & edge work', 'Sealing & finishing'],
+  },
+  {
+    slug: 'scaffolding', title: 'Scaffolding', lines: ['Scaffolding'],
+    description: 'Access scaffold erected, maintained and struck as the job needs it.',
+    items: ['Erection & dismantling', 'Access & working platforms', 'Inspection through the works'],
+  },
+  {
+    slug: 'waterproofing', title: 'Waterproofing', lines: ['Waterproofing'],
+    description: 'Membranes and waterproof detailing that keep water where it belongs.',
+    items: ['Membranes & tanking', 'Wet area waterproofing', 'Detailing at junctions & upstands'],
+  },
+  {
+    slug: 'cleaning-services', title: 'Cleaning Services', lines: ['Cleaning', 'Services'],
+    description: 'Construction cleaning through the works and on handover.',
+    items: ['Builders clean through the works', 'Final clean at handover', 'Debris clearance'],
+  },
 ]
+
+/* The four with photography behind them — used wherever the layout shows a
+   service as a picture rather than as a line in a list. */
+export const featuredServices = services.filter(service => service.image)
 
 /* The four stages every concrete job runs through, each illustrated with a
    photograph from one of our own sites rather than a stock image. */
@@ -175,12 +253,12 @@ const tradeSlide = (slug: string, title: [string, string], lede: string): HeroSl
   const service = serviceBySlug(slug)
   return {
     id: service.slug,
-    image: service.image,
+    image: service.image!,
     eyebrow: service.title,
     title,
     lede,
     primary: { label: service.title, to: `/services/${service.slug}` },
-    secondary: { label: `${countByCategory(service.category)} photographs`, to: `/projects?trade=${categorySlug(service.category)}` },
+    secondary: { label: `${countByCategory(service.category!)} photographs`, to: `/projects?trade=${categorySlug(service.category!)}` },
   }
 }
 
@@ -203,9 +281,9 @@ export const heroSlides: HeroSlide[] = [
     primary: { label: 'See the commercial work', to: '/projects?trade=commercial' },
     secondary: { label: 'Start a Project', to: '/contact' },
   },
-  tradeSlide('concrete-sidewalks', ['Poured to line.', 'Finished by hand.'], 'Sidewalks, driveways and aprons, taken from the subbase up to the final float.'),
-  tradeSlide('masonry-blockwork', ['Laid true.', 'Built to last.'], 'Block walls and masonry on live sites, around services and down tight corridors.'),
-  tradeSlide('subway-construction', ['Stations rebuilt.', 'Stairs set right.'], 'Station stairways, tile and blockwork, from breaking out to reopening.'),
+  tradeSlide('concrete-work', ['Poured to line.', 'Finished by hand.'], 'Sidewalks, driveways and aprons, taken from the subbase up to the final float.'),
+  tradeSlide('masonry-brick-block', ['Laid true.', 'Built to last.'], 'Block, brick and masonry on live sites, around services and down tight corridors.'),
+  tradeSlide('stonework', ['Cut stone.', 'Set by hand.'], 'Treads, copings and facings, bedded to line and level and pointed up.'),
 ]
 
 /* The kinds of site the company's work goes into, as supplied by the
@@ -250,6 +328,6 @@ export const clips: Clip[] = [
 /* What the company does, as supplied by the company: the work on site and
    the services around a project. */
 export const capabilities: { title: string; items: string[] }[] = [
-  { title: 'Our services include', items: ['Subway construction', 'Concrete work', 'Masonry, brick and block work', 'Stonework and installation', 'Tile installation', 'K-rail installation', 'Plumbing', 'Interior and exterior painting'] },
+  { title: 'Our services include', items: services.map(service => service.title) },
   { title: 'For the project', items: ['Contract administration', 'Owner / contractor representation', 'Cost estimating', 'Quality control inspections', 'Subcontracting support'] },
 ]

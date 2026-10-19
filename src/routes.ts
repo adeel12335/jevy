@@ -41,8 +41,8 @@ const STATIC: PageMeta[] = [
   },
   {
     path: '/services',
-    title: `Construction Services | Concrete, Masonry & Subway | ${brand}`,
-    description: 'Concrete and sidewalk work, masonry and blockwork, and subway construction across New York and New Jersey — every service documented in photographs from our own sites.',
+    title: `Construction Services | Residential & Commercial | ${brand}`,
+    description: `Renovation and new construction for residential and commercial projects across New York and New Jersey: ${services.map(service => service.title.toLowerCase()).join(', ')}.`,
     image: 'masonry',
     photo: true,
     trail: [{ name: 'Services', path: '/services' }],
@@ -72,7 +72,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/contact',
     title: `Contact ${brand} | Jamaica, NY`,
-    description: `${company.street}, ${company.locality}, ${company.region} ${company.postalCode}. Email ${company.email} or call the office on ${company.telephone} to discuss concrete, masonry or subway work.`,
+    description: `${company.street}, ${company.locality}, ${company.region} ${company.postalCode}. Email ${company.email} or call the office on ${company.telephone} to discuss renovation or new construction work.`,
     image: 'sidewalk',
     trail: [{ name: 'Contact', path: '/contact' }],
   },
@@ -80,10 +80,12 @@ const STATIC: PageMeta[] = [
 
 const SERVICE_PAGES: PageMeta[] = services.map(service => ({
   path: `/services/${service.slug}`,
-  title: `${service.title} in New York | ${brand}`,
-  description: `${service.items.join(', ')}. ${inCategory(service.category).length} photographs from ${service.category.toLowerCase()} jobs by ${brand} across New York and New Jersey.`,
-  image: service.image,
-  photo: true,
+  title: `${service.title} in New York & New Jersey | ${brand}`,
+  description: service.category
+    ? `${service.items.join(', ')}. ${inCategory(service.category).length} photographs from ${service.category.toLowerCase()} jobs by ${brand} across New York and New Jersey.`
+    : `${service.description} ${service.items.join(', ')}. Residential and commercial ${service.title.toLowerCase()} from ${brand}, Jamaica NY.`,
+  image: service.image ?? 'crew',
+  photo: Boolean(service.image),
   trail: [{ name: 'Services', path: '/services' }, { name: service.title, path: `/services/${service.slug}` }],
 }))
 
@@ -97,6 +99,18 @@ const PROJECT_PAGES: PageMeta[] = projects.map(project => ({
 }))
 
 export const pages: PageMeta[] = [...STATIC, ...SERVICE_PAGES, ...PROJECT_PAGES]
+
+/* Service URLs that changed when the service list was corrected to the
+   eleven trades the company actually offers. Kept as permanent redirects so
+   anything already linking to the old paths lands somewhere useful instead
+   of on the 404 page. "Subway construction" has no successor service — the
+   station stairway photographs now live in the gallery — so it goes to the
+   service index rather than guessing at a replacement. */
+export const redirects: { from: string; to: string }[] = [
+  { from: '/services/concrete-sidewalks', to: '/services/concrete-work' },
+  { from: '/services/masonry-blockwork', to: '/services/masonry-brick-block' },
+  { from: '/services/subway-construction', to: '/services' },
+]
 
 export const notFoundMeta: PageMeta = {
   path: '/404',
@@ -133,7 +147,7 @@ const organization = {
     addressCountry: company.country,
   },
   areaServed: company.areaServed.map(name => ({ '@type': 'State', name })),
-  knowsAbout: ['Residential construction', 'Commercial construction', 'Subway construction', 'Concrete work', 'Masonry, brick and block work', 'Stonework and installation', 'Tile installation', 'K-rail installation', 'Plumbing', 'Interior and exterior painting', 'Contract administration', 'Owner and contractor representation', 'Cost estimating', 'Quality control inspections', 'Subcontracting support'],
+  knowsAbout: ['Residential construction', 'Commercial construction', 'Renovation', ...services.map(service => service.title), 'Contract administration', 'Owner and contractor representation', 'Cost estimating', 'Quality control inspections', 'Subcontracting support'],
   hasCredential: certifications.map(group => ({
     '@type': 'EducationalOccupationalCredential',
     credentialCategory: `${group.label} (${group.type})`,

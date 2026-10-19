@@ -106,6 +106,23 @@ come from `dist/_headers`, which the build generates.
 - `/media/*` → `max-age=604800` — photographs keep stable filenames, so they must **not** be immutable
 - `404.html` for unknown paths
 
+### Redirects
+
+Service URLs changed when the service list was corrected to the eleven trades
+the company actually offers. `src/routes.ts` holds the map; the build writes
+`dist/_redirects` (Netlify, Cloudflare Pages) from it and **fails if
+`vercel.json` does not carry the same permanent redirects**, since Vercel reads
+its config from the repository rather than from `dist`.
+
+| Old path | Now |
+| --- | --- |
+| `/services/concrete-sidewalks` | `/services/concrete-work` |
+| `/services/masonry-blockwork` | `/services/masonry-brick-block` |
+| `/services/subway-construction` | `/services` |
+
+Add a pair to `redirects` in `src/routes.ts` and to `redirects` in
+`vercel.json` whenever a path moves.
+
 ### The content security policy
 
 The policy is strict: everything the page loads is same-origin, fonts included, with one exception: the office map on the home and contact pages is a Google Maps frame, so `frame-src` allows `https://www.google.com`. The
