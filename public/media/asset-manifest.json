@@ -779,6 +779,114 @@
       ],
       "width": 1500,
       "height": 2000
+    },
+    {
+      "name": "block-stair-forms",
+      "number": 70,
+      "source": "Chat Image 2026-10-21 (7).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1000,
+      "height": 563
+    },
+    {
+      "name": "tile-before-flight",
+      "number": 71,
+      "source": "Chat Image 2026-10-21 (25).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "tile-before-wall",
+      "number": 72,
+      "source": "Chat Image 2026-10-21 (26).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "tile-before-shoring",
+      "number": 73,
+      "source": "Chat Image 2026-10-21 (27).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "tile-before-shoring-stair",
+      "number": 74,
+      "source": "Chat Image 2026-10-21 (28).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "tile-after-wall",
+      "number": 75,
+      "source": "WhatsApp Image 2026-10-15 at 5.54.53 PM (1).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "tile-after-rail",
+      "number": 76,
+      "source": "Chat Image 2026-10-21 (30).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "name": "tile-floor-grouting",
+      "number": 77,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.13 PM.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 900,
+      "height": 1600
+    },
+    {
+      "name": "gateway-rubble",
+      "number": 78,
+      "source": "WhatsApp Image 2026-10-15 at 5.55.13 PM (6).jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

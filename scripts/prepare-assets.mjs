@@ -44,6 +44,8 @@ const photos = {
   'gateway-clearance': 64,
   // Commercial building construction, supplied 16 October
   'commercial-wall-forms': 65, 'commercial-deck': 66, 'commercial-wall-crew': 67, 'commercial-column': 68, 'commercial-columns': 69,
+  // Block installation, tile before-and-after and demolition, supplied 21 October
+  'block-stair-forms': 70, 'tile-before-flight': 71, 'tile-before-wall': 72, 'tile-before-shoring': 73, 'tile-before-shoring-stair': 74, 'tile-after-wall': 75, 'tile-after-rail': 76, 'tile-floor-grouting': 77, 'gateway-rubble': 78,
 }
 
 /* Every photograph is written at the three sizes the layout actually asks

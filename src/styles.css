@@ -774,8 +774,8 @@ html.js .hero-controls[data-playing='false'] .hero-dot.is-active .hero-dot-bar {
 .marquee-tile:hover::after { opacity: 1; }
 .marquee-tile:hover .marquee-label { opacity: 1; translate: 0 0; }
 
-.gallery-tally { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); }
-.tally-item:nth-child(4n) { border-right: 0; }
+.gallery-tally { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); }
+.tally-item:nth-child(3n) { border-right: 0; }
 .tally-item {
   display: flex; align-items: baseline; gap: 0.75rem; padding: 1.5rem 0.5rem 0 0;
   border: 0; border-right: 1px solid var(--rule); background: none;
@@ -1039,6 +1039,7 @@ html.lenis, html.lenis body { height: auto; }
   .work-grid { grid-template-columns: repeat(2, 1fr); }
   .work-card--lead { grid-column: span 2; }
   .gallery-tally { grid-template-columns: repeat(2, 1fr); gap: 0 1rem; }
+  .tally-item:nth-child(3n) { border-right: 1px solid var(--rule); }
   .tally-item:nth-child(2n) { border-right: 0; }
   .compare-grid { grid-template-columns: 1fr; }
   .clip-grid { grid-template-columns: 1fr; }
