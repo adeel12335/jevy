@@ -314,7 +314,7 @@ export type Transformation = { id: string; title: string; before: string; after:
 
 export const transformations: Transformation[] = [
   { id: 'station-stairway', title: 'Station stairway', before: 'station-stairs-before', after: 'station-stairs', note: 'The old flight broken out, new treads poured, nosings and rails set and the floor tile relaid.' },
-  { id: 'stair-flight', title: 'Stair flight', before: 'stair-breakout', after: 'stair-rebuilt', note: 'From breaking out the old steps with jackhammers to a new concrete flight ready for its finishes.' },
+  { id: 'stair-flight', title: 'Demolition / concrete pouring completed', before: 'stair-breakout', after: 'stair-rebuilt', note: 'Demolition of the old steps with jackhammers, then the new concrete flight poured and completed.' },
   { id: 'plaza-slab', title: 'Lehman College building stairs', before: 'plaza-formwork', after: 'plaza-cured', note: 'Forms and mesh set out, concrete placed and floated, then sealed and left to cure at the Lehman College building stairs.' },
   { id: 'tiled-wall', title: 'Tiled wall', before: 'tile-before-wall', after: 'tile-after-wall', note: 'Wall tile set with spacers along the flight, then grouted and finished with the skirting.' },
   { id: 'tiled-rail', title: 'Tile and handrail', before: 'tile-before-shoring', after: 'tile-after-rail', note: 'Tile set behind the shoring while the landing above is formed, then grouted and the handrail fixed.' },
