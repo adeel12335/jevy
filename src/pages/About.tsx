@@ -13,7 +13,7 @@ export default function About() {
 
   return <>
     <PageHeader
-      eyebrow="About Jevvy"
+      eyebrow="About Jevvy Construction"
       title={['Care in every detail.', 'Commitment on every site.']}
       lede={<p>{company.name} is a family-owned small business holding a General Contractor (GC) license, providing residential and commercial construction services throughout New York and New Jersey from the office in {company.locality}, Queens.</p>}
       trail={meta.trail!}

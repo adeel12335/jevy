@@ -43,9 +43,9 @@ export function BeforeAfter() {
       <Reveal className="section-head">
         <div>
           <p className="eyebrow">Start to finish</p>
-          <h2 id="compare-title"><Lines text={['The same site,', 'before and after.']} /></h2>
+          <h2 id="compare-title"><Lines text={['Before and after:', 'stone, tile, stairs.']} /></h2>
         </div>
-        <p className="lede">Drag the handle across each pair. Both frames are our own site, photographed as the job went in and again when it was done.</p>
+        <p className="lede">Stone work, tile and stairs for residential and commercial buildings and subways. Drag the handle across each pair: both frames are our own site, photographed as the job went in and again when it was done.</p>
       </Reveal>
       <div className="compare-grid">
         {transformations.map((pair, index) => <Reveal key={pair.id} className="compare-item" delay={index * 0.07}>

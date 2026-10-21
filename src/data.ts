@@ -5,7 +5,10 @@ export type Project = { id: string; title: string; category: Category; caption: 
    captions describe what is in the frame; the only place named is the one
    the company asked to be named. Ordered so the unfiltered gallery opens on
    the strongest work and stays varied as it runs. */
-export const projects: Project[] = [
+/* In the order the company presents the work. */
+export const categories: Category[] = ['Demolition', 'Formwork', 'Stone', 'Concrete', 'Masonry', 'Tile', 'Stairs', 'Commercial', 'Groundwork']
+
+const catalogue: Project[] = [
   { id: 'commercial-deck', title: 'Commercial Build: Deck Reinforcement', category: 'Commercial', caption: 'Reinforcement in', alt: 'Reinforcing steel tied out across a commercial building deck, with the city skyline beyond' },
   { id: 'stair-forms', title: 'Stair Flight Formed Up', category: 'Formwork', caption: 'Forms set', alt: 'Timber forms and scaffold for a new stair flight under a skylight, with the crew on the landing above' },
   { id: 'sidewalk', title: 'Sidewalk & Retaining Wall', category: 'Concrete', caption: 'Finished panels', alt: 'Finished concrete sidewalk panels running alongside a stone retaining wall' },
@@ -82,7 +85,10 @@ export const projects: Project[] = [
   { id: 'excavation', title: 'Excavation', category: 'Demolition', caption: 'Site preparation', alt: 'Excavated ground with service pipe and bucket before new work' },
 ]
 
-export const categories: Category[] = ['Commercial', 'Concrete', 'Masonry', 'Stone', 'Tile', 'Formwork', 'Stairs', 'Demolition', 'Groundwork']
+/* The gallery runs in the company's order of work (see `categories`), each
+   trade keeping the order the frames were catalogued in. */
+export const projects: Project[] = [...catalogue].sort((a, b) => categories.indexOf(a.category) - categories.indexOf(b.category))
+
 
 export const categorySlug = (category: Category) => category.toLowerCase().replace(/\s+/g, '-')
 export const categoryFromSlug = (slug: string) => categories.find(category => categorySlug(category) === slug)
@@ -341,4 +347,15 @@ export const clips: Clip[] = [
 export const capabilities: { title: string; items: string[] }[] = [
   { title: 'Our services include', items: services.map(service => service.title) },
   { title: 'For the project', items: ['Contract administration', 'Owner / contractor representation', 'Cost estimating', 'Quality control inspections', 'Subcontracting support'] },
+]
+
+/* One photograph per stage, in the order the company wants the work shown. */
+export const sequence: { title: string; category: Category; image: string }[] = [
+  { title: 'Demolition', category: 'Demolition', image: 'stair-breakout' },
+  { title: 'Formwork', category: 'Formwork', image: 'stair-forms' },
+  { title: 'Stone installation', category: 'Stone', image: 'stone-steps-crew' },
+  { title: 'Concrete pouring', category: 'Concrete', image: 'plaza-pour' },
+  { title: 'Block work', category: 'Masonry', image: 'block-stair-forms' },
+  { title: 'Tiles', category: 'Tile', image: 'tile-after-wall' },
+  { title: 'Floor tiles', category: 'Tile', image: 'tile-floor' },
 ]

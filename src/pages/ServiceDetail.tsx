@@ -77,7 +77,7 @@ export default function ServiceDetail() {
       <div className="container">
         <Reveal className="section-head">
           <div>
-            <p className="eyebrow">Also from Jevvy</p>
+            <p className="eyebrow">Also from Jevvy Construction</p>
             <h2 id="other-services"><Lines text={['Everything else', 'we build.']} /></h2>
           </div>
           <p className="lede">{company.name} runs {services.length} trades in-house, so one team can carry a job from the ground up.</p>

@@ -30,7 +30,7 @@ export function Footer() {
         <nav className="footer-links" aria-label="Company">
           <h2>Company</h2>
           <ul>
-            <li><Link to="/about">About Jevvy</Link></li>
+            <li><Link to="/about">About Jevvy Construction</Link></li>
             <li><Link to="/projects">Project gallery</Link></li>
             <li><Link to="/qualifications">Qualifications</Link></li>
             <li><Link to="/contact">Contact</Link></li>

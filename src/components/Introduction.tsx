@@ -186,11 +186,11 @@ export function AboutIntro() {
         <div className="about-stamp"><b><CountUp to={agencyCount} /></b><span>Certifying<br />agencies</span></div>
       </Reveal>
       <Reveal className="about-copy" delay={0.1}>
-        <p className="eyebrow">About Jevvy</p>
+        <p className="eyebrow">About Jevvy Construction</p>
         <h2 id="about-title"><Lines text={['Care in every detail.', 'Commitment on every site.']} /></h2>
         <p>{company.intro}</p>
         <p>A family-owned small business holding a General Contractor (GC) license. Every photograph on this site is our own work, on our own jobs. We hold MWBE, SBE and DBE certifications across {agencyCount} public agencies in New York and New Jersey, and we are a registered vendor with New York State OGS.</p>
-        <TextLink to="/about">Get to know Jevvy</TextLink>
+        <TextLink to="/about">Get to know Jevvy Construction</TextLink>
       </Reveal>
     </div>
   </section>

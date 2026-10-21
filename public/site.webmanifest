@@ -1,7 +1,7 @@
 {
   "name": "Jevvy Construction Inc",
-  "short_name": "Jevvy",
-  "description": "Concrete, masonry and stair construction in Jamaica, New York.",
+  "short_name": "Jevvy Construction",
+  "description": "Residential and commercial construction services throughout New York and New Jersey.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
