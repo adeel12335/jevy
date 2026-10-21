@@ -28,7 +28,7 @@ export default function QualificationsPage() {
           <h2 id="quals-note"><Lines text={['Ready for the', 'bid list.']} /></h2>
         </Reveal>
         <Reveal delay={0.08}>
-          <p className="lede">A Minority and Women-owned Business Enterprise (MWBE), Disadvantaged Business Enterprise (DBE) or Small Business Enterprise (SBE) certification is issued by the agency itself after it reviews ownership, control and capacity. It is what lets a prime contractor count a subcontractor&rsquo;s scope toward the participation goals written into a public contract.</p>
+          <p className="lede">A Minority-owned Business Enterprise (MWBE), Disadvantaged Business Enterprise (DBE) or Small Business Enterprise (SBE) certification is issued by the agency itself after it reviews ownership, control and capacity. It is what lets a prime contractor count a subcontractor&rsquo;s scope toward the participation goals written into a public contract.</p>
           <p className="lede">Each certification above is held directly with the agency named beside it. If you need our certification numbers or a copy of a certificate for a bid package, ask and we will send them across.</p>
         </Reveal>
       </div>

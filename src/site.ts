@@ -13,7 +13,7 @@ export const company = {
   tagline: 'Building with purpose. Delivering with care.',
   positioning: 'Residential & Commercial Construction Services',
   reach: 'We provide construction services throughout New York and New Jersey.',
-  description: 'Residential and commercial construction services throughout New York and New Jersey. Prequalified MWBE, SBE and DBE with public agencies in both states, and a registered vendor with New York State OGS.',
+  description: 'Family-owned, GC-licensed residential and commercial construction services throughout New York and New Jersey. Prequalified MWBE, SBE and DBE with public agencies in both states, and a registered vendor with New York State OGS.',
   intro: 'Jevvy Construction Inc. provides renovation and new construction services for residential and commercial projects, from start to finish. Our experienced and dedicated team brings hands-on expertise, attention to detail, and a commitment to quality workmanship to every job. With union professionals on our team, we have the skilled workforce to support a wide range of construction needs.',
   street: '175-61 Hillside Avenue, Suite 202',
   locality: 'Jamaica',
