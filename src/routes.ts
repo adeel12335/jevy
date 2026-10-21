@@ -25,7 +25,7 @@ const HOME: PageMeta = {
   path: '/',
   title: `${brand} | Residential & Commercial Construction Services | New York & New Jersey`,
   description: `Jevvy Construction Inc provides renovation and new construction services for residential and commercial projects throughout New York and New Jersey. Prequalified ${prequalified.join(', ')}, and registered with New York State OGS.`,
-  image: 'commercial-deck',
+  image: 'stair-forms',
   photo: true,
 }
 

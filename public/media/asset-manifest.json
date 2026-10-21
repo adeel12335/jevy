@@ -887,6 +887,19 @@
       ],
       "width": 1600,
       "height": 1200
+    },
+    {
+      "name": "stair-forms",
+      "number": 79,
+      "source": "Chat Image 2026-10-21 (33).jpg",
+      "widths": [
+        400,
+        800,
+        1200,
+        1600
+      ],
+      "width": 563,
+      "height": 1000
     }
   ]
 }

@@ -7,6 +7,7 @@ export type Project = { id: string; title: string; category: Category; caption: 
    the strongest work and stays varied as it runs. */
 export const projects: Project[] = [
   { id: 'commercial-deck', title: 'Commercial Build: Deck Reinforcement', category: 'Commercial', caption: 'Reinforcement in', alt: 'Reinforcing steel tied out across a commercial building deck, with the city skyline beyond' },
+  { id: 'stair-forms', title: 'Stair Flight Formed Up', category: 'Formwork', caption: 'Forms set', alt: 'Timber forms and scaffold for a new stair flight under a skylight, with the crew on the landing above' },
   { id: 'sidewalk', title: 'Sidewalk & Retaining Wall', category: 'Concrete', caption: 'Finished panels', alt: 'Finished concrete sidewalk panels running alongside a stone retaining wall' },
   { id: 'stairs', title: 'Subway Stairway Flight', category: 'Stairs', caption: 'In progress', alt: 'Stair flight under construction with tiled walls and protected handrails' },
   { id: 'masonry', title: 'Block Wall', category: 'Masonry', caption: 'Laid and pointed', alt: 'Concrete block wall under construction on a project site' },
@@ -93,7 +94,7 @@ export const countByCategory = (category: Category) => projects.filter(project =
 
 /* The photographs that run full-bleed in the home slider; these are the only
    four written at 1600px by scripts/prepare-assets.mjs. */
-export const fullBleed = new Set(['crew', 'sidewalk', 'masonry', 'stairs', 'commercial-deck', 'commercial-wall-forms'])
+export const fullBleed = new Set(['crew', 'sidewalk', 'masonry', 'stairs', 'commercial-deck', 'commercial-wall-forms', 'stair-forms'])
 
 /* The eleven services the company offers, in its own wording.
 
@@ -274,7 +275,7 @@ const tradeSlide = (slug: string, title: [string, string], lede: string): HeroSl
 export const heroSlides: HeroSlide[] = [
   {
     id: 'company',
-    image: 'commercial-deck',
+    image: 'stair-forms',
     eyebrow: 'MWBE · SBE · DBE certified',
     title: ['Building with purpose.', 'Delivering with care.'],
     lede: 'We provide construction services throughout New York and New Jersey.',

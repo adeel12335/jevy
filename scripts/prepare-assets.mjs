@@ -46,6 +46,8 @@ const photos = {
   'commercial-wall-forms': 65, 'commercial-deck': 66, 'commercial-wall-crew': 67, 'commercial-column': 68, 'commercial-columns': 69,
   // Block installation, tile before-and-after and demolition, supplied 21 October
   'block-stair-forms': 70, 'tile-before-flight': 71, 'tile-before-wall': 72, 'tile-before-shoring': 73, 'tile-before-shoring-stair': 74, 'tile-after-wall': 75, 'tile-after-rail': 76, 'tile-floor-grouting': 77, 'gateway-rubble': 78,
+  // Stair forms, supplied 21 October for the opening slide
+  'stair-forms': 79,
 }
 
 /* Every photograph is written at the three sizes the layout actually asks
@@ -53,7 +55,7 @@ const photos = {
    phone photographs of gravel and concrete, so each extra size is expensive
    and nothing but the hero is ever displayed above 1200px. */
 const WIDTHS = [400, 800, 1200]
-const FULL_BLEED = new Set(['crew', 'sidewalk', 'masonry', 'stairs', 'commercial-deck', 'commercial-wall-forms'])
+const FULL_BLEED = new Set(['crew', 'sidewalk', 'masonry', 'stairs', 'commercial-deck', 'commercial-wall-forms', 'stair-forms'])
 const QUALITY = { 400: 76, 800: 80, 1200: 78, 1600: 72 }
 
 const manifest = []
