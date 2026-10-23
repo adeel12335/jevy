@@ -206,7 +206,8 @@ export const certifications: Credential[] = [
       { code: 'WOSB', name: 'Women-Owned Small Business' },
       { code: 'WBE', name: 'Women-owned Business Enterprise' },
       { code: 'MBE', name: 'Minority-owned Business Enterprise' },
-      { code: 'MWBE', name: 'Minority and Women-owned Business Enterprise, City and State of New York' },
+      { code: 'MWBE NY', name: 'Minority and Women-owned Business Enterprise, New York State' },
+      { code: 'MWBE NYC', name: 'Minority and Women-owned Business Enterprise, New York City' },
     ],
   },
   {
@@ -232,7 +233,8 @@ export const agencyCount = new Set(agencyCredentials.flatMap(group => group.agen
 
 const listOf = (items: string[]) => items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('')
 /* The codes in one line each, in the company's own form. */
-export const certificationLine = listOf(certified.flatMap(group => group.agencies.map(agency => agency.code === 'MWBE' ? 'city and state MWBE' : agency.code)))
+/* The two MWBE certificates, state and city, read as one entry: "MWBE NY/NYC". */
+export const certificationLine = listOf([...new Set(certified.flatMap(group => group.agencies.map(agency => agency.code.startsWith('MWBE') ? 'MWBE NY/NYC' : agency.code)))])
 export const agencyLine = listOf(agencyCredentials.flatMap(group => group.agencies.map(agency => agency.code)))
 export const registrationLine = listOf(registrations.flatMap(group => group.agencies.map(agency => agency.code)))
 /* "Certified WOSB, WBE, MBE and city and state MWBE" and so on, one phrase each. */

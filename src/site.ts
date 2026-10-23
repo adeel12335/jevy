@@ -13,7 +13,7 @@ export const company = {
   tagline: 'Building with purpose. Delivering with care.',
   positioning: 'Residential & Commercial Construction Services',
   reach: 'We provide construction services throughout New York and New Jersey.',
-  description: 'Family-owned, minority-owned small business and licensed general contractor serving New York and New Jersey. Certified WOSB, WBE, MBE and city and state MWBE; credentials with SCA, PANYNJ and MTA; registered vendor with OGS and DASNY.',
+  description: 'Family-owned, minority-owned small business and licensed general contractor serving New York and New Jersey. Certified WOSB, WBE, MBE and MWBE NY/NYC; credentials with SCA, PANYNJ and MTA; registered vendor with OGS and DASNY.',
   /* The About page, in the company's own words. */
   about: [
     'Jevvy Construction Inc. is a family-owned, minority-owned small business and licensed general contractor serving New York and New Jersey. We provide renovation and new construction services for residential and commercial projects, bringing hands-on experience, skilled craftsmanship, and personal accountability to every stage of the work.',
