@@ -106,8 +106,9 @@ export const services: {
   {
     slug: 'k-rail-installation', title: 'K-Rail Installation', lines: ['K-Rail', 'Installation'],
     category: 'K-Rail', image: 'krail-stair',
-    description: 'Concrete barrier placed, moved and struck as the work moves across a site.',
-    items: ['Barrier placement', 'Site & lane protection', 'Repositioning as work moves', 'Removal & reinstatement'],
+    description: 'Station railings, guards and handrails set, fixed and finished, with the barrier a site needs while the work is on.',
+    detail: 'Cast railing panels and posts set on the curb, stainless handrails fixed to the wall, and the concrete barrier that protects a site and its lanes while the work goes in.',
+    items: ['Railing panels & posts', 'Handrails & guards', 'Barrier & lane protection', 'Removal & reinstatement'],
   },
   {
     slug: 'plumbing', title: 'Plumbing', lines: ['Plumbing'],
