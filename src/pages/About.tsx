@@ -15,7 +15,7 @@ export default function About() {
     <PageHeader
       eyebrow="About Jevvy Construction"
       title={['Care in every detail.', 'Commitment on every site.']}
-      lede={<p>{company.name} is a family-owned, minority-owned small business and licensed general contractor serving New York and New Jersey.</p>}
+      lede={<p>{company.name} is a licensed general contractor serving New York and New Jersey, built on family values and proudly led by minority ownership.</p>}
       trail={meta.trail!}
       image="sidewalk"
       imageAlt="Finished concrete sidewalk panels alongside a stone retaining wall"
@@ -29,7 +29,6 @@ export default function About() {
         </Reveal>
         <Reveal className="about-page-copy" delay={0.08}>
           {company.about.map(paragraph => <p key={paragraph.slice(0, 24)}>{paragraph}</p>)}
-          <p><strong>We build with pride, and we stand behind our work.</strong></p>
           <TextLink to="/qualifications">See the certifications and credentials</TextLink>
         </Reveal>
       </div>

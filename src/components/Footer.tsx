@@ -16,7 +16,7 @@ export function Footer() {
         <div className="footer-brand">
           <Link to="/" className="footer-logo" aria-label={`${company.name} home`}><Logo /></Link>
           <p className="footer-tagline">{tagline[0]}<span className="accent">{tagline[1]}</span></p>
-          <p className="footer-blurb">Family-owned, minority-owned and GC-licensed. Residential and commercial construction services throughout New York and New Jersey.</p>
+          <p className="footer-blurb">A licensed general contractor providing residential and commercial construction services throughout New York and New Jersey.</p>
         </div>
 
         <nav className="footer-links" aria-label="Services">

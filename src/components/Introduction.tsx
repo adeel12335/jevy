@@ -189,7 +189,7 @@ export function AboutIntro() {
         <p className="eyebrow">About Jevvy Construction</p>
         <h2 id="about-title"><Lines text={['Care in every detail.', 'Commitment on every site.']} /></h2>
         <p>{company.intro}</p>
-        <p>A family-owned, minority-owned small business and licensed general contractor. Every photograph on this site is our own work, on our own jobs. We are certified WOSB, WBE, MBE and MWBE NY/NYC, hold credentials with {agencyCount} public agencies, and are registered vendors with OGS and DASNY.</p>
+        <p>A licensed general contractor, built on family values. Every photograph on this site is our own work, on our own jobs. We are certified WOSB, WBE, MBE and MWBE NY/NYC, hold credentials with {agencyCount} public agencies, and are registered vendors with OGS and DASNY.</p>
         <TextLink to="/about">Get to know Jevvy Construction</TextLink>
       </Reveal>
     </div>
