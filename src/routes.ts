@@ -1,4 +1,4 @@
-import { categories, certifications, inCategory, prequalified, projects, services } from './data'
+import { allProjects, categories, certifications, inCategory, prequalified, projects, services } from './data'
 import { SITE_URL, company, socials } from './site'
 
 /* Every page on the site, with the head it needs. The client reads this on
@@ -89,7 +89,7 @@ const SERVICE_PAGES: PageMeta[] = services.map(service => ({
   trail: [{ name: 'Services', path: '/services' }, { name: service.title, path: `/services/${service.slug}` }],
 }))
 
-const PROJECT_PAGES: PageMeta[] = projects.map(project => ({
+const PROJECT_PAGES: PageMeta[] = allProjects.map(project => ({
   path: `/projects/${project.id}`,
   title: `${project.title} — ${project.category} | ${brand}`,
   description: `${project.alt}. ${project.category} work photographed on site by ${brand}, Jamaica, New York.`,

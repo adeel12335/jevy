@@ -11,7 +11,7 @@ export function Expertise({ heading = true }: { heading?: boolean }) {
           <p className="eyebrow">Our expertise</p>
           <h2 id="expertise-title"><Lines text={['Practical expertise.', 'Careful execution.']} /></h2>
         </div>
-        <p className="lede">The four trades our own site photography covers. Every service we offer is listed below them.</p>
+        <p className="lede">The trades our own site photography covers. Every service we offer is listed below them.</p>
       </Reveal> : null}
       <div className="trade-strip">
         {featuredServices.map((service, index) => {

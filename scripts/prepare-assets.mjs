@@ -17,41 +17,38 @@ const index = Object.fromEntries(
 )
 
 const photos = {
-  // Concrete and sidewalk work
-  sidewalk: 35, walkway: 10, driveway: 30, entrance: 34, pour: 15,
-  'ramp-fence': 1, 'sidewalk-taped': 3, 'slab-wide': 5, 'driveway-garage': 6,
-  'stone-wall-walk': 7, 'formwork-edge': 8, 'curved-walk': 9, 'side-passage': 11,
-  'alley-walk': 12, 'retaining-walk': 13, 'manhole-apron': 14, 'stone-apron': 16,
-  'street-barriers': 17, 'hoarding-walk': 18, 'gateway-apron': 20, 'pour-edge': 27,
-  'gate-driveway': 29, 'ramp-formwork': 31, 'tree-pit-walk': 32, 'joint-detail': 33,
-  'column-base': 36,
-  // Masonry and blockwork
-  masonry: 25, 'block-wall': 26,
-  // Stair construction
-  stairs: 42, 'stair-detail': 40, 'stair-progress': 39, 'stairwell-narrow': 21,
-  'stair-treads': 38, 'stair-blockwork': 41,
-  // Groundwork
-  prep: 2, crew: 4, mesh: 19, excavation: 43,
-  // Plaza concrete and formwork, supplied 15 October
-  'plaza-pour': 45, 'plaza-screed': 46, 'plaza-float': 47, 'plaza-cured': 48, 'plaza-formwork': 49, 'slab-formwork': 50,
-  // Tile work
-  'tile-band': 51, 'tile-ceiling': 52, 'tile-floor': 53, 'tile-membrane': 54,
-  // Stone steps
-  'stone-steps': 55, 'stone-steps-crew': 56, 'stone-steps-detail': 57,
-  // Stair reconstruction, including a subway station flight
-  'station-stairs': 58, 'station-stairs-before': 59, 'stair-rail': 60, 'stair-nosings': 61, 'stair-rebuilt': 62, 'stair-breakout': 63,
-  // Groundwork
+  'sidewalk': 35,
+  'walkway': 10,
+  'pour': 15,
+  'prep': 2,
+  'crew': 4,
+  'mesh': 19,
+  'plaza-pour': 45,
+  'plaza-cured': 48,
+  'plaza-formwork': 49,
+  'tile-floor': 53,
+  'stone-steps': 55,
+  'stone-steps-crew': 56,
+  'station-stairs': 58,
+  'station-stairs-before': 59,
+  'stair-rebuilt': 62,
+  'stair-breakout': 63,
   'gateway-clearance': 64,
-  // Commercial building construction, supplied 16 October
-  'commercial-wall-forms': 65, 'commercial-deck': 66, 'commercial-wall-crew': 67, 'commercial-column': 68, 'commercial-columns': 69,
-  // Block installation, tile before-and-after and demolition, supplied 21 October
-  'block-stair-forms': 70, 'tile-before-flight': 71, 'tile-before-wall': 72, 'tile-before-shoring': 73, 'tile-before-shoring-stair': 74, 'tile-after-wall': 75, 'tile-after-rail': 76, 'tile-floor-grouting': 77, 'gateway-rubble': 78,
-  // Stair forms, supplied 21 October for the opening slide
+  'commercial-wall-forms': 65,
+  'commercial-deck': 66,
+  'tile-before-wall': 72,
+  'tile-before-shoring': 73,
+  'tile-after-wall': 75,
+  'tile-after-rail': 76,
   'stair-forms': 79,
-  // CMU block wall, supplied 23 October for the block-work card
   'block-wall-cmu': 80,
-  // Block wall with ties and the station treads pair, supplied 23 October
-  'block-wall-ties': 81, 'station-treads-before': 82, 'station-treads-after': 83,
+  'block-wall-ties': 81,
+  'station-treads-before': 82,
+  'station-treads-after': 83,
+  'krail-stair': 84,
+  'krail-install': 85,
+  'paint-canopy': 86,
+  'paint-steel': 87,
 }
 
 /* Every photograph is written at the three sizes the layout actually asks
@@ -59,7 +56,7 @@ const photos = {
    phone photographs of gravel and concrete, so each extra size is expensive
    and nothing but the hero is ever displayed above 1200px. */
 const WIDTHS = [400, 800, 1200]
-const FULL_BLEED = new Set(['crew', 'sidewalk', 'masonry', 'stairs', 'commercial-deck', 'commercial-wall-forms', 'stair-forms'])
+const FULL_BLEED = new Set(['crew', 'sidewalk', 'commercial-deck', 'commercial-wall-forms', 'stair-forms'])
 const QUALITY = { 400: 76, 800: 80, 1200: 78, 1600: 72 }
 
 const manifest = []

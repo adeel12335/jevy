@@ -12,7 +12,9 @@ export default function ProjectDetail() {
   if (!project) return <Navigate to="/projects" replace />
 
   const meta = metaFor(`/projects/${project.id}`)
-  const index = projects.findIndex(entry => entry.id === project.id)
+  /* A "before" frame is not in the gallery run, so it steps through from
+     the start of its trade instead. */
+  const index = Math.max(0, projects.findIndex(entry => entry.id === project.id))
   const previous = projects[(index - 1 + projects.length) % projects.length]
   const next = projects[(index + 1) % projects.length]
   const service = serviceForCategory(project.category)
@@ -29,7 +31,7 @@ export default function ProjectDetail() {
               <p className="eyebrow">{project.category} · {project.caption}</p>
               <h1>{project.title}</h1>
             </div>
-            <p className="project-counter">{index + 1} <i>/</i> {projects.length}</p>
+            {project.hidden ? null : <p className="project-counter">{index + 1} <i>/</i> {projects.length}</p>}
           </div>
         </div>
       </header>

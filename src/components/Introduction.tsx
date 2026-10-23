@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState, type AnimationEvent, type CSS
 import { Link } from 'react-router'
 import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
 import { prefersReducedMotion, useScrollTransform } from '../parallax'
-import { agencyCount, countByCategory, featuredServices, heroSlides, projectById } from '../data'
+import { agencyCount, countByCategory, heroSlides, projectById, railServices } from '../data'
 import { company } from '../site'
 import { serviceIcons } from './icons'
 import { CountUp, Lines, Photo, Reveal, Rise, Setout, TextLink } from './ui'
@@ -162,7 +162,7 @@ export function Hero() {
 
     <Rise className="hero-rail" delay={0.42}>
       <div className="container rail-grid">
-        {featuredServices.map(service => {
+        {railServices.map(service => {
           const Icon = serviceIcons[service.slug]
           return <Link key={service.slug} className="rail-item" to={`/services/${service.slug}`}>
             {Icon ? <Icon size={30} strokeWidth={1.4} /> : null}
