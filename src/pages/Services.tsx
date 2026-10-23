@@ -15,8 +15,8 @@ export default function Services() {
       title={['Practical expertise.', 'Careful execution.']}
       lede={<p>Renovation and new construction for residential and commercial projects, from start to finish. {services.length} trades run by the same team, with union professionals on it. Open any one for the full scope.</p>}
       trail={meta.trail!}
-      image="masonry"
-      imageAlt="Concrete block wall under construction"
+      image="block-wall-cmu"
+      imageAlt="Newly laid concrete block wall"
     />
     <Expertise heading={false} />
     <Capabilities />

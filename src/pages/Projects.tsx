@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router'
 import { categories, categoryFromSlug, categorySlug, countByCategory, projects, serviceForCategory } from '../data'
 import { metaFor } from '../routes'
@@ -10,7 +11,11 @@ import { Photo, Reveal, TextLink } from '../components/ui'
 export default function Projects() {
   const meta = metaFor('/projects')
   const [params] = useSearchParams()
-  const active = categoryFromSlug(params.get('trade') ?? '')
+  /* The page is prerendered unfiltered, so the filter is read once the
+     client has taken over; the markup it hydrates then matches. */
+  const [hydrated, setHydrated] = useState(false)
+  useEffect(() => { setHydrated(true) }, [])
+  const active = hydrated ? categoryFromSlug(params.get('trade') ?? '') : undefined
   const visible = active ? projects.filter(project => project.category === active) : projects
   const service = active ? serviceForCategory(active) : undefined
 

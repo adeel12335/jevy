@@ -43,7 +43,7 @@ const STATIC: PageMeta[] = [
     path: '/services',
     title: `Construction Services | Residential & Commercial | ${brand}`,
     description: `Renovation and new construction for residential and commercial projects across New York and New Jersey: ${services.map(service => service.title.toLowerCase()).join(', ')}.`,
-    image: 'masonry',
+    image: 'block-wall-cmu',
     photo: true,
     trail: [{ name: 'Services', path: '/services' }],
   },
