@@ -1,4 +1,4 @@
-export type Category = 'Commercial' | 'Concrete' | 'Formwork' | 'Masonry' | 'Stone' | 'Tile' | 'K-Rail' | 'Paint' | 'Stairs' | 'Demolition' | 'Groundwork'
+export type Category = 'Commercial' | 'Concrete' | 'Foam Work' | 'Masonry' | 'Stone' | 'Tile' | 'K-Rail' | 'Paint' | 'Stairs' | 'Demolition' | 'Groundwork'
 export type Project = { id: string; title: string; category: Category; caption: string; alt: string; hidden?: boolean }
 
 /* Every photograph supplied by the company, catalogued by trade. Titles and
@@ -6,13 +6,13 @@ export type Project = { id: string; title: string; category: Category; caption: 
    the company asked to be named. Ordered so the unfiltered gallery opens on
    the strongest work and stays varied as it runs. */
 /* In the order the company presents the work. */
-export const categories: Category[] = ['Demolition', 'Formwork', 'Stone', 'Concrete', 'Masonry', 'Tile', 'K-Rail', 'Paint', 'Stairs', 'Commercial', 'Groundwork']
+export const categories: Category[] = ['Demolition', 'Foam Work', 'Stone', 'Concrete', 'Masonry', 'Tile', 'K-Rail', 'Paint', 'Stairs', 'Commercial', 'Groundwork']
 
 const catalogue: Project[] = [
   { id: 'stair-breakout', title: 'Breaking Out', category: 'Demolition', caption: 'Breaking out', alt: 'Crew breaking out an old stair flight with jackhammers' },
   { id: 'gateway-clearance', title: 'Clearing the Gateway', category: 'Demolition', caption: 'Breaking out', alt: 'Excavator clearing concrete rubble between stone gate pillars' },
-  { id: 'stair-forms', title: 'Stair Flight Formed Up', category: 'Formwork', caption: 'Forms set', alt: 'Timber forms and scaffold for a new stair flight under a skylight, with the crew on the landing above' },
-  { id: 'plaza-formwork', title: 'Lehman College: Set Out for the Pour', category: 'Formwork', caption: 'Set to line', alt: 'Timber forms and reinforcing mesh set out before the pour at the Lehman College building stairs' },
+  { id: 'stair-forms', title: 'Stair Flight Formed Up', category: 'Foam Work', caption: 'Forms set', alt: 'Timber forms and scaffold for a new stair flight under a skylight, with the crew on the landing above' },
+  { id: 'plaza-formwork', title: 'Lehman College: Set Out for the Pour', category: 'Foam Work', caption: 'Set to line', alt: 'Timber forms and reinforcing mesh set out before the pour at the Lehman College building stairs' },
   { id: 'stone-steps', title: 'Lehman College: Stone Steps', category: 'Stone', caption: 'Set and protected', alt: 'Wide flight of stone steps at the Lehman College building, taped off while the joints cure' },
   { id: 'stone-steps-crew', title: 'Lehman College: Setting the Steps', category: 'Stone', caption: 'In progress', alt: 'Crew setting the stone steps at the Lehman College building with a forklift alongside' },
   { id: 'sidewalk', title: 'Sidewalk & Retaining Wall', category: 'Concrete', caption: 'Finished panels', alt: 'Finished concrete sidewalk panels running alongside a stone retaining wall' },
@@ -79,8 +79,8 @@ export const services: {
     slug: 'concrete-work', title: 'Concrete Work', lines: ['Concrete', 'Work'],
     category: 'Concrete', image: 'sidewalk',
     description: 'Preparation, forming and finishing for concrete surfaces, inside and out.',
-    detail: 'From the ground beneath a surface, through formwork and reinforcement, to the finished and jointed pour.',
-    items: ['Site preparation & subbase', 'Formwork & reinforcement', 'Sidewalks, slabs & driveways', 'Steps, ramps & aprons'],
+    detail: 'From the ground beneath a surface, through foam work and reinforcement, to the finished and jointed pour.',
+    items: ['Site preparation & subbase', 'Foam work & reinforcement', 'Sidewalks, slabs & driveways', 'Steps, ramps & aprons'],
   },
   {
     slug: 'masonry-brick-block', title: 'Masonry, Bricks & Blocks Work', lines: ['Masonry, Bricks', '& Blocks Work'],
@@ -319,7 +319,7 @@ export const capabilities: { title: string; items: string[] }[] = [
 /* One photograph per stage, in the order the company wants the work shown. */
 export const sequence: { title: string; category: Category; image: string }[] = [
   { title: 'Demolition', category: 'Demolition', image: 'stair-breakout' },
-  { title: 'Formwork', category: 'Formwork', image: 'stair-forms' },
+  { title: 'Foam work', category: 'Foam Work', image: 'stair-forms' },
   { title: 'Stone installation', category: 'Stone', image: 'stone-steps-crew' },
   { title: 'Concrete pouring', category: 'Concrete', image: 'plaza-pour' },
   { title: 'Block work', category: 'Masonry', image: 'block-wall-cmu' },
