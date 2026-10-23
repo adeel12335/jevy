@@ -50,6 +50,8 @@ const photos = {
   'stair-forms': 79,
   // CMU block wall, supplied 23 October for the block-work card
   'block-wall-cmu': 80,
+  // Block wall with ties and the station treads pair, supplied 23 October
+  'block-wall-ties': 81, 'station-treads-before': 82, 'station-treads-after': 83,
 }
 
 /* Every photograph is written at the three sizes the layout actually asks

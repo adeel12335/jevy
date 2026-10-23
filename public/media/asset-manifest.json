@@ -900,6 +900,42 @@
       ],
       "width": 1600,
       "height": 1200
+    },
+    {
+      "name": "block-wall-ties",
+      "number": 81,
+      "source": "Chat Image 2026-10-23 (47).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "name": "station-treads-before",
+      "number": 82,
+      "source": "Chat Image 2026-10-23 (49).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 576,
+      "height": 1024
+    },
+    {
+      "name": "station-treads-after",
+      "number": 83,
+      "source": "Chat Image 2026-10-23 (51).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 899,
+      "height": 1599
     }
   ]
 }

@@ -15,6 +15,7 @@ const catalogue: Project[] = [
   { id: 'stairs', title: 'Subway Stairway Flight', category: 'Stairs', caption: 'In progress', alt: 'Stair flight under construction with tiled walls and protected handrails' },
   { id: 'masonry', title: 'Block Wall', category: 'Masonry', caption: 'Laid and pointed', alt: 'Concrete block wall under construction on a project site' },
   { id: 'block-stair-forms', title: 'Stair Structure Formed Up', category: 'Formwork', caption: 'Forms and shoring set', alt: 'Timber stair forms and scaffold between concrete block walls' },
+  { id: 'block-wall-ties', title: 'Block Wall Tied to Structure', category: 'Masonry', caption: 'First courses laid', alt: 'First courses of a concrete block wall laid against a concrete wall fitted with masonry ties' },
   { id: 'block-wall-cmu', title: 'Concrete Block Installation', category: 'Masonry', caption: 'Laid and pointed', alt: 'Newly laid concrete block wall on a timber plate, joints struck, before the floor goes in' },
   { id: 'crew', title: 'Reinforcement Tied Out', category: 'Groundwork', caption: 'On site with the team', alt: 'Crew preparing a reinforced concrete sidewalk behind street barriers' },
   { id: 'station-stairs', title: 'Station Stairway', category: 'Stairs', caption: 'Reopened', alt: 'Rebuilt subway station stairway with yellow nosings, handrails and new floor tile' },
@@ -75,6 +76,8 @@ const catalogue: Project[] = [
   { id: 'plaza-cured', title: 'Lehman College: Slab Sealed', category: 'Concrete', caption: 'Cured and sealed', alt: 'The finished slab at the Lehman College building stairs with curing compound rolled on' },
   { id: 'gateway-apron', title: 'Gateway Apron', category: 'Concrete', caption: 'Curing', alt: 'Concrete apron at a gated entrance with barriers set out' },
   { id: 'stone-apron', title: 'Stone Wall Apron', category: 'Concrete', caption: 'Finished', alt: 'Concrete apron meeting a mortared stone wall' },
+  { id: 'station-treads-before', title: 'Station Steps, Before', category: 'Stairs', caption: 'Before', alt: 'Worn subway station steps with chipped treads and yellow nosings before reconstruction' },
+  { id: 'station-treads-after', title: 'Station Steps, New Treads', category: 'Stairs', caption: 'After', alt: 'New blue stair treads with anti-slip inserts fitted on a rebuilt subway station flight' },
   { id: 'station-stairs-before', title: 'Station Stairway, Before', category: 'Stairs', caption: 'Before', alt: 'Worn subway station stairway behind iron gates before reconstruction' },
   { id: 'column-base', title: 'Slab at the Column', category: 'Concrete', caption: 'Finished', alt: 'Concrete slab finished tight to a painted steel column base' },
   { id: 'driveway-garage', title: 'Garage Driveway', category: 'Concrete', caption: 'Finished', alt: 'Concrete driveway leading to a brick garage with a car parked alongside' },
@@ -323,6 +326,7 @@ export const sectors: { name: string; icon: 'commercial' | 'residential' | 'muse
 export type Transformation = { id: string; title: string; before: string; after: string; note: string }
 
 export const transformations: Transformation[] = [
+  { id: 'station-treads', title: 'Station steps and treads', before: 'station-treads-before', after: 'station-treads-after', note: 'Worn, chipped station steps replaced with new treads and anti-slip nosings, ready to reopen.' },
   { id: 'station-stairway', title: 'Station stairway', before: 'station-stairs-before', after: 'station-stairs', note: 'The old flight broken out, new treads poured, nosings and rails set and the floor tile relaid.' },
   { id: 'stair-flight', title: 'Demolition / concrete pouring completed', before: 'stair-breakout', after: 'stair-rebuilt', note: 'Demolition of the old steps with jackhammers, then the new concrete flight poured and completed.' },
   { id: 'plaza-slab', title: 'Lehman College building stairs', before: 'plaza-formwork', after: 'plaza-cured', note: 'Forms and mesh set out, concrete placed and floated, then sealed and left to cure at the Lehman College building stairs.' },
