@@ -65,6 +65,11 @@
       "source": "/services/subway-construction",
       "destination": "/services",
       "permanent": true
+    },
+    {
+      "source": "/projects/stair-opening",
+      "destination": "/projects?trade=demolition",
+      "permanent": true
     }
   ]
 }

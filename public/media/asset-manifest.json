@@ -394,18 +394,6 @@
       "height": 1600
     },
     {
-      "name": "stair-opening",
-      "number": 37,
-      "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (1).jpeg",
-      "widths": [
-        400,
-        800,
-        1200
-      ],
-      "width": 1200,
-      "height": 1600
-    },
-    {
       "name": "stair-treads",
       "number": 38,
       "source": "WhatsApp Image 2026-10-14 at 11.32.49 PM (2).jpeg",
@@ -900,6 +888,18 @@
       ],
       "width": 563,
       "height": 1000
+    },
+    {
+      "name": "block-wall-cmu",
+      "number": 80,
+      "source": "Chat Image 2026-10-23 (43).jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

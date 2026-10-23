@@ -29,7 +29,7 @@ const photos = {
   masonry: 25, 'block-wall': 26,
   // Stair construction
   stairs: 42, 'stair-detail': 40, 'stair-progress': 39, 'stairwell-narrow': 21,
-  'stair-opening': 37, 'stair-treads': 38, 'stair-blockwork': 41,
+  'stair-treads': 38, 'stair-blockwork': 41,
   // Groundwork
   prep: 2, crew: 4, mesh: 19, excavation: 43,
   // Plaza concrete and formwork, supplied 15 October
@@ -48,6 +48,8 @@ const photos = {
   'block-stair-forms': 70, 'tile-before-flight': 71, 'tile-before-wall': 72, 'tile-before-shoring': 73, 'tile-before-shoring-stair': 74, 'tile-after-wall': 75, 'tile-after-rail': 76, 'tile-floor-grouting': 77, 'gateway-rubble': 78,
   // Stair forms, supplied 21 October for the opening slide
   'stair-forms': 79,
+  // CMU block wall, supplied 23 October for the block-work card
+  'block-wall-cmu': 80,
 }
 
 /* Every photograph is written at the three sizes the layout actually asks

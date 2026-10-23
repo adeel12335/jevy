@@ -110,6 +110,8 @@ export const redirects: { from: string; to: string }[] = [
   { from: '/services/concrete-sidewalks', to: '/services/concrete-work' },
   { from: '/services/masonry-blockwork', to: '/services/masonry-brick-block' },
   { from: '/services/subway-construction', to: '/services' },
+  /* A photograph withdrawn at the company's request. */
+  { from: '/projects/stair-opening', to: '/projects?trade=demolition' },
 ]
 
 export const notFoundMeta: PageMeta = {
