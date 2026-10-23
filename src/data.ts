@@ -168,6 +168,7 @@ export const certifications: Credential[] = [
     type: 'Certified', label: 'Business certifications', kind: 'certification', agencies: [
       { code: 'WOSB', name: 'Women-Owned Small Business' },
       { code: 'WBE', name: 'Women-owned Business Enterprise' },
+      { code: 'WBENC', name: "Women's Business Enterprise National Council" },
       { code: 'MBE', name: 'Minority-owned Business Enterprise' },
       { code: 'MWBE NY', name: 'Minority and Women-owned Business Enterprise, New York State' },
       { code: 'MWBE NYC', name: 'Minority and Women-owned Business Enterprise, New York City' },

@@ -34,7 +34,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/about',
     title: `About ${brand} | Construction Corporation in Jamaica, NY`,
-    description: `${brand} is a construction corporation in Jamaica, New York, providing residential and commercial construction services, certified WOSB, WBE, MBE and MWBE NY/NYC across New York and New Jersey.`,
+    description: `${brand} is a construction corporation in Jamaica, New York, providing residential and commercial construction services, certified WOSB, WBE, WBENC, MBE and MWBE NY/NYC across New York and New Jersey.`,
     image: 'sidewalk',
     photo: true,
     trail: [{ name: 'About', path: '/about' }],
