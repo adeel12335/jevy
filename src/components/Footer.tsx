@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import { ArrowUp, Mail, MapPin, Phone, Printer } from 'lucide-react'
-import { agencyCount, certifications, prequalified, services, socials } from '../data'
+import { certifications, prequalified, services, socials } from '../data'
 import { company } from '../site'
 import { socialIcons } from './icons'
 import { Logo, Setout } from './ui'
@@ -16,7 +16,7 @@ export function Footer() {
         <div className="footer-brand">
           <Link to="/" className="footer-logo" aria-label={`${company.name} home`}><Logo /></Link>
           <p className="footer-tagline">{tagline[0]}<span className="accent">{tagline[1]}</span></p>
-          <p className="footer-blurb">Residential and commercial construction services throughout New York and New Jersey, prequalified with {agencyCount} public agencies and registered with New York State OGS.</p>
+          <p className="footer-blurb">Family-owned, minority-owned and GC-licensed. Residential and commercial construction services throughout New York and New Jersey.</p>
         </div>
 
         <nav className="footer-links" aria-label="Services">
@@ -51,9 +51,9 @@ export function Footer() {
       <div className="footer-strip">
         <div className="footer-certs">
           <ul className="footer-badges" aria-label="Certifications">
-            {certifications.map(group => <li key={group.type} title={group.label}>{group.type}</li>)}
+            {certifications.flatMap(group => group.agencies).map(entry => <li key={entry.code} title={entry.name}>{entry.code}</li>)}
           </ul>
-          <p>Prequalified {prequalified.join(' · ')} · Registered with OGS NY</p>
+          <p>{prequalified.join(' · ')}</p>
         </div>
         <ul className="footer-socials" aria-label={`Follow ${company.name}`}>
           {socials.map(social => {

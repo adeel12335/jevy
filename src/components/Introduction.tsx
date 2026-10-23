@@ -183,13 +183,13 @@ export function AboutIntro() {
     <div className="container about-grid">
       <Reveal className="about-media">
         <Photo id="sidewalk" alt="Completed concrete sidewalk alongside a stone wall" className="about-photo" sizes="(max-width: 1080px) 100vw, 50vw" />
-        <div className="about-stamp"><b><CountUp to={agencyCount} /></b><span>Certifying<br />agencies</span></div>
+        <div className="about-stamp"><b><CountUp to={agencyCount} /></b><span>Agency<br />credentials</span></div>
       </Reveal>
       <Reveal className="about-copy" delay={0.1}>
         <p className="eyebrow">About Jevvy Construction</p>
         <h2 id="about-title"><Lines text={['Care in every detail.', 'Commitment on every site.']} /></h2>
         <p>{company.intro}</p>
-        <p>A family-owned small business holding a General Contractor (GC) license. Every photograph on this site is our own work, on our own jobs. We hold MWBE, SBE and DBE certifications across {agencyCount} public agencies in New York and New Jersey, and we are a registered vendor with New York State OGS.</p>
+        <p>A family-owned, minority-owned small business and licensed general contractor. Every photograph on this site is our own work, on our own jobs. We are certified WOSB, WBE, MBE and city and state MWBE, hold credentials with {agencyCount} public agencies, and are registered vendors with OGS and DASNY.</p>
         <TextLink to="/about">Get to know Jevvy Construction</TextLink>
       </Reveal>
     </div>

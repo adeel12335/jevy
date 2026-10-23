@@ -24,7 +24,7 @@ const abs = (path: string) => `${SITE_URL}${path === '/' ? '/' : path}`
 const HOME: PageMeta = {
   path: '/',
   title: `${brand} | Residential & Commercial Construction Services | New York & New Jersey`,
-  description: `Jevvy Construction Inc provides renovation and new construction services for residential and commercial projects throughout New York and New Jersey. Prequalified ${prequalified.join(', ')}, and registered with New York State OGS.`,
+  description: `Jevvy Construction Inc provides renovation and new construction services for residential and commercial projects throughout New York and New Jersey. ${prequalified.join('. ')}.`,
   image: 'stair-forms',
   photo: true,
 }
@@ -34,7 +34,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/about',
     title: `About ${brand} | Construction Corporation in Jamaica, NY`,
-    description: `${brand} is a construction corporation in Jamaica, New York, providing residential and commercial construction services, prequalified with six public agencies across New York and New Jersey.`,
+    description: `${brand} is a construction corporation in Jamaica, New York, providing residential and commercial construction services, certified WOSB, WBE, MBE and MWBE across New York and New Jersey.`,
     image: 'sidewalk',
     photo: true,
     trail: [{ name: 'About', path: '/about' }],
@@ -64,8 +64,8 @@ const STATIC: PageMeta[] = [
   },
   {
     path: '/qualifications',
-    title: `MWBE, DBE & SBE Prequalifications | ${brand}`,
-    description: `Prequalified ${prequalified.join('; ')}. Registered vendor with the New York State Office of General Services.`,
+    title: `Certifications & Agency Credentials | ${brand}`,
+    description: `${prequalified.join('. ')}.`,
     image: 'crew',
     trail: [{ name: 'Qualifications', path: '/qualifications' }],
   },

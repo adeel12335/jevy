@@ -13,7 +13,15 @@ export const company = {
   tagline: 'Building with purpose. Delivering with care.',
   positioning: 'Residential & Commercial Construction Services',
   reach: 'We provide construction services throughout New York and New Jersey.',
-  description: 'Family-owned, GC-licensed residential and commercial construction services throughout New York and New Jersey. Prequalified MWBE, SBE and DBE with public agencies in both states, and a registered vendor with New York State OGS.',
+  description: 'Family-owned, minority-owned small business and licensed general contractor serving New York and New Jersey. Certified WOSB, WBE, MBE and city and state MWBE; credentials with SCA, PANYNJ and MTA; registered vendor with OGS and DASNY.',
+  /* The About page, in the company's own words. */
+  about: [
+    'Jevvy Construction Inc. is a family-owned, minority-owned small business and licensed general contractor serving New York and New Jersey. We provide renovation and new construction services for residential and commercial projects, bringing hands-on experience, skilled craftsmanship, and personal accountability to every stage of the work.',
+    'Our experienced team includes union professionals equipped to support a wide range of construction needs. From excavation and drainage to formwork, reinforcement, and finished concrete, we understand the work from the ground up. Our capabilities also include masonry, blockwork, stonework, tiling, building decks, and stairways.',
+    'Our business certifications and agency credentials include WOSB, WBE, MBE, city and state MWBE, SCA, PANYNJ, and MTA. We are also registered vendors with OGS and DASNY, reflecting our commitment to pursuing opportunities across the public and private sectors.',
+    'As a family business, our reputation is personal. We value clear communication, dependable teamwork, and attention to the details that make a lasting difference.',
+    'The photographs on this website show our own projects—actual job sites, materials, and completed work. They offer a firsthand look at our craftsmanship and the care we bring to every project.',
+  ],
   intro: 'Jevvy Construction Inc. provides renovation and new construction services for residential and commercial projects, from start to finish. Our experienced and dedicated team brings hands-on expertise, attention to detail, and a commitment to quality workmanship to every job. With union professionals on our team, we have the skilled workforce to support a wide range of construction needs.',
   street: '175-61 Hillside Avenue, Suite 202',
   locality: 'Jamaica',

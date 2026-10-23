@@ -15,7 +15,7 @@ export default function About() {
     <PageHeader
       eyebrow="About Jevvy Construction"
       title={['Care in every detail.', 'Commitment on every site.']}
-      lede={<p>{company.name} is a family-owned small business holding a General Contractor (GC) license, providing residential and commercial construction services throughout New York and New Jersey from the office in {company.locality}, Queens.</p>}
+      lede={<p>{company.name} is a family-owned, minority-owned small business and licensed general contractor serving New York and New Jersey.</p>}
       trail={meta.trail!}
       image="sidewalk"
       imageAlt="Finished concrete sidewalk panels alongside a stone retaining wall"
@@ -25,14 +25,12 @@ export default function About() {
       <div className="container about-page-grid">
         <Reveal>
           <p className="eyebrow">Who we are</p>
-          <h2 id="about-story"><Lines text={['The work speaks', 'for itself.']} /></h2>
+          <h2 id="about-story"><Lines text={['About Jevvy', 'Construction Inc.']} /></h2>
         </Reveal>
         <Reveal className="about-page-copy" delay={0.08}>
-          <p>{company.intro}</p>
-          <p>The work runs from the excavation and drainage beneath a surface through forms and reinforcement to the finished, jointed pour — and from a single block wall to a commercial building deck, a stone stair or a station stairway.</p>
-          <p>Every photograph on this site came off one of our own jobs. There are no renders here and no stock photography: {projects.length} frames of real surfaces, real formwork and real site conditions, so you can judge the standard before you call us.</p>
-          <p>We are a family-owned small business holding a General Contractor (GC) license, prequalified as a Minority-owned, Small and Disadvantaged Business Enterprise with {agencyCount} public agencies across New York and New Jersey, and registered as a vendor with New York State OGS, which lets general contractors and agencies count our scope toward their participation goals.</p>
-          <TextLink to="/qualifications">See the prequalifications</TextLink>
+          {company.about.map(paragraph => <p key={paragraph.slice(0, 24)}>{paragraph}</p>)}
+          <p><strong>We build with pride, and we stand behind our work.</strong></p>
+          <TextLink to="/qualifications">See the certifications and credentials</TextLink>
         </Reveal>
       </div>
     </section>
@@ -49,7 +47,7 @@ export default function About() {
         <Reveal className="figure-grid">
           <div className="figure"><b><CountUp to={projects.length} /></b><span>Photographs, all our own work</span></div>
           <div className="figure"><b><CountUp to={services.length} /></b><span>Trades we build in</span></div>
-          <div className="figure"><b><CountUp to={agencyCount} /></b><span>Certifying public agencies</span></div>
+          <div className="figure"><b><CountUp to={agencyCount} /></b><span>Agency credentials</span></div>
           <div className="figure"><b><CountUp to={company.areaServed.length} /></b><span>States we work across</span></div>
         </Reveal>
       </div>

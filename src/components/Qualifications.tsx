@@ -1,4 +1,4 @@
-import { agencyCount, certifications } from '../data'
+import { agencyLine, certificationLine, certifications, registrationLine } from '../data'
 import { Lines, Reveal, Setout, TextLink } from './ui'
 
 /* Shown whole on the home page; on /qualifications the page header already
@@ -15,10 +15,10 @@ export function Qualifications({ heading = true }: { heading?: boolean }) {
       <Reveal className="cert-aside">
         {heading ? <>
           <p className="eyebrow">Prequalifications</p>
-          <h2 id="qualifications-title"><Lines text={['Certified.', 'Registered.', 'On the list.']} /></h2>
+          <h2 id="qualifications-title"><Lines text={['Certified.', 'Credentialed.', 'Registered.']} /></h2>
         </> : null}
-        <p className="lede">Jevvy Construction Inc is certified as a Minority-owned, Small and Disadvantaged Business Enterprise with {agencyCount} public agencies across New York and New Jersey, and is a registered vendor with the New York State Office of General Services.</p>
-        <div className="cert-types"><span>MWBE</span><span>SBE</span><span>DBE</span><span>OGS registered</span></div>
+        <p className="lede">Our business certifications and agency credentials include {certificationLine}, {agencyLine}. We are also registered vendors with {registrationLine}.</p>
+        <div className="cert-types">{certifications.flatMap(group => group.agencies).map(entry => <span key={entry.code}>{entry.code}</span>)}</div>
         <TextLink to="/contact" className="cert-link">Discuss a project</TextLink>
       </Reveal>
       <Reveal delay={0.1}>

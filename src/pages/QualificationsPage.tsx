@@ -1,4 +1,4 @@
-import { agencyCount, certified } from '../data'
+import { agencyLine, certificationLine, registrationLine } from '../data'
 import { company } from '../site'
 import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
@@ -8,13 +8,12 @@ import { Lines, Reveal } from '../components/ui'
 
 export default function QualificationsPage() {
   const meta = metaFor('/qualifications')
-  const types = certified.map(group => group.type).join(', ')
 
   return <>
     <PageHeader
       eyebrow="Prequalifications"
-      title={['Certified.', 'Registered.', 'On the list.']}
-      lede={<p>{company.name} is prequalified {types} with {agencyCount} public agencies across New York and New Jersey, and registered with New York State OGS — so our scope can count toward a participation goal on your project.</p>}
+      title={['Certified.', 'Credentialed.', 'Registered.']}
+      lede={<p>{company.name} is certified {certificationLine}, holds credentials with {agencyLine}, and is a registered vendor with {registrationLine} — so our scope can count toward a participation goal on your project.</p>}
       trail={meta.trail!}
       compact
     />
@@ -28,8 +27,8 @@ export default function QualificationsPage() {
           <h2 id="quals-note"><Lines text={['Ready for the', 'bid list.']} /></h2>
         </Reveal>
         <Reveal delay={0.08}>
-          <p className="lede">A Minority-owned Business Enterprise (MWBE), Disadvantaged Business Enterprise (DBE) or Small Business Enterprise (SBE) certification is issued by the agency itself after it reviews ownership, control and capacity. It is what lets a prime contractor count a subcontractor&rsquo;s scope toward the participation goals written into a public contract.</p>
-          <p className="lede">Each certification above is held directly with the agency named beside it. If you need our certification numbers or a copy of a certificate for a bid package, ask and we will send them across.</p>
+          <p className="lede">A WOSB, WBE, MBE or MWBE certification is issued after a review of ownership, control and capacity. It is what lets a prime contractor count a subcontractor&rsquo;s scope toward the participation goals written into a public contract.</p>
+          <p className="lede">The agency credentials and vendor registrations above are held directly with the agency named. If you need our certification numbers or a copy of a certificate for a bid package, ask and we will send them across.</p>
         </Reveal>
       </div>
     </section>

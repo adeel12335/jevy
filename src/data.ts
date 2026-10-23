@@ -195,47 +195,48 @@ export const process: { step: string; title: string; body: string; image: string
   { step: '04', title: 'Cure & reopen', body: 'Protection stays on through the cure. Barriers come off and the walk goes back into use.', image: 'walkway', alt: 'Completed concrete walkway reopened along a residential street' },
 ]
 
-/* Prequalifications as supplied by the company. Agency names are given in
-   full so a procurement reader can match them to their own register. The
-   OGS entry is a vendor registration rather than a certification. */
-export type Credential = { type: string; label: string; kind: 'certification' | 'registration'; agencies: { code: string; name: string }[] }
+/* Certifications and agency credentials as the company states them. Codes
+   are given with the full name so a procurement reader can match them to
+   their own register. */
+export type Credential = { type: string; label: string; kind: 'certification' | 'agency' | 'registration'; agencies: { code: string; name: string }[] }
 
 export const certifications: Credential[] = [
   {
-    type: 'MWBE', label: 'Minority and Women-owned Business Enterprise', kind: 'certification', agencies: [
-      { code: 'DASNY', name: 'Dormitory Authority of the State of New York' },
-      { code: 'NYC SBS', name: 'NYC Department of Small Business Services' },
-      { code: 'NYS ESD', name: 'Empire State Development' },
+    type: 'Certified', label: 'Business certifications', kind: 'certification', agencies: [
+      { code: 'WOSB', name: 'Women-Owned Small Business' },
+      { code: 'WBE', name: 'Women-owned Business Enterprise' },
+      { code: 'MBE', name: 'Minority-owned Business Enterprise' },
+      { code: 'MWBE', name: 'Minority and Women-owned Business Enterprise, City and State of New York' },
+    ],
+  },
+  {
+    type: 'Credentialed', label: 'Agency credentials', kind: 'agency', agencies: [
+      { code: 'SCA', name: 'NYC School Construction Authority' },
+      { code: 'PANYNJ', name: 'The Port Authority of New York and New Jersey' },
       { code: 'MTA', name: 'Metropolitan Transportation Authority' },
     ],
   },
   {
-    type: 'SBE', label: 'Small Business Enterprise', kind: 'certification', agencies: [
-      { code: 'PANYNJ', name: 'The Port Authority of New York and New Jersey' },
-    ],
-  },
-  {
-    type: 'DBE', label: 'Disadvantaged Business Enterprise', kind: 'certification', agencies: [
-      { code: 'NJDOT', name: 'New Jersey Department of Transportation' },
-    ],
-  },
-  {
-    type: 'OGS', label: 'Registered vendor', kind: 'registration', agencies: [
-      { code: 'OGS NY', name: 'New York State Office of General Services' },
+    type: 'Registered', label: 'Registered vendor', kind: 'registration', agencies: [
+      { code: 'OGS', name: 'New York State Office of General Services' },
+      { code: 'DASNY', name: 'Dormitory Authority of the State of New York' },
     ],
   },
 ]
 
 export const certified = certifications.filter(group => group.kind === 'certification')
+export const agencyCredentials = certifications.filter(group => group.kind === 'agency')
 export const registrations = certifications.filter(group => group.kind === 'registration')
-/* Agencies the company holds a certification with; the OGS registration is
-   counted separately wherever it is mentioned. */
-export const agencyCount = new Set(certified.flatMap(group => group.agencies.map(agency => agency.code))).size
+/* The public agencies the company holds a credential with. */
+export const agencyCount = new Set(agencyCredentials.flatMap(group => group.agencies.map(agency => agency.code))).size
 
 const listOf = (items: string[]) => items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('')
-/* One phrase per certification, in the company's own form: "MWBE with DASNY,
-   NYC SBS, NYS ESD and MTA". */
-export const prequalified = certified.map(group => `${group.type} with ${listOf(group.agencies.map(agency => agency.code))}`)
+/* The codes in one line each, in the company's own form. */
+export const certificationLine = listOf(certified.flatMap(group => group.agencies.map(agency => agency.code === 'MWBE' ? 'city and state MWBE' : agency.code)))
+export const agencyLine = listOf(agencyCredentials.flatMap(group => group.agencies.map(agency => agency.code)))
+export const registrationLine = listOf(registrations.flatMap(group => group.agencies.map(agency => agency.code)))
+/* "Certified WOSB, WBE, MBE and city and state MWBE" and so on, one phrase each. */
+export const prequalified = [`Certified ${certificationLine}`, `Credentials with ${agencyLine}`, `Registered with ${registrationLine}`]
 
 export const navigation = [
   { label: 'About', href: '/about' },
