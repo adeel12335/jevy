@@ -83,7 +83,7 @@ export const services: {
     items: ['Site preparation & subbase', 'Formwork & reinforcement', 'Sidewalks, slabs & driveways', 'Steps, ramps & aprons'],
   },
   {
-    slug: 'masonry-brick-block', title: 'Masonry, Brick & Block Work', lines: ['Masonry, Brick', '& Block Work'],
+    slug: 'masonry-brick-block', title: 'Masonry, Bricks & Blocks Work', lines: ['Masonry, Bricks', '& Blocks Work'],
     category: 'Masonry', image: 'block-wall-cmu',
     description: 'Block walls, brickwork and the masonry details that go with them.',
     detail: 'Concrete block, brick, and the blockwork that carries stairs, services and structure.',
