@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { ArrowUp, Mail, MapPin, Phone, Printer } from 'lucide-react'
+import { ArrowUp, Clock, Mail, MapPin, Phone, Printer } from 'lucide-react'
 import { certifications, prequalified, services, socials } from '../data'
 import { company } from '../site'
 import { socialIcons } from './icons'
@@ -44,6 +44,7 @@ export function Footer() {
             <li><Mail size={17} aria-hidden="true" /><a href={`mailto:${company.email}`}>{company.email}</a></li>
             {company.telephones.map(line => <li key={line.href}><Phone size={17} aria-hidden="true" /><a href={line.href}>{line.number}</a></li>)}
             <li><Printer size={17} aria-hidden="true" /><span>Fax {company.fax}</span></li>
+              <li><Clock size={17} aria-hidden="true" /><span>{company.hours}</span></li>
           </ul>
         </div>
       </div>

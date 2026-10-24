@@ -476,7 +476,7 @@ html.js .hero-controls[data-playing='false'] .hero-dot.is-active .hero-dot-bar {
 .contact-grid { display: grid; gap: clamp(2.5rem, 4vw, 4.5rem); grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: start; }
 .contact-aside h2 { margin-bottom: 1.35rem; }
 .contact-lines { display: grid; margin-top: 2.2rem; }
-.contact-lines a, .contact-lines address {
+.contact-lines a, .contact-lines address, .contact-lines .contact-hours {
   display: flex; align-items: center; gap: 0.9rem; padding: 0.95rem 0; margin: 0;
   border-top: 1px solid var(--slab-200); font-size: 1rem; font-style: normal;
   text-decoration: none; color: var(--slab-ink); transition: color 0.18s var(--ease);

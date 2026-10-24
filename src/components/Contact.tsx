@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { ArrowRight, Check, Copy, Mail, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, Check, Clock, Copy, Mail, MapPin, Phone } from 'lucide-react'
 import { company, telephoneSentence } from '../site'
 import { Lines, Modal, Reveal } from './ui'
 
@@ -84,6 +84,7 @@ export function Contact({ heading = true }: { heading?: boolean }) {
             <a href={`mailto:${company.email}`}><Mail size={20} strokeWidth={1.7} aria-hidden="true" />{company.email}</a>
             {company.telephones.map(line => <a key={line.href} href={line.href}><Phone size={20} strokeWidth={1.7} aria-hidden="true" />{line.number}</a>)}
             <address><MapPin size={20} strokeWidth={1.7} aria-hidden="true" />{company.street}, {company.locality}, {company.region} {company.postalCode}</address>
+            <span className="contact-hours"><Clock size={20} strokeWidth={1.7} aria-hidden="true" />{company.hours}</span>
           </div>
         </Reveal>
         <Reveal className="contact-card" delay={0.1}>
