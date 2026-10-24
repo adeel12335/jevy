@@ -25,7 +25,7 @@ export default function About() {
       <div className="container about-page-grid">
         <Reveal>
           <p className="eyebrow">Who we are</p>
-          <h2 id="about-story"><Lines text={['About Jevvy', 'Construction Inc.']} /></h2>
+          <h2 id="about-story"><Lines text={['About Jevvy', 'Construction Inc']} /></h2>
         </Reveal>
         <Reveal className="about-page-copy" delay={0.08}>
           {company.about.map(paragraph => <p key={paragraph.slice(0, 24)}>{paragraph}</p>)}

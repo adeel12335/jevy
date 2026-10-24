@@ -1,8 +1,12 @@
 node_modules/
 dist/
 dist-ssr/
-.vercel/
 *.tsbuildinfo
+
+# Vercel CLI link and the OIDC token it downloads
+.vercel
+
+# Local environment; the example stays tracked
 .env
 .env.*
 !.env.example
