@@ -17,6 +17,11 @@ const index = Object.fromEntries(
 )
 
 const photos = {
+  // Waterproofing: blue membrane on the stairwell walls before tiling.
+  'waterproof-stairwell': 88,
+  'waterproof-flight': 89,
+  'waterproof-tile-edge': 90,
+  'waterproof-landing': 91,
   'sidewalk': 35,
   'walkway': 10,
   'pour': 15,

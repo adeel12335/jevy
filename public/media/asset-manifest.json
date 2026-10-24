@@ -7,6 +7,54 @@
   ],
   "photos": [
     {
+      "name": "waterproof-stairwell",
+      "number": 88,
+      "source": "Waterproofing 2026-10-25 (10).png",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "waterproof-flight",
+      "number": 89,
+      "source": "Waterproofing 2026-10-25 (11).png",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "waterproof-tile-edge",
+      "number": 90,
+      "source": "Waterproofing 2026-10-25 (12).png",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "waterproof-landing",
+      "number": 91,
+      "source": "Waterproofing 2026-10-25 (14).png",
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "width": 1024,
+      "height": 768
+    },
+    {
       "name": "sidewalk",
       "number": 35,
       "source": "WhatsApp Image 2026-10-14 at 11.32.48 PM (9).jpeg",
