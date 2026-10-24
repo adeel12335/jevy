@@ -1,4 +1,4 @@
-export type Category = 'Commercial' | 'Concrete' | 'Forming' | 'Masonry' | 'Stone' | 'Waterproofing' | 'Tile' | 'K-Rail' | 'Paint' | 'Stairs' | 'Demolition' | 'Groundwork'
+export type Category = 'Commercial' | 'Concrete' | 'Forming' | 'Masonry' | 'Stone' | 'Tile' | 'K-Rail' | 'Paint' | 'Stairs' | 'Demolition' | 'Groundwork'
 export type Project = { id: string; title: string; category: Category; caption: string; alt: string; hidden?: boolean }
 
 /* Every photograph supplied by the company, catalogued by trade. Titles and
@@ -6,7 +6,7 @@ export type Project = { id: string; title: string; category: Category; caption: 
    the company asked to be named. Ordered so the unfiltered gallery opens on
    the strongest work and stays varied as it runs. */
 /* In the order the company presents the work. */
-export const categories: Category[] = ['Demolition', 'Forming', 'Stone', 'Concrete', 'Masonry', 'Waterproofing', 'Tile', 'K-Rail', 'Paint', 'Stairs', 'Commercial', 'Groundwork']
+export const categories: Category[] = ['Demolition', 'Forming', 'Stone', 'Concrete', 'Masonry', 'Tile', 'K-Rail', 'Paint', 'Stairs', 'Commercial', 'Groundwork']
 
 const catalogue: Project[] = [
   { id: 'stair-breakout', title: 'Breaking Out', category: 'Demolition', caption: 'Breaking out', alt: 'Crew breaking out an old stair flight with jackhammers' },
@@ -20,10 +20,6 @@ const catalogue: Project[] = [
   { id: 'plaza-cured', title: 'Lehman College: Slab Sealed', category: 'Concrete', caption: 'Cured and sealed', alt: 'The finished slab at the Lehman College building stairs with curing compound rolled on' },
   { id: 'block-wall-cmu', title: 'Concrete Block Installation', category: 'Masonry', caption: 'Laid and pointed', alt: 'Newly laid concrete block wall on a timber plate, joints struck, before the floor goes in' },
   { id: 'block-wall-ties', title: 'Block Wall Tied to Structure', category: 'Masonry', caption: 'First courses laid', alt: 'First courses of a concrete block wall laid against a concrete wall fitted with masonry ties' },
-  { id: 'waterproof-stairwell', title: 'Stairwell Sealed', category: 'Waterproofing', caption: 'Membrane applied', alt: 'Blue waterproofing membrane covering both stairwell walls, with wall tile going up on the right' },
-  { id: 'waterproof-tile-edge', title: 'Membrane Before Tile', category: 'Waterproofing', caption: 'Tile going on', alt: 'Blue waterproofing membrane on a wall with the first course of tile set along the base on red spacers' },
-  { id: 'waterproof-flight', title: 'Flight, Walls Sealed', category: 'Waterproofing', caption: 'Membrane applied', alt: 'Stair flight with steel nosings, the walls either side coated in blue waterproofing membrane' },
-  { id: 'waterproof-landing', title: 'Landing and Flight', category: 'Waterproofing', caption: 'Membrane applied', alt: 'Bottom landing with the stair flight beyond, blue waterproofing on the right wall and finished tile on the left' },
   { id: 'tile-after-wall', title: 'Wall Tile, Completed', category: 'Tile', caption: 'Grouted and finished', alt: 'Finished white wall tile with a tiled skirting above a flight of station steps' },
   { id: 'tile-floor', title: 'Quarry Tile Floor', category: 'Tile', caption: 'Grouted', alt: 'Two crew members grouting a red quarry tile floor beside a glass wall' },
   { id: 'tile-after-rail', title: 'Tile and Handrail, Completed', category: 'Tile', caption: 'Grouted and finished', alt: 'Finished white wall tile with a stainless handrail above a flight of station steps' },
@@ -137,9 +133,7 @@ export const services: {
   },
   {
     slug: 'waterproofing', title: 'Waterproofing', lines: ['Waterproofing'],
-    category: 'Waterproofing', image: 'waterproof-stairwell',
     description: 'Membranes and waterproof detailing that keep water where it belongs.',
-    detail: 'Membrane taken over the walls and the detail at every junction, so the finish that goes on top of it stays dry.',
     items: ['Membranes & tanking', 'Wet area waterproofing', 'Detailing at junctions & upstands'],
   },
   {
