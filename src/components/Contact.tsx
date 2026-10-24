@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { ArrowRight, Check, Copy, Mail, MapPin, Phone } from 'lucide-react'
-import { company } from '../site'
+import { company, telephoneSentence } from '../site'
 import { Lines, Modal, Reveal } from './ui'
 
 type Inquiry = { name: string; email: string; location: string; message: string }
@@ -82,7 +82,7 @@ export function Contact({ heading = true }: { heading?: boolean }) {
           <p className="lede">Tell us the site, the scope and the timeline. We will come back to you about the work.</p>
           <div className="contact-lines">
             <a href={`mailto:${company.email}`}><Mail size={20} strokeWidth={1.7} aria-hidden="true" />{company.email}</a>
-            <a href={company.telephoneHref}><Phone size={20} strokeWidth={1.7} aria-hidden="true" />{company.telephone}</a>
+            {company.telephones.map(line => <a key={line.href} href={line.href}><Phone size={20} strokeWidth={1.7} aria-hidden="true" />{line.number}</a>)}
             <address><MapPin size={20} strokeWidth={1.7} aria-hidden="true" />{company.street}, {company.locality}, {company.region} {company.postalCode}</address>
           </div>
         </Reveal>
@@ -91,7 +91,7 @@ export function Contact({ heading = true }: { heading?: boolean }) {
           {status === 'sent' ? <div className="form-sent" role="status">
             <Check size={30} strokeWidth={1.6} aria-hidden="true" />
             <p><strong>Your inquiry is on its way.</strong></p>
-            <p>We will come back to you at the address you gave us. For anything urgent, call the office on {company.telephone}.</p>
+            <p>We will come back to you at the address you gave us. For anything urgent, call the office on {telephoneSentence}.</p>
             <button type="button" className="button button-secondary" onClick={() => setStatus('idle')}>Send another inquiry</button>
           </div> : <form
             className="inquiry-form"

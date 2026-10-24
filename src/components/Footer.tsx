@@ -42,7 +42,7 @@ export function Footer() {
           <ul className="footer-lines">
             <li><MapPin size={17} aria-hidden="true" /><address>{company.street}<br />{company.locality}, {company.region} {company.postalCode}</address></li>
             <li><Mail size={17} aria-hidden="true" /><a href={`mailto:${company.email}`}>{company.email}</a></li>
-            <li><Phone size={17} aria-hidden="true" /><a href={company.telephoneHref}>{company.telephone}</a></li>
+            {company.telephones.map(line => <li key={line.href}><Phone size={17} aria-hidden="true" /><a href={line.href}>{line.number}</a></li>)}
             <li><Printer size={17} aria-hidden="true" /><span>Fax {company.fax}</span></li>
           </ul>
         </div>

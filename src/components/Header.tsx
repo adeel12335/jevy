@@ -46,7 +46,7 @@ export function Header() {
             <div className="mobile-menu-contact">
               <span>Let us talk about your project</span>
               <a href={`mailto:${company.email}`}>{company.email}</a>
-              <a href={company.telephoneHref}>{company.telephone}</a>
+              {company.telephones.map(line => <a key={line.href} href={line.href}>{line.number}</a>)}
             </div>
           </Dialog.Content>
         </Dialog.Portal>

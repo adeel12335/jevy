@@ -1,4 +1,4 @@
-export type Category = 'Commercial' | 'Concrete' | 'Foam Work' | 'Masonry' | 'Stone' | 'Tile' | 'K-Rail' | 'Paint' | 'Stairs' | 'Demolition' | 'Groundwork'
+export type Category = 'Commercial' | 'Concrete' | 'Forming' | 'Masonry' | 'Stone' | 'Tile' | 'K-Rail' | 'Paint' | 'Stairs' | 'Demolition' | 'Groundwork'
 export type Project = { id: string; title: string; category: Category; caption: string; alt: string; hidden?: boolean }
 
 /* Every photograph supplied by the company, catalogued by trade. Titles and
@@ -6,13 +6,13 @@ export type Project = { id: string; title: string; category: Category; caption: 
    the company asked to be named. Ordered so the unfiltered gallery opens on
    the strongest work and stays varied as it runs. */
 /* In the order the company presents the work. */
-export const categories: Category[] = ['Demolition', 'Foam Work', 'Stone', 'Concrete', 'Masonry', 'Tile', 'K-Rail', 'Paint', 'Stairs', 'Commercial', 'Groundwork']
+export const categories: Category[] = ['Demolition', 'Forming', 'Stone', 'Concrete', 'Masonry', 'Tile', 'K-Rail', 'Paint', 'Stairs', 'Commercial', 'Groundwork']
 
 const catalogue: Project[] = [
   { id: 'stair-breakout', title: 'Breaking Out', category: 'Demolition', caption: 'Breaking out', alt: 'Crew breaking out an old stair flight with jackhammers' },
   { id: 'gateway-clearance', title: 'Clearing the Gateway', category: 'Demolition', caption: 'Breaking out', alt: 'Excavator clearing concrete rubble between stone gate pillars' },
-  { id: 'stair-forms', title: 'Stair Flight Formed Up', category: 'Foam Work', caption: 'Forms set', alt: 'Timber forms and scaffold for a new stair flight under a skylight, with the crew on the landing above' },
-  { id: 'plaza-formwork', title: 'Lehman College: Set Out for the Pour', category: 'Foam Work', caption: 'Set to line', alt: 'Timber forms and reinforcing mesh set out before the pour at the Lehman College building stairs' },
+  { id: 'stair-forms', title: 'Stair Flight Formed Up', category: 'Forming', caption: 'Forms set', alt: 'Timber forms and scaffold for a new stair flight under a skylight, with the crew on the landing above' },
+  { id: 'plaza-formwork', title: 'Lehman College: Set Out for the Pour', category: 'Forming', caption: 'Set to line', alt: 'Timber forms and reinforcing mesh set out before the pour at the Lehman College building stairs' },
   { id: 'stone-steps', title: 'Lehman College: Stone Steps', category: 'Stone', caption: 'Set and protected', alt: 'Wide flight of stone steps at the Lehman College building, taped off while the joints cure' },
   { id: 'stone-steps-crew', title: 'Lehman College: Setting the Steps', category: 'Stone', caption: 'In progress', alt: 'Crew setting the stone steps at the Lehman College building with a forklift alongside' },
   { id: 'sidewalk', title: 'Sidewalk & Retaining Wall', category: 'Concrete', caption: 'Finished panels', alt: 'Finished concrete sidewalk panels running alongside a stone retaining wall' },
@@ -56,8 +56,8 @@ export const inCategory = (category: Category) => projects.filter(project => pro
 
 export const countByCategory = (category: Category) => projects.filter(project => project.category === category).length
 
-/* The photographs that run full-bleed in the home slider; these are the only
-   four written at 1600px by scripts/prepare-assets.mjs. */
+/* The photographs that run full-bleed in the home slider; these are the
+   only ones written at 1600px by scripts/prepare-assets.mjs. */
 export const fullBleed = new Set(['crew', 'sidewalk', 'commercial-deck', 'commercial-wall-forms', 'stair-forms'])
 
 /* The eleven services the company offers, in its own wording.
@@ -79,8 +79,8 @@ export const services: {
     slug: 'concrete-work', title: 'Concrete Work', lines: ['Concrete', 'Work'],
     category: 'Concrete', image: 'sidewalk',
     description: 'Preparation, forming and finishing for concrete surfaces, inside and out.',
-    detail: 'From the ground beneath a surface, through foam work and reinforcement, to the finished and jointed pour.',
-    items: ['Site preparation & subbase', 'Foam work & reinforcement', 'Sidewalks, slabs & driveways', 'Steps, ramps & aprons'],
+    detail: 'From the ground beneath a surface, through forming and reinforcement, to the finished and jointed pour.',
+    items: ['Site preparation & subbase', 'Forming & reinforcement', 'Sidewalks, slabs & driveways', 'Steps, ramps & aprons'],
   },
   {
     slug: 'masonry-brick-block', title: 'Masonry, Bricks & Blocks Work', lines: ['Masonry, Bricks', '& Blocks Work'],
@@ -170,7 +170,7 @@ export const certifications: Credential[] = [
       { code: 'WBE', name: 'Women-owned Business Enterprise' },
       { code: 'WBENC', name: "Women's Business Enterprise National Council" },
       { code: 'MBE', name: 'Minority-owned Business Enterprise' },
-      { code: 'MWBE NY', name: 'Minority and Women-owned Business Enterprise, New York State' },
+      { code: 'MWBE NYS', name: 'Minority and Women-owned Business Enterprise, New York State' },
       { code: 'MWBE NYC', name: 'Minority and Women-owned Business Enterprise, New York City' },
     ],
   },
@@ -197,12 +197,17 @@ export const agencyCount = new Set(agencyCredentials.flatMap(group => group.agen
 
 const listOf = (items: string[]) => items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('')
 /* The codes in one line each, in the company's own form. */
-/* The two MWBE certificates, state and city, read as one entry: "MWBE NY/NYC". */
-export const certificationLine = listOf([...new Set(certified.flatMap(group => group.agencies.map(agency => agency.code.startsWith('MWBE') ? 'MWBE NY/NYC' : agency.code)))])
+/* The two MWBE certificates, state and city, read as one entry: "MWBE NYS/NYC". */
+export const certificationLine = listOf([...new Set(certified.flatMap(group => group.agencies.map(agency => agency.code.startsWith('MWBE') ? 'MWBE NYS/NYC' : agency.code)))])
 export const agencyLine = listOf(agencyCredentials.flatMap(group => group.agencies.map(agency => agency.code)))
 export const registrationLine = listOf(registrations.flatMap(group => group.agencies.map(agency => agency.code)))
 /* "Certified WOSB, WBE, MBE and city and state MWBE" and so on, one phrase each. */
 export const prequalified = [`Certified ${certificationLine}`, `Credentials with ${agencyLine}`, `Registered with ${registrationLine}`]
+
+/* The hero eyebrow, built from the certifications actually held so it can
+   never drift from the register on /qualifications. The two MWBE
+   certificates, state and city, read as one code here. */
+export const certifiedEyebrow = `${[...new Set(certified.flatMap(group => group.agencies.map(agency => agency.code.startsWith('MWBE') ? 'MWBE' : agency.code)))].join(' · ')} certified`
 
 export const navigation = [
   { label: 'About', href: '/about' },
@@ -215,7 +220,7 @@ export const navigation = [
 export { socials } from './site'
 
 /* The home page opens on a slider: the company first, then one frame for
-   each trade. Every photograph here is one of the four written at 1600px. */
+   each trade. Every photograph here is one of the full-bleed set. */
 export type HeroSlide = {
   id: string
   image: string
@@ -249,7 +254,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 'company',
     image: 'stair-forms',
-    eyebrow: 'MWBE · SBE · DBE certified',
+    eyebrow: certifiedEyebrow,
     title: ['Building with purpose.', 'Delivering with care.'],
     lede: 'We provide construction services throughout New York and New Jersey.',
     primary: { label: 'Explore Our Work', to: '/projects' },
@@ -320,7 +325,7 @@ export const capabilities: { title: string; items: string[] }[] = [
 /* One photograph per stage, in the order the company wants the work shown. */
 export const sequence: { title: string; category: Category; image: string }[] = [
   { title: 'Demolition', category: 'Demolition', image: 'stair-breakout' },
-  { title: 'Foam work', category: 'Foam Work', image: 'stair-forms' },
+  { title: 'Forming', category: 'Forming', image: 'stair-forms' },
   { title: 'Stone installation', category: 'Stone', image: 'stone-steps-crew' },
   { title: 'Concrete pouring', category: 'Concrete', image: 'plaza-pour' },
   { title: 'Block work', category: 'Masonry', image: 'block-wall-cmu' },

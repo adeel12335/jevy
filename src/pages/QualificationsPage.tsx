@@ -1,5 +1,5 @@
 import { agencyLine, certificationLine, registrationLine } from '../data'
-import { company } from '../site'
+import { company, telephoneSentence } from '../site'
 import { metaFor } from '../routes'
 import { PageHeader } from '../components/PageHeader'
 import { CallToAction } from '../components/CallToAction'
@@ -36,7 +36,7 @@ export default function QualificationsPage() {
     <CallToAction
       eyebrow="For primes and agencies"
       title={['Ask for the', 'certificates.']}
-      lede={`Email ${company.email} or call ${company.telephone} and we will send the documentation your bid package needs.`}
+      lede={`Email ${company.email} or call ${telephoneSentence} and we will send the documentation your bid package needs.`}
     />
   </>
 }

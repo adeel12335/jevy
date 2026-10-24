@@ -1,5 +1,5 @@
 import { allProjects, categories, certifications, inCategory, prequalified, projects, services } from './data'
-import { SITE_URL, company, socials } from './site'
+import { SITE_URL, company, socials, telephoneSentence } from './site'
 
 /* Every page on the site, with the head it needs. The client reads this on
    navigation and the prerenderer reads it at build time, so a page can never
@@ -34,7 +34,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/about',
     title: `About ${brand} | Construction Corporation in Jamaica, NY`,
-    description: `${brand} is a construction corporation in Jamaica, New York, providing residential and commercial construction services, certified WOSB, WBE, WBENC, MBE and MWBE NY/NYC across New York and New Jersey.`,
+    description: `${brand} is a construction corporation in Jamaica, New York, providing residential and commercial construction services, certified WOSB, WBE, WBENC, MBE and MWBE NYS/NYC across New York and New Jersey.`,
     image: 'sidewalk',
     photo: true,
     trail: [{ name: 'About', path: '/about' }],
@@ -72,7 +72,7 @@ const STATIC: PageMeta[] = [
   {
     path: '/contact',
     title: `Contact ${brand} | Jamaica, NY`,
-    description: `${company.street}, ${company.locality}, ${company.region} ${company.postalCode}. Email ${company.email} or call the office on ${company.telephone} to discuss renovation or new construction work.`,
+    description: `${company.street}, ${company.locality}, ${company.region} ${company.postalCode}. Email ${company.email} or call the office on ${telephoneSentence} to discuss renovation or new construction work.`,
     image: 'sidewalk',
     trail: [{ name: 'Contact', path: '/contact' }],
   },
@@ -138,7 +138,7 @@ const organization = {
   logo: `${SITE_URL}/icon-512.png`,
   image: `${SITE_URL}/og-image.jpg`,
   email: company.email,
-  telephone: '+1-786-767-0403',
+  telephone: company.telephones.map(line => line.e164),
   faxNumber: '+1-646-352-503',
   address: {
     '@type': 'PostalAddress',
