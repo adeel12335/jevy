@@ -39,7 +39,8 @@ export const company = {
   /* The first line, for the places that show a single number. */
   telephone: telephones[0].number,
   telephoneHref: telephones[0].href,
-  fax: '+1 646 352 503',
+  fax: '(646) 352-5031',
+  faxE164: '+1-646-352-5031',
   email: 'info@jevvyconstruction.com',
   areaServed: ['New York', 'New Jersey'],
 } as const

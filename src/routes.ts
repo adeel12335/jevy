@@ -139,7 +139,7 @@ const organization = {
   image: `${SITE_URL}/og-image.jpg`,
   email: company.email,
   telephone: company.telephones.map(line => line.e164),
-  faxNumber: '+1-646-352-503',
+  faxNumber: company.faxE164,
   address: {
     '@type': 'PostalAddress',
     streetAddress: company.street,
