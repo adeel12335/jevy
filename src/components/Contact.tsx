@@ -6,11 +6,12 @@ import { Lines, Modal, Reveal } from './ui'
 type Inquiry = { name: string; email: string; location: string; message: string }
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 
-/* With no endpoint configured the form stays useful without a backend: it
-   drafts the message and hands it to the visitor's own email client, so
-   nothing is silently lost. Set VITE_FORM_ENDPOINT (Formspree, Web3Forms,
-   Netlify Forms or your own handler) and the same form posts instead. */
-const ENDPOINT = import.meta.env.VITE_FORM_ENDPOINT as string | undefined
+/* The form posts to our own serverless function (api/contact.js), which
+   sends the inquiry over Gmail SMTP. If that answers anything but OK — mail
+   not configured, Gmail refusing, the function down — the page falls back to
+   drafting the message in the visitor's own email client, so an inquiry is
+   never silently lost. VITE_FORM_ENDPOINT overrides the destination. */
+const ENDPOINT = (import.meta.env.VITE_FORM_ENDPOINT as string | undefined) || '/api/contact'
 
 export function Contact({ heading = true }: { heading?: boolean }) {
   const [inquiry, setInquiry] = useState<Inquiry | null>(null)
@@ -43,8 +44,6 @@ export function Contact({ heading = true }: { heading?: boolean }) {
 
     setCopied(false)
     setCopyError(false)
-
-    if (!ENDPOINT) { setInquiry(value); return }
 
     setStatus('sending')
     try {
@@ -109,11 +108,7 @@ export function Contact({ heading = true }: { heading?: boolean }) {
             <button className="button" type="submit" disabled={status === 'sending'}>
               {status === 'sending' ? 'Sending…' : <>Send Project Inquiry <ArrowRight size={18} aria-hidden="true" /></>}
             </button>
-            <p className="form-note">
-              {ENDPOINT
-                ? 'We read every inquiry and reply to the address you give us.'
-                : 'Review your inquiry, then send it through your email app.'}
-            </p>
+            <p className="form-note">We read every inquiry and reply to the address you give us.</p>
           </form>}
         </Reveal>
       </div>
